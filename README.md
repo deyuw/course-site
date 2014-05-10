@@ -1,1 +1,1 @@
-template for course websites
+sample course website template
