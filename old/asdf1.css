@@ -1,0 +1,127 @@
+<style>
+    /*body {
+      font-family: avenir;
+      font-size: 16px;
+      margin-left:auto;
+      margin-right:auto;
+      margin-bottom: 50px;
+      max-width: 650;
+      padding: 0 20;
+      line-height: 1.6;
+    }*/
+    @keyframes fadein { from { opacity:0; } to { opacity:1; } }
+    @-moz-keyframes fadein { from { opacity:0; } to { opacity:1; } }
+    @-webkit-keyframes fadein { from { opacity:0; } to { opacity:1; } }
+    @-o-keyframes fadein { from { opacity:0; } to { opacity: 1; } }
+    .content{
+      margin: 40 0;
+      animation: fadein 0.6s;
+      -moz-animation: fadein 0.6s;
+      -webkit-animation: fadein 0.6s;
+      -o-animation: fadein 0.6s;
+    }
+    h1{
+      font-size: 28;
+      font-weight: 100;
+      line-height: 1.2;
+      margin: 10 0 15 0;
+    }
+    h4{
+      margin: 10 0;
+    }
+    p{
+      margin: 10 0;
+    }
+    ul{
+      padding:0;
+    }
+    li{
+      display: inline;
+    }
+    a{
+      background: white;
+      padding: 3 0;
+      border-radius: 4px;
+      outline: none;
+      color: 3399FF;
+      text-decoration: none;
+      transition: 0.5s;
+    }
+    a:hover {
+      background: D6EEF8;
+      transition: 0s;
+      cursor: pointer;
+    }
+    #menu{
+      max-width: 650;
+      margin-left:auto;
+      margin-right:auto;
+      line-height: 2;
+    }
+    .there{
+      animation: fadein 0s;
+      -moz-animation: fadein 0s;
+      -webkit-animation: fadein 0s;
+      -o-animation: fadein 0s;
+      padding: 4 8 3 8;
+      border-radius: 7px;
+      margin: 0 15 0 0;
+      position: relative;
+      left: -8px;
+    }
+    .here{
+      padding: 4 8 3 8;
+      border-radius: 7px;
+      margin: 0 15 0 0;
+      position: relative;
+      left: -8px;
+      background: 3399FF;
+      color: white;
+    }
+    .here:hover{
+      background: 3399FF;
+      color: white;
+    }
+    img.center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    table{
+      outline: none;
+      border-collapse: collapse;
+    }
+    td { 
+      padding: 0 0 10 0;
+    }
+    #announcement tr > td:first-child {
+      color: A9A9A9;
+      width: 140;
+      text-align: right;
+      padding: 0 20 0 0;
+      vertical-align:top;
+      line-height: 1.4;
+    }
+    #announcement td:nth-child(2) {
+      vertical-align:top;
+      line-height: 1.4;
+    }
+    #instructor tr > td:first-child {
+      color: A9A9A9;
+      padding: 0 20 0 0;
+      vertical-align:top;
+      line-height: 1.4;
+    }
+    #instructor td:nth-child(2) {
+      vertical-align:top;
+      line-height: 1.4;
+    }
+    object[type="application/pdf"]{
+      border: solid #cccccc 3px;
+      border-radius: 6px;
+      width: 950px;
+      margin-left:-150px;
+      min-height: 450px;
+      max-height: 900px;
+    }
+  </style>

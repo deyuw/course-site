@@ -1,0 +1,233 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<head>
+  <link href="/normalize.css" rel="stylesheet">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <title>CSC236 Spring 2014</title>
+  <style>
+    body {
+      font-family: avenir;
+      font-size: 16px;
+      margin-left:auto;
+      margin-right:auto;
+      margin-bottom: -50px;
+      max-width: 950;
+      padding: 0 20;
+      line-height: 1.6;
+    }
+    @keyframes fadein { from { opacity:0; } to { opacity:1; } }
+    @-moz-keyframes fadein { from { opacity:0; } to { opacity:1; } }
+    @-webkit-keyframes fadein { from { opacity:0; } to { opacity:1; } }
+    @-o-keyframes fadein { from { opacity:0; } to { opacity: 1; } }
+    ul{
+      padding:0;
+    }
+    li{
+      display: inline;
+    }
+    h1{
+      font-size: 28;
+      font-weight: 100;
+      line-height: 1.2;
+      margin: 10 0 15 0;
+    }
+    h4{
+      margin: 10 0;
+    }
+    p{
+      margin: 10 0;
+    }
+    a{
+      padding: 3 0;
+      border-radius: 4px;
+      outline: none;
+      color: 3399FF;
+      text-decoration: none;
+      transition: 0.5s;
+    }
+    a:hover {
+      background: D6EEF8;
+      transition: 0s;
+      cursor: pointer;
+    }
+    #menu{
+      max-width: 650;
+      margin-left:auto;
+      margin-right:auto;
+      line-height: 2;
+      margin-top: 20;
+    }
+    .menuitem{
+      animation: fadein 0s;
+      -moz-animation: fadein 0s;
+      -webkit-animation: fadein 0s;
+      -o-animation: fadein 0s;
+      padding: 4 8 3 8;
+      border-radius: 7px;
+      margin: 15 15 0 0;
+      position: relative;
+      left: -8px;
+    }
+    #menucurrent{
+      padding: 4 8 3 8;
+      border-radius: 7px;
+      margin: 15 15 0 0;
+      position: relative;
+      left: -8px;
+      background: 3399FF;
+      color: white;
+    }
+    #menucurrent:hover{
+      background: 3399FF;
+      color: white;
+    }
+    #left{
+      margin: 30 0;
+      float: left;
+      max-width: 250px;
+    }
+    .leftitem{
+      position: relative;
+      padding: 3 8;
+      margin: -25;
+      /*margin: -10;*/
+      line-height: 1.6;
+      border-radius: 7px;
+    }
+    #leftcurrent{
+      position: relative;
+      padding: 3 8;
+      margin: 0 -25;
+      /*margin: -10;*/
+      line-height: 1.6;
+      border-radius: 7px;
+      background: 3399FF;
+      color: white;
+    }
+    #leftcurrent:hover{
+      background: 3399FF;
+      color: white;
+    }
+    table{
+      border-width: 1;
+    }
+    tr > td{
+      padding: 5 0px;
+    }
+    .content{ 
+      animation: fadein 1s;
+      -moz-animation: fadein 1s;
+      -webkit-animation: fadein 1s;
+      -o-animation: fadein 1s;
+      position: relative;
+      margin: 35 -20 0 0;
+      float: right;
+      max-width: 700px;
+    }
+    iframe{
+      border: solid 3px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div id="menu">
+      <ul>
+        <li><a class="menuitem" href="./home.html">CSC236</a></li>
+        <li><a class="menuitem" href="./learn.html">Learn</a></li>
+        <li><a class="menuitem" id="menucurrent" href="./work.html">Work</a></li>
+        <li><a class="menuitem" href="https://piazza.com/" target="_blank">Discuss</a></li>
+        <li><a class="menuitem">More</a></li>
+        <span style="float: right">Spring 2014</span>
+      </ul>
+    </div>
+  <header>
+  <div id="left" style="background-color: cyan;">
+    <table>
+      <tr><td><a class="leftitem" id="leftcurrent" href="">Instructions</a></td></tr>
+      <tr><td><a class="leftitem" href="">Problem Set 1</a></td></tr>
+      <tr><td><a class="leftitem" href="">Problem Set 2</a></td></tr>
+      <tr><td><a class="leftitem" href="">Problem Set 3</a></td></tr>
+      <tr><td><a class="leftitem" href="">Problem Set 4</a></td></tr>
+      <tr><td><a class="leftitem" href="">Problem Set 5</a></td></tr>
+      <tr><td><a class="leftitem" href="">Problem Set 6</a></td></tr>
+      <tr><td><a class="leftitem" href="">Problem Set 7</a></td></tr>
+      <tr><td><a class="leftitem" href="">Problem Set 8</a></td></tr>
+      <tr><td><a class="leftitem" href="">Problem Set 9</a></td></tr>
+      <tr><td><a class="leftitem" href="">Problem Set 10</a></td></tr>
+      <tr><td><a class="leftitem" href="">Problem Set 11</a></td></tr>
+    </table>
+  </div>
+
+  <div class="content" style="position: relative; top: -15px;">
+  <h1>Problem Sets</h1>
+  <p>
+  This term, you will complete 11 problem sets, corresponding to the first 11 weeks of the course.
+  Each problem set will be divided into two quite different parts, described in the following table:
+  </p>
+  <table cellpadding="10" border="1">
+  <tr><th></th><th>Preliminary Question</th><th>Challenges</th></tr>
+  <tr><td>Due</td><td>8 p.m. Tuesdays (mostly)</td><td>12 noon Saturdays (mostly)</td></tr>
+  <tr><td>Goal</td><td>Review week's material; understand basic concepts; see how much you know</td><td>Apply knowledge to unfamiliar settings; use your brain!</td></tr>
+  <tr><td>Grading</td><td>3-point rubric</td><td>Standard marks; detailed</td></tr>
+  <tr><td>Work...</td><td>individually</td><td>in groups of up to <strong>three</strong></td></tr>
+  <tr><td>Late Policy</td><td>No late submissions accepted</td><td>Grace tokens</td></tr>
+  <tr><td>Remark Policy</td><td>No remarks</td><td>Request must be submitted within a week of receiving grade; see <a href="policies.html">Policies</a> for details</td></tr>
+  </table>
+  <p>
+  The two midterm weeks, the Preliminary questions will be due on Thursday, instead of Tuesday. The final set of Challenge questions will be due on Friday, April 4. Check the calendar frequently if you're forgetful!
+  </p>
+  <p>
+  Your lowest Preliminary Question mark and Challenge mark will be dropped; these will be independent of each other (i.e., the two dropped components can be from different weeks). 
+  </p>
+  <p>
+  The Challenge questions will generally be a little harder than the ones you've seen in lecture &ndash; so start thinking early, and ask for help!
+  The lectures will build on ideas from the assignments and vice versa &ndash; the best way to learn from the assignments is to <strong>try every question, even if you are working in a group</strong>.
+  </p>
+
+  <br>
+  <h1>Submitting Assignments</h1>
+  <p>
+  We will manage all assignment submissions electronically using <a href="https://markus.cdf.toronto.edu/csc236-2014-01">MarkUs</a>. You can logon to MarkUs using your CDF login and password. 
+  All submissions must be in <strong>PDF</strong> format.
+  Any other file formats run a very high risk of not being visible to the markers, and thus getting a zero.
+  To avoid the lowest-quality handwritten submissions, we also <strong>will not accept photographs of written work</strong>. So if you want to write solutions by hand, make sure you have access to a scanner! However, we strongly recommend the use of LaTeX for your solutions (see below).
+  </p>
+  <p>
+  Every student will receive <strong>eight grace tokens</strong>, to be used for Challenges. Each grace token grants a group a SIX hour extension; up to FOUR grace tokens (extra 24 hours) can be used per assignment. This is all done automatically through MarkUs, so simply submitting an assignment late is enough to use the grace credit feature.
+  However, any assignment submitted late without enough grace tokens, or beyond 24 hours after the due date, will receive a zero. 
+  </p>
+  <p>
+  When a group uses a grace token, each group member spends one: this is a <strong>group</strong> decision! You'll be allowed to change groups during the term; grace tokens used will be tracked individually, and the number of tokens available to a group is the minimum of the grace tokens of its members.
+  </p>
+
+  <br>
+  <h1>LaTeX Policy</h1>
+  <p>
+  LaTeX is a mathematics typesetting software that is the de facto standard for academic writing in computer science and math (among many other fields). 
+  A nontrivial part of effective writing is its presentation &ndash; for people like me who have terrible handwriting, LaTeX is a huge boon. 
+  Though there is no requirement to use LaTeX in this course, I strongly encourage you to at least familiarize yourself with this typesetting marvel. 
+  </p>
+  <p>
+  As a provided incentive, <strong>for the first THREE Challenges, groups who use LaTeX will receive a 10% bonus</strong>. 
+  You may include hand-drawn <strong>images</strong> in your pdf and still receive the bonus.
+  To be eligible for this bonus, the tex source file must be uploaded to MarkUs in addition to the PDF &ndash; and it will be verified!
+  Finally, note that empty or almost empty tex files will not receive the bonus; an honest attempt at the questions must be made.
+  </p>
+  <p>
+  LaTeX can be daunting at first &ndash; we're used to document editors showing us exactly what's going on ("What you see is what you get"), and it can take people time to get used to the idea of <em>compiling</em> a document.
+  I'll do my best to support anyone interested in learning LaTeX, so if you have any LaTeX questions, please come talk to me or post on the forum, just as you would for questions about the course material.
+  </p>
+  <p>
+  Check out the following video, as well as the <strong>Latex</strong> section for support on getting started with LaTeX.
+  </p>
+
+  <video width=auto height="450" controls><source src="Latex.mp4" type="video/mp4"></video>
+    
+  </div>
+</body>

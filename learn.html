@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- <!DOCTYPE HTML> -->
+<html>
+<head>
+  <title>CSC236 Spring 2014</title>
+  <!-- Style -->
+  <link rel="stylesheet" href="./styles/a.css"></link>
+  <!-- Normalize for compatibility with all browsers -->
+  <link rel="stylesheet" href="./normalize.css"></link>
+  <!-- jQuery -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+</head>
+
+<body data-spy="scroll" data-target=".navbar-example">
+  <!-- menu line separator after scroll -->
+  <div id="line_left_long"></div> <!-- nesting -->
+  <div id="line_right_long"></div>
+  <script>
+    var $line_left = $('#line_left_long');
+    $(document).scroll(function() {
+        $line_left.css({display: $(this).scrollTop() > 20? "block":"none"});
+    });
+    var $line_right = $('#line_right_long');
+    $(document).scroll(function() {
+        $line_right.css({display: $(this).scrollTop() > 20? "block":"none"});
+    });
+  </script>
+
+  <!-- menu -->
+  <div id="top_bar">
+    <li style="float: right;">asdf</li>
+  </div>
+  <div id="semester">
+    <li style="float: right;">Spring 2014</li>
+  </div>
+  
+  <div id="menu">
+		<li><a href="./home.html" class="there">CSC236</a></li>
+		<li><a href="./learn.html" class="here">Learn</a></li>
+		<li><a href="./work.html" class="there">Work</a></li>
+		<li><a href="https://piazza.com/" class="there" target="_blank">Discuss</a></li>
+		<li><a href="./more_david_notes.html" class="there">More</a></li>
+  </div>
+
+  <div class "navbar-example">
+    <div id="left" style="background: white; position: fixed; margin: 0 0 0 -220; max-width: 200;">
+      <table>
+        <tr><td class="nav nav-tabs"><a href="./learn.html" class="topic">Simple Induction</a></td></tr>
+        <tr><td class="nav nav-tabs"><a href="#2" class="topic">Complete & Structural Induction</a></td></tr>
+        <tr><td><a href="#3" class="topic">Recursively Defined Functions</a></td></tr>
+        <tr><td><a href="#4" class="topic">Analysing Recursive Algorithms</a></td></tr>
+        <tr><td class="topic">Divide-and-Conquer</td></tr>
+        <tr><td class="topic">Correctness: Recursive Functions</td></tr>
+        <tr><td class="topic">Correctness: Iterative Functions</td></tr>
+        <tr><td class="topic">Correctness: Termination</td></tr>
+        <tr><td class="topic">Regular Languages & Regular Expressions</td></tr>
+        <tr><td class="topic">Deterministic Finite Automata</td></tr>
+        <tr><td class="topic">Nondeterminism</td></tr>
+        <tr><td class="topic">Equivalence of Representations</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div id="first" class="section" style="margin: 80 0 0 0;">
+    <h1>Simple Induction</h1>
+    <video width="850" height=auto preload="metadata" controls><source src="./videos/1 The Flexibility of Induction.mp4" type="video/mp4"></video>
+    <p>Sample text. In the above video, I talk about simple induction, the first type of induction in the list of induction methods to be taught in this class. You can download the video by right clicking on the video.</p>
+
+    <p id="2"><p>
+    </br>
+    </br>
+    </br>
+    <h1>Complete and Structural Induction</h1>
+    <video width="850" height=auto preload="metadata" controls><source src="./videos/1 The Flexibility of Induction.mp4" type="video/mp4"></video>
+
+    <p id="3"><p>
+    </br>
+    </br>
+    </br>
+    <h1>Recursively-Defined Functions</h1>
+    <video width="850" height=auto preload="metadata" controls><source src="./videos/1 The Flexibility of Induction.mp4" type="video/mp4"></video>
+
+    <p id="4"><p>
+    </br>
+    </br>
+    </br>
+    <h1>Analysing Recursive Algorithms</h1>
+    <p>In the following video we go deeper in understanding recursive algorithms.</p>
+    <video width="850" height=auto preload="metadata" controls><source src="./videos/1 The Flexibility of Induction.mp4" type="video/mp4"></video>
+  </div>
+
+  <a href="http://www.utoronto.ca/" target="_blank"><img style="display: block;  margin: 50 0; margin-left: auto; margin-right: auto; width: 25%" src="http://www.governingcouncil.utoronto.ca/Assets/Governing+Council+Digital+Assets/Homepage+Images/ppapr211998.jpg"></a>
+
+</body>
+</html>
