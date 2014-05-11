@@ -1,1 +1,1 @@
-sample course website template
+This course website is currently designed for David Liu's CSC236 class.
