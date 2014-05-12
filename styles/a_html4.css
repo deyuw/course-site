@@ -1,0 +1,226 @@
+<style type="text/css">
+    /*Set up animations*/
+    @keyframes fadein { from { opacity:0; } to { opacity:1; } }
+    @-moz-keyframes fadein { from { opacity:0; } to { opacity:1; } }
+    @-webkit-keyframes fadein { from { opacity:0; } to { opacity:1; } }
+    @-o-keyframes fadein { from { opacity:0; } to { opacity: 1; } }
+    body {
+      font-family: Avenir, Arial, serif;
+      font-size: 16px;
+      margin: 0 auto;
+      /*margin-bottom: 50px;*/
+      max-width: 650;
+      padding: 0 20;
+      line-height: 1.6;
+      /*background: cyan;*/
+    }
+
+    #menu{
+      position: fixed;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 650px;
+      background: white;
+      line-height: 2;
+      padding: 10 0 6 0;
+      margin: -80 0 0 -8;
+      /*background: cyan;*/
+    }
+    #semester{
+      position: fixed;
+      margin-left: auto;
+      margin-right: auto;
+      width: 650px;
+      background: white;
+      line-height: 2;
+      padding: 10 0 6 0;
+      margin: -80 -8 0 0;
+      float: right;
+      /*background: cyan;*/
+    }
+    #top_bar{
+      position: fixed;
+      margin-left: auto;
+      margin-right: auto;
+      width: 1000px;
+      background: white;
+      line-height: 2;
+      padding: 10 0 6 0;
+      margin: -80 -8 0 0;
+      float: right;
+      /*background: cyan;*/
+    }
+    #line_left{
+      position: fixed;
+      display:none;
+      margin-left: auto;
+      margin-right: auto;
+      width: 400;
+      margin: -32 0 0 -75;
+      height: 1px;
+      /*background: #C0C0C0;*/
+      background: -webkit-gradient(linear, 10 0, 20% 0, from(white), to(#C0C0C0), color-stop(100%, #C0C0C0));
+      /*height: 10px;*/
+      /*background: -webkit-gradient(linear, 10 0, 20% 0, from(red), to(blue), color-stop(100%, #C0C0C0));*/
+    }
+    #line_right{
+      position: fixed;
+      display:none;
+      margin-left: auto;
+      margin-right: auto;
+      width: 400;
+      margin: -32 0 0 325;
+      height: 1px;
+      /*background: #C0C0C0;*/
+      background: -webkit-gradient(linear, 285 0, 95% 0, from(#C0C0C0), to(white), color-stop(100%, #C0C0C0));
+      /*height: 10px;*/
+      /*background: -webkit-gradient(linear, 285 0, 95% 0, from(green), to(red), color-stop(100%, #C0C0C0));*/
+    }
+    #line_left_long{
+      position: fixed;
+      display:none;
+      margin-left: auto;
+      margin-right: auto;
+      width: 600;
+      margin: -32 0 0 -275;
+      height: 1px;
+      /*background: #C0C0C0;*/
+      background: -webkit-gradient(linear, 10 0, 20% 0, from(white), to(#C0C0C0), color-stop(100%, #C0C0C0));
+      /*height: 10px;*/
+      /*background: -webkit-gradient(linear, 10 0, 20% 0, from(red), to(blue), color-stop(100%, #C0C0C0));*/
+    }
+    #line_right_long{
+      position: fixed;
+      display:none;
+      margin-left: auto;
+      margin-right: auto;
+      width: 600;
+      margin: -32 0 0 325;
+      height: 1px;
+      /*background: #C0C0C0;*/
+      background: -webkit-gradient(linear, 285 0, 95% 0, from(#C0C0C0), to(white), color-stop(100%, #C0C0C0));
+      /*height: 10px;*/
+      /*background: -webkit-gradient(linear, 285 0, 95% 0, from(green), to(red), color-stop(100%, #C0C0C0));*/
+    }
+
+    a{
+      background: white;
+      padding: 3 0;
+      border-radius: 4px;
+      outline: none;
+      color: 3399FF;
+      text-decoration: none;
+      transition: 0.5s;
+    }
+    a:hover {
+      background: D6EEF8;
+      transition: 0s;
+      cursor: pointer;
+    }
+    .there{
+      animation: fadein 0s;
+      -moz-animation: fadein 0s;
+      -webkit-animation: fadein 0s;
+      -o-animation: fadein 0s;
+      padding: 4 8 3 8;
+      border-radius: 7px;
+      margin: 0 15 0 0;
+      /*position: relative;
+      left: -8px;*/
+    }
+    .here{
+      padding: 4 8 2 8;
+      border-radius: 7px;
+      margin: 0 15 0 0;
+      /*position: relative;
+      left: -8px;*/
+      background: #3399FF;
+      color: white;
+    }
+    .here:hover{
+      background: 3399FF;
+      color: white;
+    }
+    li{
+      display: inline;
+    }
+    
+    .section{
+      margin: 40 0 0 0;
+      animation: fadein 0.6s;
+      -moz-animation: fadein 0.6s;
+      -webkit-animation: fadein 0.6s;
+      -o-animation: fadein 0.6s;
+      /*background: lime;*/
+    }
+    .topic{
+      display:block;
+      padding: 5px;
+    }
+    .topic_current{
+      display:block;
+      padding: 5px;
+      background: #3399FF;
+      color: white;
+    }
+    h1{
+      font-size: 28;
+      font-weight: 100;
+      line-height: 1.2;
+      margin: 10 0 15 0;
+      /*background: cyan;*/
+    }
+    h4{
+      margin: 10 0;
+    }
+    p{
+      margin: 10 0;
+    }
+
+    img.center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    table{
+      outline: none;
+      border-collapse: collapse;
+    }
+    td { 
+      padding: 0 0 10 0;
+    }
+
+    #announcement tr > td:first-child {
+      color: A9A9A9;
+      width: 140;
+      text-align: right;
+      padding: 0 20 0 0;
+      vertical-align:top;
+      line-height: 1.4;
+    }
+    #announcement td:nth-child(2) {
+      vertical-align:top;
+      line-height: 1.4;
+    }
+    #instructor tr > td:first-child {
+      color: A9A9A9;
+      padding: 0 20 0 0;
+      vertical-align:top;
+      line-height: 1.4;
+    }
+    #instructor td:nth-child(2) {
+      vertical-align:top;
+      line-height: 1.4;
+    }
+    object[type="application/pdf"]{
+      border: solid #cccccc 3px;
+      border-radius: 6px;
+      width: 850;
+      /*height: 750;*/
+      height: 80vh;
+      /*width: 950px;*/
+      /*margin-left:-150px;*/
+      /*min-height: 450px;*/
+      /*max-height: 700px;*/
+    }
+  </style>
