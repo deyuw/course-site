@@ -14,4 +14,4 @@ $(document).scroll(function() {
 var $line_right_long = $('#line_right_long');
 $(document).scroll(function() {
   $line_right_long.css({display: $(this).scrollTop() > 20? "block":"none"});
-});
+}); 
