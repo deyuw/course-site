@@ -1,4 +1,3 @@
-/*<style type="text/css">*/
 /*Set up animations*/
 @keyframes fadein { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadein { from { opacity:0; } to { opacity:1; } }
@@ -65,7 +64,7 @@ li{
   margin-left: auto;
   margin-right: auto;
   width: 400px;
-  margin: 8px 0px 0px -75px;
+  margin: 7px 0px 0px -75px;
   height: 1px;
   background: -webkit-gradient(linear, 10 0, 20% 0, from(white), to(#C0C0C0), color-stop(100%, #C0C0C0));
   animation: fadein 0.4s;
@@ -79,7 +78,7 @@ li{
   margin-left: auto;
   margin-right: auto;
   width: 400px;
-  margin: 8px 0px 0px 325px;
+  margin: 7px 0px 0px 325px;
   height: 1px;
   background: -webkit-gradient(linear, 285 0, 95% 0, from(#C0C0C0), to(white), color-stop(100%, #C0C0C0));
   animation: fadein 0.4s;
@@ -93,7 +92,7 @@ li{
   margin-left: auto;
   margin-right: auto;
   width: 600px;
-  margin: 8px 0px 0px -255px;
+  margin: 7px 0px 0px -255px;
   height: 1px;
   background: -webkit-gradient(linear, 10 0, 20% 0, from(white), to(#C0C0C0), color-stop(100%, #C0C0C0));
   animation: fadein 0.4s;
@@ -107,7 +106,7 @@ li{
   margin-left: auto;
   margin-right: auto;
   width: 600px;
-  margin: 8px 0px 0px 325px;
+  margin: 7px 0px 0px 325px;
   height: 1px;
   background: -webkit-gradient(linear, 285 0, 95% 0, from(#C0C0C0), to(white), color-stop(100%, #C0C0C0));
   animation: fadein 0.4s;
