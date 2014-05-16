@@ -1,1 +1,1 @@
-This course website is currently designed for David Liu's CSC236 class.
+Course website is currently designed for David Liu's CSC236
