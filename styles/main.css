@@ -7,8 +7,8 @@ body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   margin: 0 auto;
-  /*max-width: 650px;*/
-  width: 650px;
+  max-width: 650px;
+  /*width: 650px;*/
   padding: 0px 20px;
   line-height: 1.6;
   /*background: cyan;*/
@@ -29,26 +29,13 @@ li{
 }
 #semester{
   position: fixed;
-  top: 0px; left: 0px; right: 0px;
+  top: -1px; left: 0px; right: 0px;
   margin-left: auto;
   margin-right: auto;
   width: 650px;
   background: white;
   line-height: 2;
   padding: 10px 0px 6px 0px;
-  float: right;
-  /*background: cyan;*/
-}
-#top_bar{
-  position: fixed;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1000px; /*mobile problem*/
-  background: white;
-  line-height: 2;
-  padding: 10px 0px 6px 0px;
-  /*margin: -80px -8px 0px 0px;*/
-  margin: -40px -8px 0px 0px;
   float: right;
   /*background: cyan;*/
 }
@@ -146,6 +133,14 @@ a:hover {
   background: #3399FF;
   color: white;
 }
+#left{
+  background: white;
+  position: fixed;
+  top: 70px;
+  margin: 0px 0px 0px 100px;
+  max-width: 200px;
+  left: 0px;
+}
 .section{
   margin: 40px 0px 0px 0px;
   animation: fadein 0.6s;
@@ -177,6 +172,7 @@ h4{
 p{
   margin: 10px 0px;
 }
+
 
 img.center {
   display: block;
