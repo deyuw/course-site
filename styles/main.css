@@ -1,6 +1,6 @@
 /*main*/
 body{
-  font-family: Avenir, Helvetica Neue, Arial, sans-serif;
+  font-family: Avenir, sans-serif;
   font-size: 16px;
   margin: 0 auto;
   width: 1150px;
@@ -84,28 +84,6 @@ li{
   -webkit-animation: fadein 0.4s;
   -o-animation: fadein 0.4s;
 }
-
-
-
-
-
-
-#semester{
-  position: fixed;
-  top: -1px; left: 0px; right: 0px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
-  background: white;
-  line-height: 2;
-  padding: 10px 0px 6px 0px;
-  float: right;
-  /*background: cyan;*/
-}
-
-
-
-
 
 /*top bar*/
 .here{
@@ -228,12 +206,7 @@ object[type="application/pdf"]{
   border: solid #cccccc 3px;
   border-radius: 6px;
   width: 850px;
-  /*height: 750;*/
   height: 80vh;
-  /*width: 950px;*/
-  /*margin-left:-150px;*/
-  /*min-height: 450px;*/
-  /*max-height: 700px;*/
 }
 
 /*animations*/
