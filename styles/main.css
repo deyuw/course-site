@@ -202,6 +202,15 @@ td {
   line-height: 1.4;
 }
 
+/*video*/
+button{
+  width: 650px;
+  height: 450px;
+  border: 1px solid #3399FF;
+  border-radius: 10px;
+  
+}
+
 /*pdf style*/
 object[type="application/pdf"]{
   border: solid #cccccc 3px;

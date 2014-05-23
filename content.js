@@ -1,17 +1,19 @@
-document.write("hello");
-var content = document.getElementById("section");
-
-function 1(){
-	content.innerHTML='
-			<br>
-			<h1>Simple Induction</h1>
-      <p>In this video, I talk about simple induction, the first type of induction in the list of induction methods to be taught in this class. You can download the video by right clicking on the video.</p>
-      <iframe width="650" height="450" src="http://www.youtube.com/embed/0LtSgSsnu7o?rel=0" frameborder="0" allowfullscreen></iframe>
-      </br>
-      </br>
-      <p>This video talks about well-ordering.</p>
-      <iframe width="650" height="450" src="http://www.youtube.com/embed/DeMEQXoB7T4?rel=0" frameborder="0" allowfullscreen></iframe>';
+function lec1(){
+  var content=document.getElementById("section");
+  var text="aksjdff  ads  asdf";
+  content.innerHTML='<br /><h1>a</h1>;alskdfj; alksjdf;lakjsdf;\
+  lkajsd; lfkja;lskdjfa;lksdj f;lakjsd;lfkajs;ld kfja;lskdjfa;lk\
+  sd jf;laksjdfl;kasj d;flkajsd;lkfjals;kd jfa;lksjdfl;aksjdf; l\
+  kajsdl;fkajs;ldkfja; lskdjfa;lksdjf;lkasjdf ;lkasjdf;lkasjdf;l\
+  kajsd ;flkajsd;flkajsd;lfkj as;ldkjf;laksjd;lfkja s;ldkjfklasj\
+  d;flkajs l;dkjf;lakjsdl;fk jasdklf';
 }
-function 2(){
-	content.innerHTML="yo";
+function lec2(){
+  var content=document.getElementById("section");
+  content.innerHTML="<br /><h1>b</h1>";
+}
+function play1(){
+  var button=document.getElementById("button1");
+  var vid=document.getElementById("vid1");
+  vid.innerHTML='<iframe height=498 width=510 src="http://player.youku.com/embed/XNzEzMTQ4Nzky&autoplay=1" frameborder=0 allowfullscreen></iframe>';
 }
