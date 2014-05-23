@@ -7,15 +7,28 @@
   <link rel="stylesheet" href="styles/main.css"></link>
   <link rel="stylesheet" href="normalize.css"></link>
   <script src="scripts/jquery-1.11.1.js"></script>
+  <!-- <script src="content.js"></script> -->
+  <script>
+  
+  function lec1(){
+    var content=document.getElementById("section");
+    content.innerHTML='<br /><h1>a</h1>';
+  }
+  function lec2(){
+    var content=document.getElementById("section");
+    content.innerHTML="<br /><h1>b</h1>";
+  }
+
+  </script>
 </head>
 
 <body>
   <div id="left">
     <table>
-      <tr><td><a>Simple Induction</a></td></tr>
-      <tr><td><a>Complete & Structural Induction</a></td></tr>
-      <tr><td><a>Recursively Defined Functions</a></td></tr>
-      <tr><td><a>Analysing Recursive Algorithms</a></td></tr>
+      <tr><td><a onClick="lec1()">Simple Induction</a></td></tr>
+      <tr><td><a onClick="lec2()">Complete & Structural Induction</a></td></tr>
+      <tr><td><a onClick="lec3()">Recursively Defined Functions</a></td></tr>
+      <tr><td><a onClick="lec4()">Analysing Recursive Algorithms</a></td></tr>
       <tr><td><p>Divide-and-Conquer</p></td></tr>
       <tr><td><p>Correctness: Recursive Functions</p></td></tr>
       <tr><td><p>Correctness: Iterative Functions</p></td></tr>
@@ -43,15 +56,16 @@
       </ul>
     </nav> 
 
-    <div class="section">
-      </br>
-      <h1>Simple Induction</h1>
-      <p>In this video, I talk about simple induction, the first type of induction in the list of induction methods to be taught in this class. You can download the video by right clicking on the video.</p>
-      <iframe width="650" height="450" src="http://www.youtube.com/embed/0LtSgSsnu7o?rel=0" frameborder="0" allowfullscreen></iframe>
-      </br>
-      </br>
-      <p>This video talks about well-ordering.</p>
-      <iframe width="650" height="450" src="http://www.youtube.com/embed/DeMEQXoB7T4?rel=0" frameborder="0" allowfullscreen></iframe>
+    <div id="section">
+      <br>
+        <h1>Simple Induction</h1>
+        <p>In this video, I talk about simple induction, the first type of induction in the list of induction methods to be taught in this class. You can download the video by right clicking on the video.</p>
+        <iframe width="650" height="450" src="http://www.youtube.com/embed/0LtSgSsnu7o?rel=0" frameborder="0" allowfullscreen></iframe>
+        </br>
+        </br>
+        <p>This video talks about well-ordering.</p>
+        <iframe width="650" height="450" src="http://www.youtube.com/embed/DeMEQXoB7T4?rel=0" frameborder="0" allowfullscreen></iframe>
+      
 
       <!-- <p id="2"><p>
       </br>
