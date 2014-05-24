@@ -6,7 +6,6 @@ var $line_right = $('#line_right');
 $(document).scroll(function() {
   $line_right.css({display: $(this).scrollTop() > 20? "block":"none"});
 });
-
 var $line_left_long = $('#line_left_long');
 $(document).scroll(function() {
   $line_left_long.css({display: $(this).scrollTop() > 20? "block":"none"});

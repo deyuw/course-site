@@ -3,13 +3,18 @@ body{
   font-family: Avenir, sans-serif;
   font-size: 16px;
   margin: 0 auto;
-  width: 1150px;
+  width: 700px;
   padding: 0px 20px;
   line-height: 1.6;
 }
 #center{
   width: 650px;
   margin: 0 auto;
+}
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -box-sizing: border-box;
 }
 
 /*top navigation bar*/
@@ -102,6 +107,22 @@ li{
   border-radius: 7px;
   margin: 0px 15px 0px 0px;
 }
+.more{
+  padding: 4px 8px 3px 8px;
+  border-radius: 7px;
+  margin: 0px 15px 0px 0px;
+  background: white;
+  border: 1px solid white;
+  transition: 0s;
+}
+.more:hover{
+  padding: 4px 8px 3px 8px;
+  border-radius: 7px;
+  margin: 0px 15px 0px 0px;
+  background: white;
+  border: 1px solid #3399FF;
+  transition: 0s;
+}
 
 /*left bar*/
 #left{
@@ -138,7 +159,7 @@ li{
 /*content elements*/
 a{
   background: white;
-  padding: 3px 0px;
+  padding: 2px 0px;
   border-radius: 4px;
   outline: none;
   color: #3399FF;
@@ -208,7 +229,7 @@ button{
   height: 450px;
   border: 1px solid #3399FF;
   border-radius: 10px;
-  
+
 }
 
 /*pdf style*/

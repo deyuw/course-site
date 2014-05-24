@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles/main.css" /> 
   <link rel="stylesheet" href="normalize.css" /> 
   <script src="scripts/jquery-1.11.1.js"></script>
+  <script src="content.js"></script>
 </head> 
 <body> 
   <div id="center">
@@ -16,31 +17,30 @@
     <nav>
       <ul> 
         <li><a href="home.html" class="here">CSC236</a></li> 
-        <li><a href="learn.html" class="there">Learn</a></li> 
-        <li><a href="work.html" class="there">Work</a></li> 
+        <li><a href="materials.html" class="there">Materials</a></li> 
         <li><a href="https://piazza.com/" class="there" target="_blank">Discuss</a></li> 
         <li><a href="" class="there">Submit</a></li> 
-        <li><a href="more_david_notes.html" class="there">More</a></li> 
+        <li><a class="more">More</a></li> 
         <span style="float: right;"><li>Spring 2014</li></span>
       </ul> 
     </nav> 
       <div id="section"> 
-       <br /> 
-       <h1>Recent Announcements</h1> 
-       <table id="announcement"> 
-        <tbody>
-         <tr> 
-          <td>March 14, 2014</td> 
-          <td><a href="https://portal.utoronto.ca/" target="_blank">Course Evaluations</a> are on! This would really help me out!</td> 
-        </tr> 
-        <tr> 
-          <td>March 1, 2014</td> 
-          <td>I will be hosting extra office hours on Wednesday March 3rd, 3-5pm in BA2230. John will be hosting extra office hours on Thursday March 4th, 3-5pm in BA2000. He will also be answering a lot of questions on Piazza.</td> 
-        </tr> 
-        <tr> 
-          <td>February 14, 2014</td> 
-          <td>John went to the store and bought some ice cream for all you students stressed out for the upcoming midterm. Please pick them up before they melt.</td> 
-        </tr>         
+        <br /> 
+        <h1>Recent Announcements</h1>
+         <table id="announcement"> 
+          <tbody>
+           <tr> 
+            <td>March 14, 2014</td> 
+            <td><a href="https://portal.utoronto.ca/" target="_blank">Course Evaluations</a> are on! This would really help me out!</td> 
+          </tr> 
+          <tr> 
+            <td>March 1, 2014</td> 
+            <td>I will be hosting extra office hours on Wednesday March 3rd, 3-5pm in BA2230. John will be hosting extra office hours on Thursday March 4th, 3-5pm in BA2000. He will also be answering a lot of questions on Piazza.</td> 
+          </tr> 
+          <!-- <tr> 
+            <td>February 14, 2014</td> 
+            <td>John went to the store and bought some ice cream for all you students stressed out for the upcoming midterm. Please pick them up before they melt.</td> 
+          </tr>      -->    
         <!-- <tr> 
           <td>January 7, 2014</td> 
           <td>Soliciting feedback for <a class="intext" href="http://www.cs.toronto.edu/~liudavid/rqs/planner.html" target="_blank">Course Planner</a>.</td> 
@@ -51,20 +51,42 @@
         </tr>  -->
       </tbody>
       </table> 
-      <a href="">See all anouncements</a>
+      <a id="toggle-calendar" onClick="toggleCalendar()" style="float:left;">Show calendar</a>
+      <a href="" style="float:right;">See all announcements ></a>
+      <div id="calendar"></div>
       <br />
       <br />
 
       <h1>This Week</h1>
-      <p>There ain't nuttin yet!</p>
+      <p>Ain't nuttin yet</p>
+      <p>Ain't nuttin yet</p>
+      <p>Ain't nuttin yet</p>
+      <p>Ain't nuttin yet</p>
+      <p>Ain't nuttin yet</p>
+      <p>Ain't nuttin yet</p>
+      <p>Ain't nuttin yet</p>
+      <p>Ain't nuttin yet</p>
+      <p>Ain't nuttin yet</p>
+      <p>Ain't nuttin yet</p>
+      <p>Ain't nuttin yet</p>
+      <p>Ain't nuttin yet</p>
+      <p>Ain't nuttin yet</p>
+      <p>Ain't nuttin yet</p>
+      <p>Ain't nuttin yet</p>
+      <p>Ain't nuttin yet</p>
+      <p>Ain't nuttin yet</p>
+      <p>Ain't nuttin yet</p>
+      <p>Ain't nuttin yet</p>
+      <p>Ain't nuttin yet</p>
+      <p>Ain't nuttin yet</p>
+      <p>Ain't nuttin yet</p>
       <br />
 
       <!-- <h1>Introduction to the Theory of Computation</h1> 
       <p>Welcome to CSC236! In this course, you will learn about mathematical induction, a powerful proof technique in mathematics and computer science. You will then apply this technique to analyse programs in two different ways: measuring the running time of recursive algorithms, and formally proving algorithm correctness via preconditions, postconditions, and loop invariants. Finally, you will learn about the theory of finite automata, a simple model of computation, and regular languages, both of which have several applications in diverse fields of computer science, from computational biology to natural language processing.</p> 
       <br />  -->
 
-      <h1>Calendar</h1> 
-      <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;mode=Week&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=girap627neuf616brgv7hp8ur4%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=America%2FToronto" width="650" height="500" frameborder="0" scrolling="no" style="max-width: 650px; min-width: 200px; border-width:0; margin-bottom: 25px;"></iframe>
+      
 
       <!-- <h1>Course Info</h1> 
       <a href="./syllabus.html">Click here to see the full course syllabus.</a> 
@@ -94,9 +116,13 @@
       <p>L0201: Thursday 11-12, 1-2 in GB 120</p> 
       </div> -->
 
+
       <a href="http://www.utoronto.ca/" target="_blank"><img style="display: block; margin: 50px 0px; margin-left: auto; margin-right: auto; width: 25%" src="images/utoronto.jpg" /></a>
       <h6 style="font-size: 12px; margin: 0 auto; text-align:center;">Submit site feedback to <a href="mailto:dyw999@gmail.com?Subject=Site%20feedback" target="_blank">dyw999@gmail.com</a></h6>
+      
+      <!-- scripts -->
       <script src="scripts/main.js"></script>
+
     </div>
 </body>
 </html>
