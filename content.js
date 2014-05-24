@@ -1,7 +1,7 @@
 function toggleCalendar(){
   var calendar = document.getElementById("calendar");
   var button = document.getElementById("toggle-calendar");
-  if (calendar.innerHTML==""){
+  if (button.innerHTML=="Show calendar"){
     calendar.innerHTML='<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;mode=Week&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=girap627neuf616brgv7hp8ur4%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=America%2FToronto" width="650" height="450" frameborder="0" scrolling="no" style="max-width: 650px; min-width: 200px; border-width:0; margin-bottom: 25px;"></iframe>';
     button.innerHTML='Hide calendar';
   } else {
@@ -9,6 +9,24 @@ function toggleCalendar(){
     button.innerHTML='Show calendar';
   }
 }
+
+function showAnnouncements(){
+	// var announcements = 
+	var button = document.getElementById("show-announcements");
+	button.innerHTML="";
+}
+
+// function toggleAllAnnouncements(){
+// 	// var announcements = 
+// 	var button = document.getElementById("toggle-all-announcements");
+// 	if (button.innerHTML=="Show all announcements"){
+// 		// show announcements
+// 		button.innerHTML="Show only recent announcements";
+// 	} else {
+// 		button.innerHTML="Show all announcements";
+// 	}
+// }
+
 
 
 // function lec1(){
