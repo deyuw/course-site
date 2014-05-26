@@ -6,6 +6,7 @@ body{
   width: 700px;
   padding: 0px 20px;
   line-height: 1.6;
+  cursor: default;
 }
 #center{
   width: 650px;
@@ -89,8 +90,6 @@ li{
   -webkit-animation: fadein 0.4s;
   -o-animation: fadein 0.4s;
 }
-
-/*top bar*/
 .here{
   padding: 4px 8px 2px 8px;
   border-radius: 7px;
@@ -102,29 +101,47 @@ li{
   background: #3399FF;
   color: white;
 }
-.there{
+nav li a{
   padding: 4px 8px 3px 8px;
   border-radius: 7px;
   margin: 0px 15px 0px 0px;
 }
+/*more drop down (not used)*/
 .more{
   padding: 4px 8px 3px 8px;
   border-radius: 7px;
   margin: 0px 15px 0px 0px;
   background: white;
   border: 1px solid white;
-  transition: 0s;
+  transition: 0.2s;
 }
 .more:hover{
   padding: 4px 8px 3px 8px;
-  border-radius: 7px;
+  border-radius: 7px 7px 0px 0px;
   margin: 0px 15px 0px 0px;
   background: white;
   border: 1px solid #3399FF;
+  border-bottom: 1px solid white;
   transition: 0s;
 }
 
-/*left bar*/
+/*left bar relative positioning*/
+#more-menu{
+  max-width: 200px;
+  float: left;
+  margin: 40px 10px 0px 0px;
+  overflow-y: scroll;
+}
+#more-menu a{
+  display: block;
+  padding: 5px;
+}
+#more-menu p{
+  padding: 5px;
+  margin: auto;
+  color: #D0D0D0;
+}
+/*left bar fixed positioning with border (not used)*/
 #left{
   max-width: 200px;
   position: fixed;
@@ -140,7 +157,7 @@ li{
   color: black;
 }
 #left p{
-  display: block; /*unnecessary*/
+  display: block;
   padding: 5px;
   margin: auto;
   color: #D0D0D0;
@@ -148,12 +165,14 @@ li{
 
 /*each section on page*/
 #section{
-  /*position: absolute;*/
   margin: 40px 0px 0px 0px;
   animation: fadein 0.6s;
   -moz-animation: fadein 0.6s;
   -webkit-animation: fadein 0.6s;
   -o-animation: fadein 0.6s;
+}
+#section h4{
+  margin-top: 15px;
 }
 
 /*content elements*/
@@ -184,6 +203,118 @@ h4{
 p{
   margin: 10px 0px;
 }
+
+/*materials table*/
+#section #materials{
+  width: 650px;
+}
+#section #materials tr:first-child{
+  /*background: cyan;*/
+  font-weight: 700;
+}
+
+
+
+
+
+.materials {
+  margin:0px;padding:0px;
+  width:100%;
+  border:1px solid #ffffff;
+  
+  -moz-border-radius-bottomleft:5px;
+  -webkit-border-bottom-left-radius:5px;
+  border-bottom-left-radius:5px;
+  
+  -moz-border-radius-bottomright:5px;
+  -webkit-border-bottom-right-radius:5px;
+  border-bottom-right-radius:5px;
+  
+  -moz-border-radius-topright:5px;
+  -webkit-border-top-right-radius:5px;
+  border-top-right-radius:5px;
+  
+  -moz-border-radius-topleft:5px;
+  -webkit-border-top-left-radius:5px;
+  border-top-left-radius:5px;
+}.materials table{
+    border-collapse: collapse;
+        border-spacing: 0;
+  width:100%;
+  height:100%;
+  margin:0px;padding:0px;
+}.materials tr:last-child td:last-child {
+  -moz-border-radius-bottomright:5px;
+  -webkit-border-bottom-right-radius:5px;
+  border-bottom-right-radius:5px;
+}
+.materials table tr:first-child td:first-child {
+  -moz-border-radius-topleft:5px;
+  -webkit-border-top-left-radius:5px;
+  border-top-left-radius:5px;
+}
+.materials table tr:first-child td:last-child {
+  -moz-border-radius-topright:5px;
+  -webkit-border-top-right-radius:5px;
+  border-top-right-radius:5px;
+}.materials tr:last-child td:first-child{
+  -moz-border-radius-bottomleft:5px;
+  -webkit-border-bottom-left-radius:5px;
+  border-bottom-left-radius:5px;
+}.materials tr:hover td{
+  
+}
+.materials tr:nth-child(odd){ background-color:#eeeeee; }
+.materials tr:nth-child(even)    { background-color:#ffffff; }.materials td{
+  vertical-align:middle;
+  
+  
+  border:1px solid #ffffff;
+  border-width:0px 1px 1px 0px;
+  text-align:left;
+  padding:9px;
+  /*font-size:14px;
+  font-family:Helvetica;
+  font-weight:normal;*/
+  color:#000000;
+}.materials tr:last-child td{
+  border-width:0px 1px 0px 0px;
+}.materials tr td:last-child{
+  border-width:0px 0px 1px 0px;
+}.materials tr:last-child td:last-child{
+  border-width:0px 0px 0px 0px;
+}
+.materials tr:first-child td{
+    background:-o-linear-gradient(bottom, #eeeeee 5%, #eeeeee 100%);  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #eeeeee), color-stop(1, #eeeeee) );
+  background:-moz-linear-gradient( center top, #eeeeee 5%, #eeeeee 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeeeee", endColorstr="#eeeeee");  background: -o-linear-gradient(top,#eeeeee,eeeeee);
+
+  background-color:#eeeeee;
+  border:0px solid #ffffff;
+  text-align:center;
+  border-width:0px 0px 1px 1px;
+  /*font-size:14px;
+  font-family:Helvetica;
+  font-weight:bold;*/
+  color:#000000;
+}
+.materials tr:first-child:hover td{
+  background:-o-linear-gradient(bottom, #eeeeee 5%, #eeeeee 100%);  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #eeeeee), color-stop(1, #eeeeee) );
+  background:-moz-linear-gradient( center top, #eeeeee 5%, #eeeeee 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeeeee", endColorstr="#eeeeee");  background: -o-linear-gradient(top,#eeeeee,eeeeee);
+
+  background-color:#eeeeee;
+}
+.materials tr:first-child td:first-child{
+  border-width:0px 0px 1px 0px;
+}
+.materials tr:first-child td:last-child{
+  border-width:0px 0px 1px 1px;
+}
+
+
+
+
 
 /*image style*/
 img.center {
@@ -229,7 +360,6 @@ button{
   height: 450px;
   border: 1px solid #3399FF;
   border-radius: 10px;
-
 }
 
 /*pdf style*/
@@ -249,3 +379,19 @@ object[type="application/pdf"]{
 /*text selection*/
 ::selection { background: #e7e7e7; /* Safari */ }
 ::-moz-selection { background: #e7e7e7; /* Firefox */ }
+
+/*utoronto logo*/
+.logo{
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 15px;
+  display: block;
+  margin: 50px auto 60px auto;
+  width: 30%;
+  transition: 0.5s;
+}
+.logo:hover{
+  border: 1px solid #3399FF;
+  border-radius: 10px;
+  transition: 0s;
+}

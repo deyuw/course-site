@@ -1,1 +1,0 @@
-Course website is currently designed for David Liu's CSC236
