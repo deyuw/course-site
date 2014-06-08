@@ -1,8 +1,9 @@
 /*main*/
 body{
-  font-family: Avenir, sans-serif;
+  font-family: "Avenir", sans-serif;
   font-size: 16px;
   margin: 0 auto;
+  /*width: 1100px;*/
   width: 700px;
   padding: 0px 20px;
   line-height: 1.6;
@@ -25,7 +26,14 @@ nav{
   line-height: 2;
   margin: -40px 0 0 0;
   padding: 9px 0 6px 0;
-  /*background: white;*/
+  background-color: rgba(255, 255, 255, 0); /*transparent*/
+}
+#navbox{
+  position: fixed;
+  width: 100%;
+  height: 47px;
+  margin: -40px 0 0 0;
+  padding: 9px 0 6px 0;
   background-color: rgba(255, 255, 255, 0.95);
 }
 ul{
@@ -91,7 +99,7 @@ li{
   -webkit-animation: fadein 0.4s;
   -o-animation: fadein 0.4s;
 }
-.here{
+.here{ /*currently selected nav button*/
   padding: 4px 8px 2px 8px;
   border-radius: 7px;
   margin: 0px 15px 0px 0px;
@@ -107,12 +115,11 @@ nav li a{
   border-radius: 7px;
   margin: 0px 15px 0px 0px;
 }
-/*more drop down (not used)*/
-.more{
+.more{ /*more nav button drop down (currently only used on home page)*/
   padding: 4px 8px 3px 8px;
   border-radius: 7px;
   margin: 0px 15px 0px 0px;
-  background: white;
+  /*background: white;*/
   border: 1px solid white;
   transition: 0.2s;
 }
@@ -125,9 +132,7 @@ nav li a{
   border-bottom: 1px solid white;
   transition: 0s;
 }
-
-/*left bar relative positioning*/
-#more-menu{
+#more-menu{ /*left bar relative positioning*/
   max-width: 200px;
   float: left;
   margin: 40px 10px 0px 0px;
@@ -135,15 +140,21 @@ nav li a{
 }
 #more-menu a{
   display: block;
-  padding: 5px;
+  padding: 5px 5px 5px 10px;
+  margin: 0px 0px 5px 0px;
+  border-radius: 10px;
 }
-#more-menu p{
-  padding: 5px;
-  margin: auto;
-  color: #D0D0D0;
+#more-menu .here{
+  padding: 5px 5px 5px 10px;
+  background: #3399FF;
+  color: white;
 }
-/*left bar fixed positioning with border (not used)*/
-#left{
+#more-menu .here:hover{
+  background: #3399FF;
+  color: white;
+}
+
+#left{ /*left bar fixed positioning with border (not used)*/
   max-width: 200px;
   position: fixed;
   top: 70px; bottom: 10%;
@@ -178,7 +189,7 @@ nav li a{
 
 /*content elements*/
 a{
-  background: white;
+  /*background: white;*/
   padding: 2px 0px;
   border-radius: 4px;
   outline: none;
@@ -189,7 +200,7 @@ a{
 a:hover {
   background: #E9F6FB;
   transition: 0s;
-  cursor: pointer;
+  /*cursor: pointer;*/
 }
 h1{
   font-size: 28px;
@@ -238,13 +249,15 @@ p{
   -moz-border-radius-topleft:5px;
   -webkit-border-top-left-radius:5px;
   border-top-left-radius:5px;
-}.materials table{
-    border-collapse: collapse;
-        border-spacing: 0;
+}
+.materials table{
+  border-collapse: collapse;
+  border-spacing: 0;
   width:100%;
   height:100%;
   margin:0px;padding:0px;
-}.materials tr:last-child td:last-child {
+}
+.materials tr:last-child td:last-child {
   -moz-border-radius-bottomright:5px;
   -webkit-border-bottom-right-radius:5px;
   border-bottom-right-radius:5px;
@@ -258,18 +271,19 @@ p{
   -moz-border-radius-topright:5px;
   -webkit-border-top-right-radius:5px;
   border-top-right-radius:5px;
-}.materials tr:last-child td:first-child{
+}
+.materials tr:last-child td:first-child{
   -moz-border-radius-bottomleft:5px;
   -webkit-border-bottom-left-radius:5px;
   border-bottom-left-radius:5px;
-}.materials tr:hover td{
+}
+.materials tr:hover td{
   
 }
-.materials tr:nth-child(odd){ background-color:#eeeeee; }
-.materials tr:nth-child(even)    { background-color:#ffffff; }.materials td{
+.materials tr:nth-child(odd){ background-color:#f7f7f7; }
+.materials tr:nth-child(even){ background-color:#ffffff; }
+.materials td{
   vertical-align:middle;
-  
-  
   border:1px solid #ffffff;
   border-width:0px 1px 1px 0px;
   text-align:left;
@@ -278,19 +292,22 @@ p{
   font-family:Helvetica;
   font-weight:normal;*/
   color:#000000;
-}.materials tr:last-child td{
+}
+.materials tr:last-child td{
   border-width:0px 1px 0px 0px;
-}.materials tr td:last-child{
+}
+.materials tr td:last-child{
   border-width:0px 0px 1px 0px;
-}.materials tr:last-child td:last-child{
+}
+.materials tr:last-child td:last-child{
   border-width:0px 0px 0px 0px;
 }
 .materials tr:first-child td{
-    background:-o-linear-gradient(bottom, #eeeeee 5%, #eeeeee 100%);  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #eeeeee), color-stop(1, #eeeeee) );
-  background:-moz-linear-gradient( center top, #eeeeee 5%, #eeeeee 100% );
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeeeee", endColorstr="#eeeeee");  background: -o-linear-gradient(top,#eeeeee,eeeeee);
+    background:-o-linear-gradient(bottom, #f7f7f7 5%, #f7f7f7 100%);  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f7f7f7), color-stop(1, #f7f7f7) );
+  background:-moz-linear-gradient( center top, #f7f7f7 5%, #f7f7f7 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#f7f7f7", endColorstr="#f7f7f7");  background: -o-linear-gradient(top,#f7f7f7,f7f7f7);
 
-  background-color:#eeeeee;
+  background-color:#f7f7f7;
   border:0px solid #ffffff;
   text-align:center;
   border-width:0px 0px 1px 1px;
@@ -300,17 +317,20 @@ p{
   color:#000000;
 }
 .materials tr:first-child:hover td{
-  background:-o-linear-gradient(bottom, #eeeeee 5%, #eeeeee 100%);  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #eeeeee), color-stop(1, #eeeeee) );
-  background:-moz-linear-gradient( center top, #eeeeee 5%, #eeeeee 100% );
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeeeee", endColorstr="#eeeeee");  background: -o-linear-gradient(top,#eeeeee,eeeeee);
+  background:-o-linear-gradient(bottom, #f7f7f7 5%, #f7f7f7 100%);  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f7f7f7), color-stop(1, #f7f7f7) );
+  background:-moz-linear-gradient( center top, #f7f7f7 5%, #f7f7f7 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#f7f7f7", endColorstr="#f7f7f7");  background: -o-linear-gradient(top,#f7f7f7,f7f7f7);
 
-  background-color:#eeeeee;
+  background-color:#f7f7f7;
 }
 .materials tr:first-child td:first-child{
   border-width:0px 0px 1px 0px;
 }
 .materials tr:first-child td:last-child{
   border-width:0px 0px 1px 1px;
+}
+.materials td:first-child{
+
 }
 
 
@@ -329,10 +349,10 @@ table{
   outline: none;
   border-collapse: collapse;
 }
-td { 
+/*td { 
   padding: 0px 0px 10px 0px;
-}
-#announcement tr > td:first-child {
+}*/
+/*#announcement tr > td:first-child {
   color: #A9A9A9;
   width: 140px;
   text-align: right;
@@ -343,7 +363,7 @@ td {
 #announcement td:nth-child(2) {
   vertical-align:top;
   line-height: 1.4;
-}
+}*/
 #instructor tr > td:first-child {
   color: #A9A9A9;
   padding: 0px 20px 0px 0px;
@@ -388,7 +408,7 @@ object[type="application/pdf"]{
   padding: 15px;
   display: block;
   margin: 50px auto 60px auto;
-  width: 30%;
+  width: 40%;
   transition: 0.5s;
 }
 .logo:hover{
