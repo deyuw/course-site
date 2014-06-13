@@ -230,24 +230,27 @@ p{
 
 
 
-
+/*materials table*/
+.materials a:visited{
+  color: #25BA2A;
+}
 .materials {
   margin:0px;padding:0px;
   width:100%;
   border:1px solid #ffffff;
-  
+
   -moz-border-radius-bottomleft:5px;
   -webkit-border-bottom-left-radius:5px;
   border-bottom-left-radius:5px;
-  
+
   -moz-border-radius-bottomright:5px;
   -webkit-border-bottom-right-radius:5px;
   border-bottom-right-radius:5px;
-  
+
   -moz-border-radius-topright:5px;
   -webkit-border-top-right-radius:5px;
   border-top-right-radius:5px;
-  
+
   -moz-border-radius-topleft:5px;
   -webkit-border-top-left-radius:5px;
   border-top-left-radius:5px;
@@ -280,7 +283,7 @@ p{
   border-bottom-left-radius:5px;
 }
 .materials tr:hover td{
-  
+
 }
 .materials tr:nth-child(odd){ background-color:#f7f7f7; }
 .materials tr:nth-child(even){ background-color:#ffffff; }
@@ -351,7 +354,7 @@ table{
   outline: none;
   border-collapse: collapse;
 }
-/*td { 
+/*td {
   padding: 0px 0px 10px 0px;
 }*/
 /*#announcement tr > td:first-child {
