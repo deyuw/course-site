@@ -198,12 +198,32 @@ a{
   color: #3399FF;
   text-decoration: none;
   transition: 0.5s;
+  /*background: url(images/external-link.gif) no-repeat right top;*/
+  /*padding-right: 10px;*/
 }
-a:hover {
+a:hover, a:focus {
   background: #E9F6FB;
   transition: 0s;
   /*cursor: pointer;*/
 }
+/*a.external{
+  position: relative;
+}
+a.external span{
+  display: none;
+}
+a.external:hover span{
+  display: block;
+  position: absolute;
+  top: 3em;
+  left: 1em;
+  border-radius: 2px;
+  border: 1px solid black;
+  background: yellow;
+  color: black;
+  font-size: 12px;
+  padding: 0px 3px;
+}*/
 h1{
   font-size: 28px;
   font-weight: 100;
