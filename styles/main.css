@@ -13,6 +13,48 @@ body{
   width: 650px;
   margin: 0 auto;
 }
+#section{
+  margin: 40px 0px 0px 0px;
+  animation: fadein 0.6s;
+  -moz-animation: fadein 0.6s;
+  -webkit-animation: fadein 0.6s;
+  -o-animation: fadein 0.6s;
+}
+h1{
+  font-size: 28px;
+  font-weight: 100;
+  line-height: 1.2;
+  margin: 10px 0px 15px 0px;
+  /*background: cyan;*/
+}
+h4{
+  margin: 10px 0px;
+}
+p{
+  margin: 10px 0px;
+}
+#section h4{
+  margin-top: 15px;
+}
+#section #materials{ /*materials table*/
+  width: 650px;
+}
+#section #materials tr:first-child{
+  /*background: cyan;*/
+  font-weight: 700;
+}
+/*animations*/
+@keyframes fadein { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadein { from { opacity:0; } to { opacity:1; } }
+@-webkit-keyframes fadein { from { opacity:0; } to { opacity:1; } }
+@-o-keyframes fadein { from { opacity:0; } to { opacity: 1; } }
+/*text selection*/
+::selection { background: #e7e7e7; /* Safari */ }
+::-moz-selection { background: #e7e7e7; /* Firefox */ }
+
+
+
+/*resets*/
 *{
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -21,6 +63,43 @@ body{
   padding: 0;
 }
 
+
+
+/*links*/
+a{
+  /*background: white;*/
+  padding: 2px 0px;
+  border-radius: 4px;
+  outline: none;
+  color: #3399FF;
+  text-decoration: none;
+  transition: 0.5s;
+  /*background: url(images/external-link.gif) no-repeat right top;*/
+  /*padding-right: 10px;*/
+}
+a:hover, a:focus {
+  background: #E9F6FB;
+  transition: 0s;
+  /*cursor: pointer;*/
+}
+/*a.external{
+  position: relative;
+}
+a.external span{
+  display: none;
+}
+a.external:hover span{
+  display: block;
+  position: absolute;
+  top: 3em;
+  left: 1em;
+  border-radius: 2px;
+  border: 1px solid black;
+  background: yellow;
+  color: black;
+  font-size: 12px;
+  padding: 0px 3px;
+}*/
 /*top navigation bar*/
 nav{
   position: fixed;
@@ -155,7 +234,6 @@ nav li a{
   background: #3399FF;
   color: white;
 }
-
 #left{ /*left bar fixed positioning with border (not used)*/
   max-width: 200px;
   position: fixed;
@@ -165,88 +243,17 @@ nav li a{
   border-radius: 10px;
   padding: 10px;
 }
-#left a{
+#left a{ /*not used*/
   display: block;
   padding: 5px;
   color: black;
 }
-#left p{
+#left p{ /*not used*/
   display: block;
   padding: 5px;
   margin: auto;
   color: #D0D0D0;
 }
-
-/*each section on page*/
-#section{
-  margin: 40px 0px 0px 0px;
-  animation: fadein 0.6s;
-  -moz-animation: fadein 0.6s;
-  -webkit-animation: fadein 0.6s;
-  -o-animation: fadein 0.6s;
-}
-#section h4{
-  margin-top: 15px;
-}
-
-/*content elements*/
-a{
-  /*background: white;*/
-  padding: 2px 0px;
-  border-radius: 4px;
-  outline: none;
-  color: #3399FF;
-  text-decoration: none;
-  transition: 0.5s;
-  /*background: url(images/external-link.gif) no-repeat right top;*/
-  /*padding-right: 10px;*/
-}
-a:hover, a:focus {
-  background: #E9F6FB;
-  transition: 0s;
-  /*cursor: pointer;*/
-}
-/*a.external{
-  position: relative;
-}
-a.external span{
-  display: none;
-}
-a.external:hover span{
-  display: block;
-  position: absolute;
-  top: 3em;
-  left: 1em;
-  border-radius: 2px;
-  border: 1px solid black;
-  background: yellow;
-  color: black;
-  font-size: 12px;
-  padding: 0px 3px;
-}*/
-h1{
-  font-size: 28px;
-  font-weight: 100;
-  line-height: 1.2;
-  margin: 10px 0px 15px 0px;
-  /*background: cyan;*/
-}
-h4{
-  margin: 10px 0px;
-}
-p{
-  margin: 10px 0px;
-}
-
-/*materials table*/
-#section #materials{
-  width: 650px;
-}
-#section #materials tr:first-child{
-  /*background: cyan;*/
-  font-weight: 700;
-}
-
 
 
 
@@ -358,10 +365,6 @@ p{
 
 }
 
-
-
-
-
 /*image style*/
 img.center {
   display: block;
@@ -415,16 +418,6 @@ object[type="application/pdf"]{
   width: 850px;
   height: 80vh;
 }
-
-/*animations*/
-@keyframes fadein { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadein { from { opacity:0; } to { opacity:1; } }
-@-webkit-keyframes fadein { from { opacity:0; } to { opacity:1; } }
-@-o-keyframes fadein { from { opacity:0; } to { opacity: 1; } }
-
-/*text selection*/
-::selection { background: #e7e7e7; /* Safari */ }
-::-moz-selection { background: #e7e7e7; /* Firefox */ }
 
 /*utoronto logo*/
 .logo{
