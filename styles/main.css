@@ -1,7 +1,5 @@
 /*style structure: main, resets, links, other*/
 
-
-
 /*main*/
 body{
   font-family: "Avenir", sans-serif;
@@ -13,11 +11,11 @@ body{
   line-height: 1.6;
   cursor: default;
 }
-#center{
+#center{ /*=====================================================================*/
   width: 650px;
   margin: 0 auto;
 }
-#section{
+#content{
   margin: 40px 0px 0px 0px;
   animation: fadein 0.6s;
   -moz-animation: fadein 0.6s;
@@ -37,13 +35,13 @@ h4{
 p{
   margin: 10px 0px;
 }
-#section h4{
+#content h4{
   margin-top: 15px;
 }
-#section #materials{ /*materials table*/
+#content #materials{ /*materials table*/
   width: 650px;
 }
-#section #materials tr:first-child{
+#content #materials tr:first-child{
   /*background: cyan;*/
   font-weight: 700;
 }
