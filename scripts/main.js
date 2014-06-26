@@ -17,3 +17,8 @@ $(document).scroll(function() {
 
 // $('#discuss').tooltip();
 // $('#submit').tooltip()
+
+function toggleMore{
+	var dropdown = document.getElementById("more-dropdown");
+	dropdown.innerHTML="";
+}
