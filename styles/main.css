@@ -3,8 +3,10 @@
 style structure: main, resets, links, other
 
 colors:
-main: #3399FF
+link: #3399FF
+hovered link: #E9F6FB
 visited link: #25BA2A
+translucency: rgba(255, 255, 255, 0.9)
 
 contact author for bugs: dyw999@gmail.com
 
@@ -137,7 +139,7 @@ nav{
   position: fixed;
   width: 658px;
   line-height: 2;
-  margin: -55px 0 0 -8px;
+  margin: -57px 0 0 -8px;
   padding: 9px 0 6px 0;
   background-color: rgba(255, 255, 255, 0); /*transparent*/
 }
@@ -154,11 +156,35 @@ nav li a{
   border-radius: 7px;
   /*display: inline-block;*/
 }
-#more-dropdown{ /*@work*/
+#more{
+  /*padding: 4px 20px 3px 8px;
+  background: url(../images/dropdown-shape-blue.png) no-repeat;
+  background-position: 50%;*/
+  cursor: pointer;
+}
+#more-dropdown{
+  display: none;
   position: absolute;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
   width: auto;
-  height: auto;
-  border: 1px solid black;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #3399FF;
+  border-radius: 4px 4px 4px 4px;
+  animation: fadein 0.2s;
+  -moz-animation: fadein 0.2s;
+  -webkit-animation: fadein 0.2s;
+  -o-animation: fadein 0.2s;
+}
+#more-dropdown li{
+  display: block;
+  margin: 0px;
+  padding: 0px;
+}
+#more-dropdown li a{
+  display: block; /*why does this enable full hover highlight?*/
+  margin: 0px;
 }
 #nav-background{
   position: fixed;
@@ -166,7 +192,7 @@ nav li a{
   height: 47px;
   margin: -40px 0 0 0;
   padding: 9px 0 6px 0;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 #line_left{
   position: fixed;
@@ -351,11 +377,11 @@ nav li a{
 .materials tr:hover td{
 
 }
-.materials tr:nth-child(odd){ background-color:#f7f7f7; }
+.materials tr:nth-child(odd){ background-color:#ffffff; }
 .materials tr:nth-child(even){ background-color:#ffffff; }
 .materials td{
   vertical-align:middle;
-  border:1px solid #ffffff;
+  border:1px solid #aaaaaa;
   border-width:0px 1px 1px 0px;
   text-align:left;
   padding:9px;
@@ -379,7 +405,7 @@ nav li a{
   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#f7f7f7", endColorstr="#f7f7f7");  background: -o-linear-gradient(top,#f7f7f7,f7f7f7);
 
   background-color:#f7f7f7;
-  border:0px solid #ffffff;
+  border:0px solid #aaaaaa;
   /*text-align:center;*/
   border-width:0px 0px 1px 1px;
   /*font-size:14px;

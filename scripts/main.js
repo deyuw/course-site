@@ -18,7 +18,28 @@ $(document).scroll(function() {
 // $('#discuss').tooltip();
 // $('#submit').tooltip()
 
-// function toggleMore{
+// toggle the More menu
+// function toggleMore(){
+// 	// var more = document.getElementById("more");
 // 	var dropdown = document.getElementById("more-dropdown");
-// 	dropdown.innerHTML="";
+// 	if (dropdown.style.display == "none"){
+// 		dropdown.style.display = "initial";
+// 		// more.style.background = "#E9F6FB";
+// 	} else {
+// 		dropdown.style.display = "none";
+// 		// more.style.background = "initial";
+// 		// more.style.background.hover = "#E9F6FB";
+// 	}
 // }
+
+// toggle the More menu
+$('html').click(function() {
+  $('#more-dropdown').hide(); 
+});
+$('nav').click(function(event){
+  event.stopPropagation();
+});
+$('#more').click(function(event){
+  $('#more-dropdown').toggle();
+  // event.stopPropagation();
+});
