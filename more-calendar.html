@@ -8,6 +8,25 @@
   <link rel="stylesheet" href="normalize.css"></link>
   <script src="scripts/jquery-1.11.1.js"></script>
   <script src="content.js"></script>
+
+  <link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
+  <script src='fullcalendar/lib/jquery.min.js'></script>
+  <script src='fullcalendar/lib/moment.min.js'></script>
+  <script src='fullcalendar/fullcalendar.js'></script>
+  <script type='text/javascript' src='fullcalendar/gcal.js'></script>
+  <script type='text/javascript'>
+
+$(document).ready(function() {
+    $('#calendar').fullCalendar({
+        events: {
+            url: 'https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;mode=Week&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=girap627neuf616brgv7hp8ur4%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=America%2FToronto',
+            className: 'gcal-event'
+        }
+    });
+});
+
+</script>
+  
 </head>
 
 <body style="width: 1150px;">
@@ -48,19 +67,36 @@
     <div id="line_left_long"></div>
     <div id="line_right_long"></div>
     <nav>
-      <ul> 
-        <li><a href="home.html">CSC236</a></li> 
-        <li><a href="materials.html">Materials</a></li> 
-        <li><a href="https://piazza.com/"target="_blank">Discuss</a></li> 
-        <li><a href="" target="_blank">Submit</a></li> 
-        <li><a href="more-calendar.html" class="here">More</a></li> 
+      <ul>
+        <li><a href="home.html">CSC236</a></li>
+        <li><a href="materials.html">Materials</a></li>
+        <li><a href="https://piazza.com/" class="external">Discuss</a></li>
+        <li><a href="" class="external">Submit</a></li>
+        <li><a id="more" class="here">More</a>
+          <div id="more-wrap">
+            <ul id="more-dropdown">
+              <li><a href="more-calendar.html">Calendar</a></li>
+              <li><a href="">Full Course Info</a></li>
+              <li><a href="">Latex Instructions</a></li>
+              <li><a href="">Policies</a></li>
+              <li><a href="">Anonymous Feedback</a></li>
+              <li><a href="">University Exam Repo</a></li>
+              <li><a href="">Computer Science Faculty</a></li>
+              <li><a href="">University of Toronto</a></li>
+              <li><a href="">Site Feedback</a></li>
+            </ul>
+          </div>
+        </li>
         <span style="float: right;"><li>Spring 2014</li></span>
-      </ul> 
-    </nav> 
+      </ul>
+    </nav>
 
     <div id="content">
       <br />
-      <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;mode=Week&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=girap627neuf616brgv7hp8ur4%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=America%2FToronto" style="margin-top: 5px; margin-bottom: 25px" width="650" height="500" frameborder="0" scrolling="no" style="max-width: 650px; min-width: 200px;"></iframe>
+      <p>start</p>
+      <div id="calendar"></div>
+      <p>end</p>
+      <!-- <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;mode=Week&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=girap627neuf616brgv7hp8ur4%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=America%2FToronto" style="margin-top: 5px; margin-bottom: 25px" width="650" height="500" frameborder="0" scrolling="no" style="max-width: 650px; min-width: 200px;"></iframe> -->
 
       <p>a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a </p>
 
