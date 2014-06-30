@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CSC236 Spring 2014</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico"/> 
+  <link rel="stylesheet" href="styles/main.css"></link>
+  <link rel="stylesheet" href="normalize.css"></link>
+  <script src="scripts/jquery-1.11.1.js"></script>
+  <script src="content.js"></script>
+
+  <link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
+  <script src='fullcalendar/lib/jquery.min.js'></script>
+  <script src='fullcalendar/lib/moment.min.js'></script>
+  <script src='fullcalendar/fullcalendar.js'></script>
+  <script type='text/javascript' src='fullcalendar/gcal.js'></script>
+
+  <style type="text/css">code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}</style>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i = 0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  <script type='text/javascript'>
+
+$(document).ready(function() {
+    $('#calendar').fullCalendar({
+        events: {
+            url: 'https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;mode=Week&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=girap627neuf616brgv7hp8ur4%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=America%2FToronto',
+            className: 'gcal-event'
+        }
+    });
+});
+
+</script>
+  
+</head>
+
+<body style="width: 1150px;">
+  <!-- <div id="left">
+    <table>
+      <tr><td><a onClick="lec1()">Simple Induction</a></td></tr>
+      <tr><td><a onClick="lec2()">Complete & Structural Induction</a></td></tr>
+      <tr><td><a onClick="lec3()">Recursively Defined Functions</a></td></tr>
+      <tr><td><a onClick="lec4()">Analysing Recursive Algorithms</a></td></tr>
+      <tr><td><p>Divide-and-Conquer</p></td></tr>
+      <tr><td><p>Correctness: Recursive Functions</p></td></tr>
+      <tr><td><p>Correctness: Iterative Functions</p></td></tr>
+      <tr><td><p>Correctness: Termination</p></td></tr>
+      <tr><td><p>Regular Languages & Regular Expressions</p></td></tr>
+      <tr><td><p>Deterministic Finite Automata</p></td></tr>
+      <tr><td><p>Nondeterminism</p></td></tr>
+      <tr><td><p>Equivalence of Representations</p></td></tr>
+    </table>
+  </div> -->
+
+  <div id="nav-background"></div>
+
+  <div id="more-menu">
+    <table>
+      <tr><td><a class="here" href="more-calendar.html">Calendar</a></tr></td>
+      <tr><td><a href="">Full Course Info</a></tr></td>
+      <tr><td><a href="">Latex Instructions</a></tr></td>
+      <tr><td><a href="">Policies</a></tr></td>
+      <tr><td><a href="">Anonymous Feedback</a></tr></td>
+      <tr><td><a href="">University Exam Repo</a></tr></td>
+      <tr><td><a href="">Computer Science Faculty</a></tr></td>
+      <tr><td><a href="">University of Toronto</a></tr></td>
+      <tr><td><a href="">Site Feedback</a></tr></td>
+    </table>
+  </div>
+
+  <div id="center">
+    <div id="line_left_long"></div>
+    <div id="line_right_long"></div>
+    <nav>
+      <ul>
+        <li><a href="home.html">CSC236</a></li>
+        <li><a href="materials.html">Materials</a></li>
+        <li><a href="https://piazza.com/" class="external">Discuss</a></li>
+        <li><a href="" class="external">Submit</a></li>
+        <li><a id="more" class="here">More</a>
+          <div id="more-wrap">
+            <ul id="more-dropdown">
+              <li><a href="more-calendar.html">Calendar</a></li>
+              <li><a href="">Full Course Info</a></li>
+              <li><a href="">Latex Instructions</a></li>
+              <li><a href="">Policies</a></li>
+              <li><a href="">Anonymous Feedback</a></li>
+              <li><a href="">University Exam Repo</a></li>
+              <li><a href="">Computer Science Faculty</a></li>
+              <li><a href="">University of Toronto</a></li>
+              <li><a href="">Site Feedback</a></li>
+            </ul>
+          </div>
+        </li>
+        <span style="float: right;"><li>Spring 2014</li></span>
+      </ul>
+    </nav>
+
+    <div id="content">
+      <br />
+
+      <p>$\forall n \geq m$</p>
+
+      <p>a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a </p>
+
+      <!-- <br />
+      <h1>Simple Induction</h1>
+      <p>In this video, I talk about simple induction, the first type of induction in the list of induction methods to be taught in this class. You can download the video by right clicking on the video.</p>
+      <div id="vid1"><button id="button1" onClick="play1()">open vid</button></div>
+      <p>This video talks about well-ordering.</p>
+
+      <p id="2"><p>
+      </br>
+      </br>
+      </br>
+      <h1>Complete and Structural Induction</h1>
+      <iframe width="650" height="450" src="http://www.youtube.com/embed/0LtSgSsnu7o?rel=0" frameborder="0" allowfullscreen></iframe>
+
+      <p id="3"><p>
+      </br>
+      </br>
+      </br>
+      <h1>Recursively-Defined Functions</h1>
+      <iframe width="650" height="450" src="http://www.youtube.com/embed/0LtSgSsnu7o?rel=0" frameborder="0" allowfullscreen></iframe>
+
+      <p id="4"><p>
+      </br>
+      </br>
+      </br>
+      <h1>Analysing Recursive Algorithms</h1>
+      <p>In the following video we go deeper in understanding recursive algorithms.</p>
+      <iframe width="650" height="450" src="http://www.youtube.com/embed/0LtSgSsnu7o?rel=0" frameborder="0" allowfullscreen></iframe> -->
+    </div>
+
+    <!-- <a href="http://www.utoronto.ca/" target="_blank"><img style="display: block; margin: 50px 0px; margin-left: auto; margin-right: auto; width: 25%" src="images/utoronto.jpg" /></a>
+    <h6 style="font-size: 12px; margin: 0 auto; text-align:center;">Submit site feedback to <a href="mailto:dyw999@gmail.com?Subject=Site%20feedback" target="_blank">dyw999@gmail.com</a></h6> -->
+    
+    <!-- <h6 style="position: absolute; margin: 0 auto; text-align:center; font-size: 12px;">Submit site feedback to <a href="mailto:dyw999@gmail.com?Subject=Site%20feedback" target="_blank">dyw999@gmail.com</a></h6> -->
+    
+    <script src="scripts/main.js"></script>
+      
+
+
+  </div>
+  
+
+</body>
+</html>
