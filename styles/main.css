@@ -116,6 +116,7 @@ a:hover, a:focus {
   transition: 0s;
   /*cursor: pointer;*/
 }
+/*to indicate an external link*/
 /*a.external{
   position: relative;
 }
@@ -303,7 +304,7 @@ nav li a{
 #more-menu{ /*left bar, with relative positioning*/
   max-width: 200px;
   float: left;
-  margin: 40px 10px 0px 0px;
+  margin: 20px 10px 0px 0px;
   overflow-y: scroll;
 }
 #more-menu a{
@@ -493,7 +494,7 @@ object[type="application/pdf"]{
   padding: 15px;
   display: block;
   margin: 50px auto 60px auto;
-  width: 40%;
+  width: 30%;
   transition: 0.5s;
 }
 .logo:hover{

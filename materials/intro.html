@@ -8,22 +8,28 @@
   <link rel="stylesheet" href="../normalize.css" />
   <script src="../scripts/jquery-1.11.1.js"></script>
   <script src="../scripts/misc.js"></script>
+
+  <!-- mathjax -->
+  <style type="text/css">code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}</style>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i = 0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 </head>
 <body>
   <div id="center">
-    <div id="line_left"></div>
-    <div id="line_right"></div>
-    <div id="navbox"></div>
-    <nav>
-      <ul>
-        <li><a href="../home.html">CSC236</a></li>
-        <li><a href="../materials.html" class="here">Materials</a></li>
-        <li><a href="https://piazza.com/" target="_blank">Discuss</a></li>
-        <li><a href="" target="_blank">Submit</a></li>
-        <li><a href="../more-calendar.html">More</a></li>
-        <span style="float: right;"><li>Spring 2014</li></span>
-      </ul>
-    </nav>
     <div id="section">
       <br />
       <!-- ===================================================================== -->
@@ -33,7 +39,7 @@
 
       <h1>Course Intro</h1>
       <p>Welcome to CSC236! In this course, you will learn about mathematical induction, a powerful proof technique in mathematics and computer science. You will then apply this technique to analyse programs in two different ways: measuring the running time of recursive algorithms, and formally proving algorithm correctness via preconditions, postconditions, and loop invariants. Finally, you will learn about the theory of finite automata, a simple model of computation, and regular languages, both of which have several applications in diverse fields of computer science, from computational biology to natural language processing.</p>
-      <p>New announcements will be posted on <a href="https://piazza.com/" class="external">Piazza<span>piazza.com</span></a> (the discussion board). Please check it regularly.</p>
+      <p>New announcements will be posted on <a href="https://piazza.com/" class="external">Piazza</a> (the discussion board). Please check it regularly.</p>
       <h4>Instructor</h4>
       <p><a href="http://www.cs.toronto.edu/~liudavid/" target="_blank">David Liu</a></p>
       <table id="instructor">
@@ -57,19 +63,20 @@
       <p>L0101: Thursdays 4-6 in LM 159</p>
       <p>L0201: Thursday 11-12, 1-2 in GB 120</p>
       <a href="">You can see the full course syllabus here.</a>
-      </div>
+      
+      
 
 
       <!-- ===================================================================== -->
       <!-- ================================= end =============================== -->
       <!-- ===================================================================== -->
-
+      
       <br/>
       <br/>
       <br/>
       <!-- scripts -->
       <script src="../scripts/main.js"></script>
-
+      </div>
     </div>
 </body>
 </html>

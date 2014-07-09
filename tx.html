@@ -14,7 +14,18 @@
   <script src='fullcalendar/lib/moment.min.js'></script>
   <script src='fullcalendar/fullcalendar.js'></script>
   <script type='text/javascript' src='fullcalendar/gcal.js'></script>
+  <script type='text/javascript'>
+    $(document).ready(function() {
+        $('#calendar').fullCalendar({
+            events: {
+                url: 'https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;mode=Week&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=girap627neuf616brgv7hp8ur4%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=America%2FToronto',
+                className: 'gcal-event'
+            }
+        });
+    });
+  </script>
 
+  <!-- mathjax -->
   <style type="text/css">code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}</style>
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -31,62 +42,18 @@
     });
   </script>
   <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  <script type='text/javascript'>
-
-$(document).ready(function() {
-    $('#calendar').fullCalendar({
-        events: {
-            url: 'https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;mode=Week&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=girap627neuf616brgv7hp8ur4%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=America%2FToronto',
-            className: 'gcal-event'
-        }
-    });
-});
-
-</script>
   
 </head>
 
 <body style="width: 1150px;">
-  <!-- <div id="left">
-    <table>
-      <tr><td><a onClick="lec1()">Simple Induction</a></td></tr>
-      <tr><td><a onClick="lec2()">Complete & Structural Induction</a></td></tr>
-      <tr><td><a onClick="lec3()">Recursively Defined Functions</a></td></tr>
-      <tr><td><a onClick="lec4()">Analysing Recursive Algorithms</a></td></tr>
-      <tr><td><p>Divide-and-Conquer</p></td></tr>
-      <tr><td><p>Correctness: Recursive Functions</p></td></tr>
-      <tr><td><p>Correctness: Iterative Functions</p></td></tr>
-      <tr><td><p>Correctness: Termination</p></td></tr>
-      <tr><td><p>Regular Languages & Regular Expressions</p></td></tr>
-      <tr><td><p>Deterministic Finite Automata</p></td></tr>
-      <tr><td><p>Nondeterminism</p></td></tr>
-      <tr><td><p>Equivalence of Representations</p></td></tr>
-    </table>
-  </div> -->
-
   <div id="nav-background"></div>
-
-  <div id="more-menu">
-    <table>
-      <tr><td><a class="here" href="more-calendar.html">Calendar</a></tr></td>
-      <tr><td><a href="">Full Course Info</a></tr></td>
-      <tr><td><a href="">Latex Instructions</a></tr></td>
-      <tr><td><a href="">Policies</a></tr></td>
-      <tr><td><a href="">Anonymous Feedback</a></tr></td>
-      <tr><td><a href="">University Exam Repo</a></tr></td>
-      <tr><td><a href="">Computer Science Faculty</a></tr></td>
-      <tr><td><a href="">University of Toronto</a></tr></td>
-      <tr><td><a href="">Site Feedback</a></tr></td>
-    </table>
-  </div>
 
   <div id="center">
     <div id="line_left_long"></div>
     <div id="line_right_long"></div>
     <nav>
       <ul>
-        <li><a href="home.html">CSC236</a></li>
+        <li><a href="index.html">CSC236</a></li>
         <li><a href="materials.html">Materials</a></li>
         <li><a href="https://piazza.com/" class="external">Discuss</a></li>
         <li><a href="" class="external">Submit</a></li>
@@ -114,7 +81,31 @@ $(document).ready(function() {
 
       <p>$\forall n \geq m$</p>
 
-      <p>a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a </p>
+      <p>Prove, by induction, that <span class="math">$\forall n \in \N$</span>, the units digit of <span class="math">4<sup><em>n</em></sup></span> is either 1, 4, or 6.</p>
+<p>This is your chance to show us you understand how induction proofs go; the content of this question is not too difficult. Remember that <span class="math">$0 \in \N$</span>. Hint: this question is also a review of using cases in proofs.</p>
+<p>Note: The <strong>LaTeX Bonus</strong> is in effect for this problem set. See the course webpage for details.</p>
+<ol>
+<li><p>It is well-known that every set of size <span class="math"><em>n</em></span> (<span class="math">$n \in \N$</span>) has exactly <span class="math">2<sup><em>n</em></sup></span> subsets. We can classify these subsets based on their number of elements. For example, if <span class="math"><em>S</em></span> is a set of size <span class="math"><em>n</em></span>, then <span class="math"><em>S</em></span> contains exactly one subset of size 0 (the empty set), and <span class="math"><em>n</em></span> subsets of size 1 (simply pick one of the <span class="math"><em>n</em></span> elements).</p>
+<ol>
+<li><p><strong>[5]</strong> Discover through experimentation/computation a formula for the number of <em>two</em>-element subsets of a set of size <span class="math"><em>n</em></span>. Then, prove your formula is correct for all <span class="math"><em>n</em> ≥ 0</span>, using simple induction.</p></li>
+<li><p><strong>[5]</strong> Prove that for all <span class="math"><em>n</em> ≥ 0</span>, every set of size <span class="math"><em>n</em></span> has <span class="math">$\frac{n(n-1)(n-2)}{6}$</span> <em>three</em>-element subsets. You should use part (a) in your proof.</p></li>
+</ol>
+<p>Do NOT appeal to “binomial coefficients” <span class="math">$\binom{n}{k}$</span> in your solution! This defeats the whole purpose of the question.</p></li>
+<li><p>Suppose you have an unlimited supply of 3- and 8-cent coins. It may be somewhat surprising that there exists a number <span class="math">$m \in \N$</span> such that for every <span class="math"><em>n</em> ≥ <em>m</em></span>, it is possible to get a combination of 3- and 8-cent coins whose value is exactly <span class="math"><em>n</em></span>.</p>
+<ol>
+<li><p><strong>[6]</strong> Find <em>the smallest possible</em> value of <span class="math"><em>m</em></span>, and then prove that <span class="math">∀<em>n</em> ≥ <em>m</em></span>, it is possible to make <span class="math"><em>n</em></span> cents using 3- and 8-cent coins by <em>simple</em> induction. Do not use complete induction; this will be on your next problem set.</p>
+<p>Hint: to use a simple induction argument, you must show how to make a value of <span class="math"><em>k</em> + 1</span> from a set of coins whose value is <span class="math"><em>k</em></span>. Suppose you had a set of coins totalling 24; how could you turn that 24 into a 25?</p></li>
+<li><p><strong>[2]</strong> Show that your <span class="math"><em>m</em></span> from part (a) really is the smallest value possible by justifying why it is <em>impossible</em> to get the value <span class="math"><em>m</em> − 1</span> from 3- and 8-cent coins.</p></li>
+<li><p><strong>[2]</strong> Finally, explain why your induction proof in part (a) FAILS if you start at <span class="math"><em>m</em> − 1</span> instead of <span class="math"><em>m</em></span> (again, for the value of <span class="math"><em>m</em></span> you found).</p></li>
+</ol></li>
+</ol>
+<p>Write a <em>recursive</em> program that takes in a list (representing a set) and outputs...</p>
+<ul>
+<li><p>All 2-element subsets of the list</p></li>
+<li><p>All 3-element subsets of the list</p></li>
+<li><p>All subsets of the list</p></li>
+</ul>
+<p>Then, write a recursive program that takes in a list and a natural number <span class="math"><em>k</em></span>, and outputs all <span class="math"><em>k</em></span>-element subsets of the list.</p>
 
       <!-- <br />
       <h1>Simple Induction</h1>

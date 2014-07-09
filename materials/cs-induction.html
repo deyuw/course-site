@@ -8,22 +8,28 @@
   <link rel="stylesheet" href="../normalize.css" /> 
   <script src="../scripts/jquery-1.11.1.js"></script>
   <script src="../scripts/misc.js"></script>
+
+  <!-- mathjax -->
+  <style type="text/css">code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}</style>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i = 0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 </head> 
 <body> 
   <div id="center">
-    <div id="line_left"></div>
-    <div id="line_right"></div>
-    <div id="navbox"></div>
-    <nav>
-      <ul> 
-        <li><a href="../home.html">CSC236</a></li> 
-        <li><a href="../materials.html" class="here">Materials</a></li> 
-        <li><a href="https://piazza.com/" target="_blank">Discuss</a></li> 
-        <li><a href="" target="_blank">Submit</a></li> 
-        <li><a href="../more-calendar.html">More</a></li> 
-        <span style="float: right;"><li>Spring 2014</li></span>
-      </ul> 
-    </nav> 
     <div id="section">
       <br />
       <!-- ===================================================================== -->
@@ -31,7 +37,8 @@
       <!-- ===================================================================== -->
 
 
-
+      <h1>Complete and Structural Induction</h1>
+      <iframe width="650" height="450" src="http://www.youtube.com/embed/0LtSgSsnu7o?rel=0" frameborder="0" allowfullscreen></iframe>
 
 
 
@@ -39,7 +46,6 @@
       <!-- ===================================================================== -->
       <!-- ================================= end =============================== -->
       <!-- ===================================================================== -->
-
       <br/>
       <br/>
       <br/>
@@ -48,5 +54,6 @@
       <script src="../scripts/main.js"></script>
 
     </div>
+  </div>
 </body>
 </html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head> 
+  <meta charset="utf-8" /> 
+  <title>CSC236 Spring 2014</title> 
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico" /> 
+  <link rel="stylesheet" href="../styles/main.css" /> 
+  <link rel="stylesheet" href="../normalize.css" /> 
+  <script src="../scripts/jquery-1.11.1.js"></script>
+  <script src="../scripts/misc.js"></script>
+
+  <!-- mathjax -->
+  <style type="text/css">code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}</style>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i = 0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+</head> 
+<body> 
+  <div id="center">
+    <div id="section">
+      <br />
+      <!-- ===================================================================== -->
+      <!-- ========================= paste content here ======================== -->
+      <!-- ===================================================================== -->
+
+
+      <h1>Problem Set 1</h1>
+
+
+      <p>Prove, by induction, that <span class="math">\(\forall n \in \N\)</span>, the units digit of <span class="math">\(4^n\)</span> is either 1, 4, or 6.</p>
+<p>This is your chance to show us you understand how induction proofs go; the content of this question is not too difficult. Remember that <span class="math">\(0 \in \N\)</span>. Hint: this question is also a review of using cases in proofs.</p>
+<p>Note: The <strong>LaTeX Bonus</strong> is in effect for this problem set. See the course webpage for details.</p>
+<ol>
+<li><p>It is well-known that every set of size <span class="math">\(n\)</span> (<span class="math">\(n \in \N\)</span>) has exactly <span class="math">\(2^n\)</span> subsets. We can classify these subsets based on their number of elements. For example, if <span class="math">\(S\)</span> is a set of size <span class="math">\(n\)</span>, then <span class="math">\(S\)</span> contains exactly one subset of size 0 (the empty set), and <span class="math">\(n\)</span> subsets of size 1 (simply pick one of the <span class="math">\(n\)</span> elements).</p>
+<ol>
+<li><p><strong>[5]</strong> Discover through experimentation/computation a formula for the number of <em>two</em>-element subsets of a set of size <span class="math">\(n\)</span>. Then, prove your formula is correct for all <span class="math">\(n \geq 0\)</span>, using simple induction.</p></li>
+<li><p><strong>[5]</strong> Prove that for all <span class="math">\(n \geq 0\)</span>, every set of size <span class="math">\(n\)</span> has <span class="math">\(\frac{n(n-1)(n-2)}{6}\)</span> <em>three</em>-element subsets. You should use part (a) in your proof.</p></li>
+</ol>
+<p>Do NOT appeal to “binomial coefficients” <span class="math">\(\binom{n}{k}\)</span> in your solution! This defeats the whole purpose of the question.</p></li>
+<li><p>Suppose you have an unlimited supply of 3- and 8-cent coins. It may be somewhat surprising that there exists a number <span class="math">\(m \in \N\)</span> such that for every <span class="math">\(n \geq m\)</span>, it is possible to get a combination of 3- and 8-cent coins whose value is exactly <span class="math">\(n\)</span>.</p>
+<ol>
+<li><p><strong>[6]</strong> Find <em>the smallest possible</em> value of <span class="math">\(m\)</span>, and then prove that <span class="math">\(\forall n \geq m\)</span>, it is possible to make <span class="math">\(n\)</span> cents using 3- and 8-cent coins by <em>simple</em> induction. Do not use complete induction; this will be on your next problem set.</p>
+<p>Hint: to use a simple induction argument, you must show how to make a value of <span class="math">\(k+1\)</span> from a set of coins whose value is <span class="math">\(k\)</span>. Suppose you had a set of coins totalling 24; how could you turn that 24 into a 25?</p></li>
+<li><p><strong>[2]</strong> Show that your <span class="math">\(m\)</span> from part (a) really is the smallest value possible by justifying why it is <em>impossible</em> to get the value <span class="math">\(m-1\)</span> from 3- and 8-cent coins.</p></li>
+<li><p><strong>[2]</strong> Finally, explain why your induction proof in part (a) FAILS if you start at <span class="math">\(m-1\)</span> instead of <span class="math">\(m\)</span> (again, for the value of <span class="math">\(m\)</span> you found).</p></li>
+</ol></li>
+</ol>
+<p>Write a <em>recursive</em> program that takes in a list (representing a set) and outputs...</p>
+<ul>
+<li><p>All 2-element subsets of the list</p></li>
+<li><p>All 3-element subsets of the list</p></li>
+<li><p>All subsets of the list</p></li>
+</ul>
+<p>Then, write a recursive program that takes in a list and a natural number <span class="math">\(k\)</span>, and outputs all <span class="math">\(k\)</span>-element subsets of the list.</p>
+
+
+
+
+      <!-- ===================================================================== -->
+      <!-- ================================= end =============================== -->
+      <!-- ===================================================================== -->
+      <br/>
+      <br/>
+      <br/>
+
+      <!-- scripts -->
+      <script src="../scripts/main.js"></script>
+
+    </div>
+  </div>
+</body>
+</html>
