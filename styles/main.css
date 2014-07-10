@@ -432,6 +432,9 @@ nav li a{
 .materials td:first-child{
 
 }
+.materials #current-week{
+  background-color:#f7f7f7;
+}
 
 /*image style*/
 img.center {
