@@ -1,14 +1,18 @@
 /*
 
-style structure: main, resets, links, other
+contact author for bugs: dyw999@gmail.com
+
+style structure: 
+- main
+- resets
+- links
+- other
 
 colors:
-link: #3399FF
-hovered link: #E9F6FB
-visited link: #25BA2A
-translucency: rgba(255, 255, 255, 0.9)
-
-contact author for bugs: dyw999@gmail.com
+- link: #3399FF
+- hovered link: #E9F6FB
+- visited link: #25BA2A
+- translucency: rgba(255, 255, 255, 0.9)
 
 */
 
@@ -18,17 +22,14 @@ body{
   font-size: 16px;
   margin: 0 auto;
   width: 1020px;
-  /*width: 1150px;*/
-  /*width: 700px;*/
   padding: 0px 20px;
   line-height: 1.6;
   cursor: default;
 }
-.center{ /*=====================================================================*/
+.center{
   width: 650px;
   margin: 0 auto;
 }
-/*@work*/
 #content{
   margin: 40px 0px 0px 0px;
   animation: fadein 0.6s;
@@ -40,11 +41,10 @@ body{
   margin-top: 15px;
 }
 #content #materials{ /*materials table*/
+  width: 650px;
   width: 1000px;
-  /*margin: 0 auto !important;*/
 }
 #content #materials tr:first-child{
-  /*background: cyan;*/
   font-weight: 700;
 }
 h1{
@@ -52,7 +52,6 @@ h1{
   font-weight: 100;
   line-height: 1.2;
   margin: 10px 0px 15px 0px;
-  /*background: cyan;*/
 }
 h4{
   margin: 10px 0px;
@@ -97,14 +96,12 @@ table {
 }
 td {
   text-align: left;
-  /*font-weight: normal;*/
 }
 
 
 
 /*links*/
 a{
-  /*background: white;*/
   padding: 2px 0px;
   border-radius: 4px;
   outline: none;
@@ -117,7 +114,6 @@ a{
 a:hover, a:focus {
   background: #E9F6FB;
   transition: 0s;
-  /*cursor: pointer;*/
 }
 /*to indicate an external link*/
 /*a.external{
@@ -138,12 +134,9 @@ a.external:hover span{
   font-size: 12px;
   padding: 0px 3px;
 }*/
-/*top navigation bar*/
-nav{ /*@nav*/
+nav{ /*top navigation bar*/
   position: fixed;
   width: 658px;
-  /*margin: 0 auto;*/
-  /*text-align: center;*/
   line-height: 2;
   margin: -57px 0 0 -8px;
   padding: 9px 0 6px 0;
@@ -162,12 +155,8 @@ nav li a{
   margin: 0px 15px 0px 0px;
   padding: 4px 8px 3px 8px;
   border-radius: 7px;
-  /*display: inline-block;*/
 }
 #more{
-  /*padding: 4px 20px 3px 8px;
-  background: url(../images/dropdown-shape-blue.png) no-repeat;
-  background-position: 50%;*/
   cursor: pointer;
 }
 #more-dropdown{
@@ -177,11 +166,9 @@ nav li a{
   margin: 0;
   padding: 0;
   list-style-type: none;
-  /*width: auto;*/
   background-color: rgba(255, 255, 255, 0.9);
   border: 1px solid #3399FF;
   border-radius: 4px 4px 4px 4px;
-  /*transition: 1s;*/
   animation: fadein 0.4s;
   -moz-animation: fadein 0.4s;
   -webkit-animation: fadein 0.4s;
@@ -193,8 +180,29 @@ nav li a{
   padding: 0px;
 }
 #more-dropdown li a{
-  display: block; /*why does this enable full hover highlight?*/
+  display: block;
   margin: 0px;
+}
+#more-menu{ /*left bar on the more page, with relative positioning*/
+  max-width: 200px;
+  float: left;
+  margin: 20px 10px 0px 0px;
+  /*overflow-y: scroll;*/
+}
+#more-menu a{
+  display: block;
+  padding: 5px 5px 5px 10px;
+  margin: 0px 0px 5px 0px;
+  border-radius: 10px;
+}
+#more-menu .here{
+  padding: 5px 5px 5px 10px;
+  background: #3399FF;
+  color: white;
+}
+#more-menu .here:hover{
+  background: #3399FF;
+  color: white;
 }
 #nav-background{
   position: fixed;
@@ -271,7 +279,7 @@ nav li a{
   background: #3399FF;
   color: white;
 }
-.more{ /*more nav button drop down animation (not used)*/
+.more{ /*not used. this is the "more" nav button with drop down animation*/
   padding: 4px 8px 3px 8px;
   border-radius: 7px;
   margin: 0px 15px 0px 0px;
@@ -288,7 +296,7 @@ nav li a{
   border-bottom: 1px solid white;
   transition: 0s;
 }
-#left{ /*left bar, with fixed positioning and border (not used)*/
+#left{ /*not used. left bar, with fixed positioning and border*/
   max-width: 200px;
   position: fixed;
   top: 70px; bottom: 10%;
@@ -307,27 +315,6 @@ nav li a{
   padding: 5px;
   margin: auto;
   color: #D0D0D0;
-}
-#more-menu{ /*left bar, with relative positioning*/
-  max-width: 200px;
-  float: left;
-  margin: 20px 10px 0px 0px;
-  /*overflow-y: scroll;*/
-}
-#more-menu a{
-  display: block;
-  padding: 5px 5px 5px 10px;
-  margin: 0px 0px 5px 0px;
-  border-radius: 10px;
-}
-#more-menu .here{
-  padding: 5px 5px 5px 10px;
-  background: #3399FF;
-  color: white;
-}
-#more-menu .here:hover{
-  background: #3399FF;
-  color: white;
 }
 
 
@@ -421,11 +408,10 @@ nav li a{
   border-width:0px 0px 0px 0px;
 }
 .materials tr:first-child td{
-    background:-o-linear-gradient(bottom, #f7f7f7 5%, #f7f7f7 100%);  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f7f7f7), color-stop(1, #f7f7f7) );
-  background:-moz-linear-gradient( center top, #f7f7f7 5%, #f7f7f7 100% );
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#f7f7f7", endColorstr="#f7f7f7");  background: -o-linear-gradient(top,#f7f7f7,f7f7f7);
-
-  background-color:#f7f7f7;
+    background:-o-linear-gradient(bottom, #f4f4f4 5%, #f4f4f4 100%);  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f4f4f4), color-stop(1, #f4f4f4) );
+  background:-moz-linear-gradient( center top, #f4f4f4 5%, #f4f4f4 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#f4f4f4", endColorstr="#f4f4f4");  background: -o-linear-gradient(top,#f4f4f4,f4f4f4);
+  background-color:#f4f4f4;
   border:0px solid #aaaaaa;
   /*text-align:center;*/
   border-width:0px 0px 1px 1px;
@@ -435,11 +421,11 @@ nav li a{
   color:#000000;
 }
 .materials tr:first-child:hover td{
-  background:-o-linear-gradient(bottom, #f7f7f7 5%, #f7f7f7 100%);  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f7f7f7), color-stop(1, #f7f7f7) );
-  background:-moz-linear-gradient( center top, #f7f7f7 5%, #f7f7f7 100% );
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#f7f7f7", endColorstr="#f7f7f7");  background: -o-linear-gradient(top,#f7f7f7,f7f7f7);
+  background:-o-linear-gradient(bottom, #f4f4f4 5%, #f4f4f4 100%);  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f4f4f4), color-stop(1, #f4f4f4) );
+  background:-moz-linear-gradient( center top, #f4f4f4 5%, #f4f4f4 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#f4f4f4", endColorstr="#f4f4f4");  background: -o-linear-gradient(top,#f4f4f4,f4f4f4);
 
-  background-color:#f7f7f7;
+  background-color:#f4f4f4;
 }
 .materials tr:first-child td:first-child{
   border-width:0px 0px 1px 0px;
@@ -447,11 +433,15 @@ nav li a{
 .materials tr:first-child td:last-child{
   border-width:0px 0px 1px 1px;
 }
-.materials td:first-child{
-
+.materials td:first-child{ /*@work*/
+  
+  /*width: 20px;*/
+  /*vertical-align: middle;*/
+  /*writing-mode: tb-rl;*/
+  /*filter: flipv fliph;*/
 }
 .materials #current-week{
-  background-color:#f7f7f7;
+  background-color:#f4f4f4;
 }
 
 /*image style*/
@@ -526,6 +516,8 @@ object[type="application/pdf"]{
 
 /*rotate text*/
 .rotate {
+  width: 20px;
+  text-align: center !important;
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
