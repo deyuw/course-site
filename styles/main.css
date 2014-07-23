@@ -1,7 +1,5 @@
 /*
 
-contact author for bugs: dyw999@gmail.com
-
 style structure: 
 - main
 - resets
@@ -161,7 +159,7 @@ nav li a{
 }
 #more-dropdown{
   display: none;
-  transform: scale(1,0);
+  /*transform: scale(1,0);*/
   position: absolute;
   margin: 0;
   padding: 0;
