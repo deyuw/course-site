@@ -39,7 +39,6 @@ body{
   margin-top: 15px;
 }
 #content #materials{ /*materials table*/
-  width: 650px;
   width: 1000px;
 }
 #content #materials tr:first-child{
@@ -443,8 +442,8 @@ nav li a{
 .materials tr:first-child td:last-child{
   border-width:0px 0px 1px 1px;
 }
-.materials td:first-child{
-  /*width: 20px;*/
+.materials td:first-child{ /*@a*/
+  width: 100px;
   /*vertical-align: middle;*/
   /*writing-mode: tb-rl;*/
   /*filter: flipv fliph;*/
@@ -524,7 +523,7 @@ object[type="application/pdf"]{
 }
 
 /*rotate text*/
-.rotate {
+.rotate { /*@b*/
   width: 20px;
   text-align: center !important;
   -webkit-transform: rotate(-90deg);
