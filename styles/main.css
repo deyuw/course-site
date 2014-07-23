@@ -523,8 +523,7 @@ object[type="application/pdf"]{
 }
 
 /*rotate text*/
-.rotate { /*@b*/
-  width: 20px;
+.rotate {
   text-align: center !important;
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
