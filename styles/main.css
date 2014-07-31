@@ -50,11 +50,16 @@ h1{
   line-height: 1.2;
   margin: 10px 0px 15px 0px;
 }
-h4{
+h2, h3, h4, h5, h6{
+  font-weight: 100;
   margin: 10px 0px;
 }
 p{
   margin: 10px 0px;
+}
+code{
+  font-family: "Monaco";
+  background: LemonChiffon;
 }
 /*animations*/
 @keyframes fadein { from { opacity:0; } to { opacity:1; } }
@@ -154,10 +159,15 @@ nav{ /*top navigation bar*/
 ul{
   
 }
+li{
+  margin-left: 40px;
+}
 nav li{
+  margin: 0;
   display: inline-block;
 }
 table li{
+  margin: 0;
   display: block;
 }
 nav li a{
@@ -332,6 +342,7 @@ nav li a{
 .agenda ol li{
   display: block;
   padding: 0 0 15px 40px;
+  margin: 0;
 }
 .agenda ol li.done{
   background: url("../images/check.png") no-repeat left top;
