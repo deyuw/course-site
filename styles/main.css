@@ -60,6 +60,7 @@ p{
 code{
   font-family: "Monaco";
   background: LemonChiffon;
+  white-space: pre;
 }
 /*animations*/
 @keyframes fadein { from { opacity:0; } to { opacity:1; } }
