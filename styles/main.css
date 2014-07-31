@@ -442,14 +442,15 @@ nav li a{
 .materials tr:first-child td:last-child{
   border-width:0px 0px 1px 1px;
 }
-.materials td:first-child{ /*@a*/
+.materials td:first-child{ /*widening week column*/
   width: 100px;
-  /*vertical-align: middle;*/
-  /*writing-mode: tb-rl;*/
-  /*filter: flipv fliph;*/
 }
 .materials #current-week{
   background-color:#f4f4f4;
+}
+.materials td:nth-last-child(2), .materials td:nth-last-child(3), .materials td:nth-last-child(5) /*addressing issue 3*/
+{
+  text-align: center;
 }
 
 /*image style*/
