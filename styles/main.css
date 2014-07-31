@@ -154,7 +154,7 @@ nav{ /*top navigation bar*/
 ul{
   
 }
-li{
+nav li{
   display: inline-block;
 }
 table li{
