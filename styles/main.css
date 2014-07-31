@@ -525,7 +525,6 @@ object[type="application/pdf"]{
 
 /*rotate text*/
 .rotate {
-  text-align: center !important;
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
@@ -541,4 +540,12 @@ object[type="application/pdf"]{
 
   /* Should be unset in IE9+ I think. */
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+  /* more edits to rotated text */
+  text-align: center !important;
+  font-size: 18px;
+
+  /* font smoothing */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
