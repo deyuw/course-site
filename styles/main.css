@@ -24,6 +24,10 @@ body{
   line-height: 1.6;
   cursor: default;
 }
+@font-face {
+  font-family: code-font;
+  src: url("consolas.ttf");
+}
 .center{
   width: 650px;
   margin: 0 auto;
@@ -58,12 +62,21 @@ p{
   margin: 10px 0px;
 }
 code{
-  font-family: "Consolas";
+  font-family: code-font;
   font-size: 14px;
   padding: 2px;
   border-radius: 2px;
   background: #F4F4F4;
   white-space: pre;
+}
+pre code{
+  font-family: code-font;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 4px;
+  background: none;
+  white-space: pre;
+  border: 1px solid #D0D0D0;
 }
 /*animations*/
 @keyframes fadein { from { opacity:0; } to { opacity:1; } }
@@ -581,7 +594,6 @@ object[type="application/pdf"]{
   /*height: 10px;*/
   /*border: 1px solid blue;*/
   /*overflow: hidden;*/
-  
   /*height: 100%;*/
   /*width: 1px;*/
 
