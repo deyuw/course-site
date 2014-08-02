@@ -586,16 +586,9 @@ object[type="application/pdf"]{
   /* more edits to rotated text */
   text-align: center !important;
   font-size: 18px;
-  white-space: nowrap;
-  background: cyan;
+  /*white-space: nowrap;*/
   overflow: hidden;
-  width: auto;
-  height: auto;
-  /*height: 10px;*/
-  /*border: 1px solid blue;*/
-  /*overflow: hidden;*/
-  /*height: 100%;*/
-  /*width: 1px;*/
+  margin: 0px -80px 0px -80px;
 
   /* font smoothing */
   -webkit-font-smoothing: antialiased;
