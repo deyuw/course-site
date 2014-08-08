@@ -558,7 +558,7 @@ object[type="application/pdf"]{
   padding: 15px;
   display: block;
   margin: 50px auto 60px auto;
-  width: 45%;
+  width: 35%;
   transition: 0.5s;
 }
 .logo:hover{
