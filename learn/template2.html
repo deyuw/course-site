@@ -7,15 +7,6 @@
   <link rel="stylesheet" href="../styles/main.css" />
   <script src="../scripts/jquery-1.11.1.js"></script>
   <script src="../scripts/misc.js"></script>
-  <style type="text/css">code{white-space: pre;}</style>
-  $if(highlighting-css)$
-    <style type="text/css">
-    $highlighting-css$
-    </style>
-  $endif$
-  $for(css)$
-    <link rel="stylesheet" href="$css$" $if(html5)$$else$$$type="text/css" $endif$/>
-  $endfor$
 </head>
 <body>
   <div id="nav-background"></div>
@@ -44,7 +35,8 @@
     </nav>
   </div>
   <div id="content">
-  $body$
+    <br />
+    <br />
     <a href="http://web.cs.toronto.edu/"><img class="logo" src="../images/csfaculty.jpg"/></a>
     <!-- scripts -->
     <script src="../scripts/main.js"></script>
