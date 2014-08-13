@@ -76,7 +76,7 @@ code{
 pre code{
   font-family: code-font;
   font-size: 14px;
-  padding: 10px;
+  padding: 0px;
   border-radius: 4px;
   background: none;
   white-space: pre;
@@ -464,7 +464,7 @@ nav li a{
   border-width:0px 0px 1px 1px;
 }
 .materials tr:first-child td:nth-child(1){ /*topic column*/ /*@work*/
-  width: 50px;
+  width: 100px;
 }
 .materials th{ /*topic column*/
   width: 50px;
