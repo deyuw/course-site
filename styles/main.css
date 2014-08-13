@@ -84,6 +84,17 @@ pre code{
   margin: 20px;
   border: 1px solid #D0D0D0;
 }
+form input, form textarea{
+  font-family: "Avenir", sans-serif;
+  font-size: 16px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 0 15px 25px 0;
+  width: 315px;
+  /*line-height: 2em;*/
+  /*margin: 0 auto;*/
+}
 /*animations*/
 @keyframes fadein { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadein { from { opacity:0; } to { opacity:1; } }
