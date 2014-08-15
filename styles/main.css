@@ -96,10 +96,10 @@ form input, form textarea{
   /*margin: 0 auto;*/
 }
 /*animations*/
-@keyframes fadein { from { opacity:0; } to { opacity:1; } }
+/*@keyframes fadein { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadein { from { opacity:0; } to { opacity:1; } }
 @-webkit-keyframes fadein { from { opacity:0; } to { opacity:1; } }
-@-o-keyframes fadein { from { opacity:0; } to { opacity: 1; } }
+@-o-keyframes fadein { from { opacity:0; } to { opacity: 1; } }*/
 /*text selection*/
 ::selection { background: #e7e7e7; /* Safari */ }
 ::-moz-selection { background: #e7e7e7; /* Firefox */ }
@@ -176,6 +176,7 @@ nav{ /*top navigation bar*/
   line-height: 2;
   margin: -57px 0 0 -8px;
   padding: 9px 0 6px 0;
+  z-index: 1;
   /*background-color: rgba(255, 255, 255, 0);*/
 }
 @media screen and (max-width: 1000px){ /*nav bar for mobile display*/
@@ -256,14 +257,14 @@ nav li a{
   background: #3399FF;
   color: white;
 }
-#nav-background{ /*@work*/
+#nav-background{ /*@w1*/
   position: fixed;
   width: 100%;
   height: 47px;
   margin: -40px 0 0 0;
   padding: 9px 0 6px 0;
   background-color: rgba(255, 255, 255, 0.9);
-  /*z-index: 0;*/
+  z-index: 1;
 }
 #line_left{
   position: fixed;
@@ -384,11 +385,11 @@ nav li a{
 
 
 /*materials table*/
-.materials {
+.materials { /*@w2*/
   margin:0px;padding:0px;
   /*width:100%;*/
   border:1px solid grey;
-  position: relative;
+  /*position: relative;*/
   /*z-index: -1;*/
 
   -moz-border-radius-bottomleft:5px;
@@ -513,6 +514,11 @@ nav li a{
 }
 .materials a:visited{
   /*color: #25BA2A;*/
+}
+.materials td:first-child{ /*@W3*/
+  /*background: red;*/
+  /*position: relative;*/
+  /*z-index: -1;*/
 }
 
 /*image style*/
