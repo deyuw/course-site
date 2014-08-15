@@ -76,7 +76,7 @@ code{
 pre code{
   font-family: code-font;
   font-size: 14px;
-  padding: 10px;
+  padding: 0px;
   border-radius: 4px;
   background: none;
   white-space: pre;
@@ -84,11 +84,22 @@ pre code{
   margin: 20px;
   border: 1px solid #D0D0D0;
 }
+form input, form textarea{
+  font-family: "Avenir", sans-serif;
+  font-size: 16px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 0 15px 25px 0;
+  width: 315px;
+  /*line-height: 2em;*/
+  /*margin: 0 auto;*/
+}
 /*animations*/
-@keyframes fadein { from { opacity:0; } to { opacity:1; } }
+/*@keyframes fadein { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadein { from { opacity:0; } to { opacity:1; } }
 @-webkit-keyframes fadein { from { opacity:0; } to { opacity:1; } }
-@-o-keyframes fadein { from { opacity:0; } to { opacity: 1; } }
+@-o-keyframes fadein { from { opacity:0; } to { opacity: 1; } }*/
 /*text selection*/
 ::selection { background: #e7e7e7; /* Safari */ }
 ::-moz-selection { background: #e7e7e7; /* Firefox */ }
@@ -165,6 +176,7 @@ nav{ /*top navigation bar*/
   line-height: 2;
   margin: -57px 0 0 -8px;
   padding: 9px 0 6px 0;
+  z-index: 1;
   /*background-color: rgba(255, 255, 255, 0);*/
 }
 @media screen and (max-width: 1000px){ /*nav bar for mobile display*/
@@ -207,7 +219,7 @@ nav li a{
   margin: 0;
   padding: 0;
   list-style-type: none;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 1);
   border: 1px solid #3399FF;
   border-radius: 4px 4px 4px 4px;
   animation: fadein 0.4s;
@@ -245,13 +257,14 @@ nav li a{
   background: #3399FF;
   color: white;
 }
-#nav-background{
+#nav-background{ /*@w1*/
   position: fixed;
   width: 100%;
   height: 47px;
   margin: -40px 0 0 0;
   padding: 9px 0 6px 0;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 1);
+  z-index: 1;
 }
 #line_left{
   position: fixed;
@@ -260,7 +273,7 @@ nav li a{
   margin-right: auto;
   width: 400px;
   margin: 7px 0px 0px -75px;
-  height: 1px;
+  height: 2px;
   background: -webkit-gradient(linear, 10 0, 20% 0, from(white), to(#C0C0C0), color-stop(100%, #C0C0C0));
   animation: fadein 0.4s;
   -moz-animation: fadein 0.4s;
@@ -274,7 +287,7 @@ nav li a{
   margin-right: auto;
   width: 400px;
   margin: 7px 0px 0px 325px;
-  height: 1px;
+  height: 2px;
   background: -webkit-gradient(linear, 285 0, 95% 0, from(#C0C0C0), to(white), color-stop(100%, #C0C0C0));
   animation: fadein 0.4s;
   -moz-animation: fadein 0.4s;
@@ -288,7 +301,7 @@ nav li a{
   margin-right: auto;
   width: 600px;
   margin: 7px 0px 0px -255px;
-  height: 1px;
+  height: 2px;
   background: -webkit-gradient(linear, 10 0, 20% 0, from(white), to(#C0C0C0), color-stop(100%, #C0C0C0));
   animation: fadein 0.4s;
   -moz-animation: fadein 0.4s;
@@ -302,7 +315,7 @@ nav li a{
   margin-right: auto;
   width: 600px;
   margin: 7px 0px 0px 325px;
-  height: 1px;
+  height: 2px;
   background: -webkit-gradient(linear, 285 0, 95% 0, from(#C0C0C0), to(white), color-stop(100%, #C0C0C0));
   animation: fadein 0.4s;
   -moz-animation: fadein 0.4s;
@@ -372,10 +385,12 @@ nav li a{
 
 
 /*materials table*/
-.materials {
+.materials { /*@w2*/
   margin:0px;padding:0px;
   /*width:100%;*/
-  border:1px solid #ffffff;
+  border:1px solid grey;
+  /*position: relative;*/
+  /*z-index: -1;*/
 
   -moz-border-radius-bottomleft:5px;
   -webkit-border-bottom-left-radius:5px;
@@ -463,8 +478,8 @@ nav li a{
 .materials tr:first-child td:last-child{
   border-width:0px 0px 1px 1px;
 }
-.materials tr:first-child td:nth-child(1){ /*topic column*/ /*@work*/
-  width: 50px;
+.materials tr:first-child td:nth-child(1){ /*topic column*/
+  width: 100px;
 }
 .materials th{ /*topic column*/
   width: 50px;
@@ -499,6 +514,11 @@ nav li a{
 }
 .materials a:visited{
   /*color: #25BA2A;*/
+}
+.materials td:first-child{ /*@W3*/
+  /*background: red;*/
+  /*position: relative;*/
+  /*z-index: -1;*/
 }
 
 /*image style*/
@@ -592,9 +612,9 @@ object[type="application/pdf"]{
   /* more edits to rotated text */
   text-align: center !important;
   font-size: 18px;
-  /*white-space: nowrap;*/
   overflow: hidden;
   margin: 0px -80px 0px -80px;
+  /*white-space: nowrap;*/
 
   /* font smoothing */
   -webkit-font-smoothing: antialiased;
