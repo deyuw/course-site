@@ -327,7 +327,7 @@ nav li a{
   -o-animation: fadein 0.4s;
 }
 .here{ /*currently selected nav button*/
-  padding: 4px 8px 2px 8px;
+  padding: 4px 8px 4px 8px;
   border-radius: 7px;
   background: #3399FF;
   color: white;
