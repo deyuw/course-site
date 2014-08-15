@@ -82,7 +82,11 @@ pre code{
   white-space: pre;
   display: block;
   margin: 20px;
-  border: 1px solid #D0D0D0;
+  /*border: 1px solid #D0D0D0;*/
+}
+footer{
+  text-align: center;
+  color: #777777;
 }
 form input, form textarea{
   font-family: "Avenir", sans-serif;

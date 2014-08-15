@@ -35,6 +35,16 @@
 
 
 
+// full calendar (not used)
+
+// $(document).ready(function() {
+//     $('#calendar').fullCalendar({
+
+//     })
+// });
+
+
+
 // not related
 
 // function lec1(){
