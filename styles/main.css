@@ -1,6 +1,6 @@
 /*
 
-style structure: 
+style structure:
 - main
 - resets
 - links
@@ -76,13 +76,12 @@ code{
 pre code{
   font-family: code-font;
   font-size: 14px;
-  padding: 0px;
+  padding: 6px 0px;
   border-radius: 4px;
   background: none;
   white-space: pre;
   display: block;
   margin: 20px;
-  /*border: 1px solid #D0D0D0;*/
 }
 footer{
   text-align: center;
@@ -193,10 +192,10 @@ nav{ /*top navigation bar*/
     /*margin: -57px 0 0 -8px;*/
     /*padding: 9px 0 6px 0;*/
     /*background-color: rgba(255, 255, 255, 0);*/
-  } 
+  }
 }
 ul{
-  
+
 }
 li{
   margin-left: 40px;
@@ -585,7 +584,7 @@ object[type="application/pdf"]{
   border-radius: 10px;
   padding: 15px;
   display: block;
-  margin: 50px auto 60px auto;
+  margin: 40px auto 10px auto;
   width: 35%;
   transition: 0.5s;
 }

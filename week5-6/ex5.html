@@ -23,9 +23,9 @@
         <li><a id="more">More</a>
           <div id="more-wrap">
             <ul id="more-dropdown">
-              <li><a href="more-calendar.html">Calendar</a></li>
-              <li><a href="more-course-info.html">Full Course Info</a></li>
-              <li><a href="more-policies.html">Policies</a></li>
+              <li><a href="../more-calendar.html">Calendar</a></li>
+              <li><a href="../more-course-info.html">Full Course Info</a></li>
+              <li><a href="../more-policies.html">Policies</a></li>
               <li><a href="https://login.library.utoronto.ca/cgi-bin/go_log.pl?url=http://exams.library.utoronto.ca">University Exam Repo</a></li>
             </ul>
           </div>
@@ -38,45 +38,44 @@
   </div>
   <div class="center">
     <br />
-    <h1 id="exercise-5---recursion">Exercise 5 - Recursion</h1>
-    <h2 id="task-1---recursion-on-linked-lists">Task 1 - Recursion on Linked Lists</h2>
-    <p>In this task, you'll return to a familiar linked list function, but implement it using <em>recursion</em> rather than using a loop.</p>
-    <p><strong>Learning goals</strong>:</p>
-    <ul>
-    <li>Practice calling functions recursively</li>
-    <li>Use the recursive structure of linked lists</li>
-    </ul>
-    <p><strong>Starter code</strong>:</p>
-    <ul>
-    <li><a href="list_map.py">list_map.py</a></li>
-    <li><a href="list_map_test.py">list_map_test.py</a></li>
-    </ul>
-    <p><strong>File to submit</strong>:</p>
-    <ul>
-    <li>list_map.py</li>
-    </ul>
-    <p>In the starter code, write a function <code>map_f(linked_list, f)</code>, where <code>f</code> is a function, which returns a new recursive linked list whose items are obtained by applying <code>f</code> to all of the items in <code>linked_list</code>. Note that <code>linked_list</code> is a <em>recursive</em> linked list, which is why there's an <code>import</code> statement.</p>
-    <p><strong>Your function should not mutate the original list, and must be recursive! No loops allowed!</strong></p>
-    <h2 id="task-2---a-family-tree">Task 2 - A Family Tree</h2>
-    <p>In this task, you'll consider a more complicated type of recursive structure: a <em>family tree</em>.</p>
-    <p><strong>Learning goal</strong>:</p>
-    <ul>
-    <li>Apply recursion to a tree-like data structure</li>
-    </ul>
-    <p><strong>Starter code</strong>:</p>
-    <ul>
-    <li><a href="family_tree.py">family.py</a></li>
-    <li><a href="family_tree_test.py">family_test.py</a></li>
-    </ul>
-    <p><strong>File to submit</strong>:</p>
-    <ul>
-    <li>family.py</li>
-    </ul>
-    <p>Consider the following situation. A person has a name and some (or no) children, each of whom is another person with a name and some (or no) children. This is modelled in the starter code using a basic <code>Person</code> class with two attributes, <code>name</code> and <code>children</code>. Note that the <code>children</code> attribute is just a plain old Python list of <code>Person</code> objects, not a linked list; a person with no children would have an empty list stored in this attribute.</p>
-    <p>A <strong>descendant</strong> of a Person is either a child of that Person, or a child of a child of that Person, etc. So clearly, a Person with no children has no descendants. Complete the body of the method <code>count_descendants</code>, which returns the number of descendants of <code>self</code>.</p>
-    <p>The million dollar recursive question: <em>How is the number of descendants of a person related to the number of descendants of his/her children?</em></p>
-    <br />
-    <br />
+<!-- Don't indent the body. There seems to be issues with this and code rendering. -->
+<h1 id="exercise-5---recursion">Exercise 5 - Recursion</h1>
+<h2 id="task-1---recursion-on-linked-lists">Task 1 - Recursion on Linked Lists</h2>
+<p>In this task, you'll return to a familiar linked list function, but implement it using <em>recursion</em> rather than using a loop.</p>
+<p><strong>Learning goals</strong>:</p>
+<ul>
+<li>Practice calling functions recursively</li>
+<li>Use the recursive structure of linked lists</li>
+</ul>
+<p><strong>Starter code</strong>:</p>
+<ul>
+<li><a href="list_map.py">list_map.py</a></li>
+<li><a href="list_map_test.py">list_map_test.py</a></li>
+</ul>
+<p><strong>File to submit</strong>:</p>
+<ul>
+<li>list_map.py</li>
+</ul>
+<p>In the starter code, write a function <code>map_f(linked_list, f)</code>, where <code>f</code> is a function, which returns a new recursive linked list whose items are obtained by applying <code>f</code> to all of the items in <code>linked_list</code>. Note that <code>linked_list</code> is a <em>recursive</em> linked list, which is why there's an <code>import</code> statement.</p>
+<p><strong>Your function should not mutate the original list, and must be recursive! No loops allowed!</strong></p>
+<h2 id="task-2---a-family-tree">Task 2 - A Family Tree</h2>
+<p>In this task, you'll consider a more complicated type of recursive structure: a <em>family tree</em>.</p>
+<p><strong>Learning goal</strong>:</p>
+<ul>
+<li>Apply recursion to a tree-like data structure</li>
+</ul>
+<p><strong>Starter code</strong>:</p>
+<ul>
+<li><a href="family_tree.py">family.py</a></li>
+<li><a href="family_tree_test.py">family_test.py</a></li>
+</ul>
+<p><strong>File to submit</strong>:</p>
+<ul>
+<li>family.py</li>
+</ul>
+<p>Consider the following situation. A person has a name and some (or no) children, each of whom is another person with a name and some (or no) children. This is modelled in the starter code using a basic <code>Person</code> class with two attributes, <code>name</code> and <code>children</code>. Note that the <code>children</code> attribute is just a plain old Python list of <code>Person</code> objects, not a linked list; a person with no children would have an empty list stored in this attribute.</p>
+<p>A <strong>descendant</strong> of a Person is either a child of that Person, or a child of a child of that Person, etc. So clearly, a Person with no children has no descendants. Complete the body of the method <code>count_descendants</code>, which returns the number of descendants of <code>self</code>.</p>
+<p>The million dollar recursive question: <em>How is the number of descendants of a person related to the number of descendants of his/her children?</em></p>
     <a href="http://web.cs.toronto.edu/"><img class="logo" src="../images/csfaculty.jpg"/></a>
     <!-- scripts -->
     <script src="../scripts/main.js"></script>
@@ -84,7 +83,9 @@
 
   <footer>
     <h5>
-      Instructor: <a href="http://www.cs.toronto.edu/~liudavid/">David Liu</a> (liudavid at cs dot toronto dot edu) <br />
+      <a href="http://www.cs.toronto.edu/~liudavid/">David Liu</a> (liudavid at cs dot toronto dot edu) <br />
+      Come find me in BA4260<br />
+      Site design by Deyu Wang (dyw999 at gmail dot com)
     </h5>
   </footer>
 

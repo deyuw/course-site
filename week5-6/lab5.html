@@ -43,9 +43,9 @@
         <li><a id="more">More</a>
           <div id="more-wrap">
             <ul id="more-dropdown">
-              <li><a href="more-calendar.html">Calendar</a></li>
-              <li><a href="more-course-info.html">Full Course Info</a></li>
-              <li><a href="more-policies.html">Policies</a></li>
+              <li><a href="../more-calendar.html">Calendar</a></li>
+              <li><a href="../more-course-info.html">Full Course Info</a></li>
+              <li><a href="../more-policies.html">Policies</a></li>
               <li><a href="https://login.library.utoronto.ca/cgi-bin/go_log.pl?url=http://exams.library.utoronto.ca">University Exam Repo</a></li>
             </ul>
           </div>
@@ -58,72 +58,71 @@
   </div>
   <div class="center">
     <br />
-    <h1 id="lab-5---recursion-explosion">Lab 5 - Recursion Explosion</h1>
-    <h2 id="task-1-thinking-recursively-60-min">Task 1: Thinking Recursively (60 min)</h2>
-    <p><strong>Learning goals</strong>:</p>
-    <ul>
-    <li>Analyse a problem recursively</li>
-    <li>Translate recursive understanding into a recursive function</li>
-    </ul>
-    <p>In this task, you will get lots of practice with <em>thinking recursively</em>. Each of the problems below has a recursive structure that you can use to write extremely simple code.</p>
-    <p>Even more important than before, it is vital that you design with pencil and paper <em>before</em> writing any code! Before even touching the keyboard, make sure you can answer the following two questions:</p>
-    <ul>
-    <li>What are the base cases? That is, what are the simplest or smallest problem sizes that you can solve directly?</li>
-    <li>How can you relate the problem of size n to the same problem structure of a smaller size?</li>
-    </ul>
-    <p>The second question really is the heart of thinking recursively. We've provided some hints and guidelines to get you started on the questions below.</p>
-    <h3 id="reversing-a-string">Reversing a String</h3>
-    <p>You are given as input a string, and want to output the reverse of that string. For example, for the input string <code>'computer'</code>, your function should output <code>'retupmoc'</code>.</p>
-    <p>Hint: take a look at <code>'computer'</code>. Remove the first letter to get <code>'omputer'</code>. How does the reversal of the rest of the string related to the reversal of the original?</p>
-    <p>Once you're ready, open up the <a href="recursion.py">starter code</a> and implement your function. A basic <a href="rec_ex_test.py">test file</a> is provided.</p>
-    <h3 id="subsets">Subsets</h3>
-    <p>You are given as input a list with no repetitions. You would like to output a <em>list of lists</em> that represents all of the different subsets of numbers from the original list. A subset is a list of numbers that appeared in the original list. Order doesn't matter, so the subsets [1,2] and [2,1] are considered identical. The empty list is considered to be a subset of any list; also, the whole list is also considered to be a subset of itself.</p>
-    <p>For example, the input list <code>[1,2,3]</code> has 8 subsets:</p>
-    <pre class="sourceCode python"><code class="sourceCode python">[
-      [], 
-      [<span class="dv">1</span>], 
-      [<span class="dv">2</span>], 
-      [<span class="dv">3</span>], 
-      [<span class="dv">1</span>, <span class="dv">2</span>], 
-      [<span class="dv">1</span>, <span class="dv">3</span>], 
-      [<span class="dv">2</span>, <span class="dv">3</span>], 
-      [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]
-    ]</code></pre>
-    <p>Hint 1: This should remind you of the binary string example from lecture.</p>
-    <p>Hint 2: First, try writing down all of the subsets of <code>[1,2,3]</code>. You should have 8. Divide these subsets into two groups: those that contain 1, and those that don't. What do you notice?</p>
-    <h2 id="task-2-recursive-linked-lists-40-min">Task 2: Recursive Linked Lists (40 min)</h2>
-    <p><strong>Learning goals</strong>:</p>
-    <ul>
-    <li>Understand the recursive implementation of a linked list</li>
-    <li>Write both non-mutating and mutating recursive methods for a linked list</li>
-    </ul>
-    <p>In this task, you will again practice thinking recursively - this time with the familiar linked list. In the <a href="linkedlistrec.py">starter code</a>, you are provided with all of the functions from lecture. Complete the methods <code>__contains__</code> and <code>insert</code> according to their docstrings, <em>using recursion</em> in each case. <code>__contains__</code> is the easiest because it doesn't involve mutation, so start there and take your time to make sure you really understand recursion on linked lists.</p>
-    <p>Note that once you get the hang of recursion, each of these functions takes no more than 5 lines of code! <strong>Remember the recursive structure of linked lists, and structure your functions in the same way!</strong></p>
-    <h2 id="task-3-visualising-references-20-min">Task 3: Visualising References (20 min)</h2>
-    <p><strong>Learning goals</strong>:</p>
-    <ul>
-    <li>Understand how objects are passed as arguments in Python</li>
-    <li>Understand how this often leads to surprising behaviour, so be careful!</li>
-    </ul>
-    <p>Consider the following alternate implementations of <code>insert_first</code> for <code>LinkedListRec</code>:</p>
-    <pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> insert_first_1(<span class="ot">self</span>, item):
-        <span class="ot">self</span>.rest = <span class="ot">self</span>
-        <span class="ot">self</span>.first = item
-    
-    <span class="kw">def</span> insert_first_2(<span class="ot">self</span>, item):
-        <span class="ot">self</span>.rest = <span class="ot">self</span>.first
-        <span class="ot">self</span>.rest.rest = <span class="ot">self</span>.rest
-        <span class="ot">self</span>.first = item</code></pre>
-    <p>These don't work - why? Step through with the <a href="http://www.pythontutor.com/visualize.html">Python visualiser</a> to see what goes wrong. This is a pretty technical point, but will come back at some time in your career if you don't understand it!</p>
-    <h2 id="task-4-optional-problems">Task 4: Optional problems</h2>
-    <p>If you finish with the problems above, here are some other ones to try. These are certainly not required for completing the lab.</p>
-    <ul>
-    <li>Write a function <code>bin_rep(n)</code> that returns a string with the binary representation of <code>n</code>.</li>
-    <li>Extend <code>bin_rep(n)</code> to create <code>base_rep(n, k)</code> to give a string representing non-netavie integer n in base k, where <code>2 &lt;= k &lt;= 10</code>. In base k, the only digits allowed are {0, ..., k-1}.</li>
-    <li>For a list of distinct integers, L, define <code>switches(L)</code> as the number of pairs in L that are not in increasing order. For example, <code>switches([6, 1, 4])</code> returns 2, since (6, 1) and (6, 4) are out of order.</li>
-    </ul>
-    <br />
-    <br />
+<!-- Don't indent the body. There seems to be issues with this and code rendering. -->
+<h1 id="lab-5---recursion-explosion">Lab 5 - Recursion Explosion</h1>
+<h2 id="task-1-thinking-recursively-60-min">Task 1: Thinking Recursively (60 min)</h2>
+<p><strong>Learning goals</strong>:</p>
+<ul>
+<li>Analyse a problem recursively</li>
+<li>Translate recursive understanding into a recursive function</li>
+</ul>
+<p>In this task, you will get lots of practice with <em>thinking recursively</em>. Each of the problems below has a recursive structure that you can use to write extremely simple code.</p>
+<p>Even more important than before, it is vital that you design with pencil and paper <em>before</em> writing any code! Before even touching the keyboard, make sure you can answer the following two questions:</p>
+<ul>
+<li>What are the base cases? That is, what are the simplest or smallest problem sizes that you can solve directly?</li>
+<li>How can you relate the problem of size n to the same problem structure of a smaller size?</li>
+</ul>
+<p>The second question really is the heart of thinking recursively. We've provided some hints and guidelines to get you started on the questions below.</p>
+<h3 id="reversing-a-string">Reversing a String</h3>
+<p>You are given as input a string, and want to output the reverse of that string. For example, for the input string <code>'computer'</code>, your function should output <code>'retupmoc'</code>.</p>
+<p>Hint: take a look at <code>'computer'</code>. Remove the first letter to get <code>'omputer'</code>. How does the reversal of the rest of the string related to the reversal of the original?</p>
+<p>Once you're ready, open up the <a href="recursion.py">starter code</a> and implement your function. A basic <a href="rec_ex_test.py">test file</a> is provided.</p>
+<h3 id="subsets">Subsets</h3>
+<p>You are given as input a list with no repetitions. You would like to output a <em>list of lists</em> that represents all of the different subsets of numbers from the original list. A subset is a list of numbers that appeared in the original list. Order doesn't matter, so the subsets [1,2] and [2,1] are considered identical. The empty list is considered to be a subset of any list; also, the whole list is also considered to be a subset of itself.</p>
+<p>For example, the input list <code>[1,2,3]</code> has 8 subsets:</p>
+<pre class="sourceCode python"><code class="sourceCode python">[
+  [], 
+  [<span class="dv">1</span>], 
+  [<span class="dv">2</span>], 
+  [<span class="dv">3</span>], 
+  [<span class="dv">1</span>, <span class="dv">2</span>], 
+  [<span class="dv">1</span>, <span class="dv">3</span>], 
+  [<span class="dv">2</span>, <span class="dv">3</span>], 
+  [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]
+]</code></pre>
+<p>Hint 1: This should remind you of the binary string example from lecture.</p>
+<p>Hint 2: First, try writing down all of the subsets of <code>[1,2,3]</code>. You should have 8. Divide these subsets into two groups: those that contain 1, and those that don't. What do you notice?</p>
+<h2 id="task-2-recursive-linked-lists-40-min">Task 2: Recursive Linked Lists (40 min)</h2>
+<p><strong>Learning goals</strong>:</p>
+<ul>
+<li>Understand the recursive implementation of a linked list</li>
+<li>Write both non-mutating and mutating recursive methods for a linked list</li>
+</ul>
+<p>In this task, you will again practice thinking recursively - this time with the familiar linked list. In the <a href="linkedlistrec.py">starter code</a>, you are provided with all of the functions from lecture. Complete the methods <code>__contains__</code> and <code>insert</code> according to their docstrings, <em>using recursion</em> in each case. <code>__contains__</code> is the easiest because it doesn't involve mutation, so start there and take your time to make sure you really understand recursion on linked lists.</p>
+<p>Note that once you get the hang of recursion, each of these functions takes no more than 5 lines of code! <strong>Remember the recursive structure of linked lists, and structure your functions in the same way!</strong></p>
+<h2 id="task-3-visualising-references-20-min">Task 3: Visualising References (20 min)</h2>
+<p><strong>Learning goals</strong>:</p>
+<ul>
+<li>Understand how objects are passed as arguments in Python</li>
+<li>Understand how this often leads to surprising behaviour, so be careful!</li>
+</ul>
+<p>Consider the following alternate implementations of <code>insert_first</code> for <code>LinkedListRec</code>:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> insert_first_1(<span class="ot">self</span>, item):
+    <span class="ot">self</span>.rest = <span class="ot">self</span>
+    <span class="ot">self</span>.first = item
+
+<span class="kw">def</span> insert_first_2(<span class="ot">self</span>, item):
+    <span class="ot">self</span>.rest = <span class="ot">self</span>.first
+    <span class="ot">self</span>.rest.rest = <span class="ot">self</span>.rest
+    <span class="ot">self</span>.first = item</code></pre>
+<p>These don't work - why? Step through with the <a href="http://www.pythontutor.com/visualize.html">Python visualiser</a> to see what goes wrong. This is a pretty technical point, but will come back at some time in your career if you don't understand it!</p>
+<h2 id="task-4-optional-problems">Task 4: Optional problems</h2>
+<p>If you finish with the problems above, here are some other ones to try. These are certainly not required for completing the lab.</p>
+<ul>
+<li>Write a function <code>bin_rep(n)</code> that returns a string with the binary representation of <code>n</code>.</li>
+<li>Extend <code>bin_rep(n)</code> to create <code>base_rep(n, k)</code> to give a string representing non-netavie integer n in base k, where <code>2 &lt;= k &lt;= 10</code>. In base k, the only digits allowed are {0, ..., k-1}.</li>
+<li>For a list of distinct integers, L, define <code>switches(L)</code> as the number of pairs in L that are not in increasing order. For example, <code>switches([6, 1, 4])</code> returns 2, since (6, 1) and (6, 4) are out of order.</li>
+</ul>
     <a href="http://web.cs.toronto.edu/"><img class="logo" src="../images/csfaculty.jpg"/></a>
     <!-- scripts -->
     <script src="../scripts/main.js"></script>
@@ -131,7 +130,9 @@
 
   <footer>
     <h5>
-      Instructor: <a href="http://www.cs.toronto.edu/~liudavid/">David Liu</a> (liudavid at cs dot toronto dot edu) <br />
+      <a href="http://www.cs.toronto.edu/~liudavid/">David Liu</a> (liudavid at cs dot toronto dot edu) <br />
+      Come find me in BA4260<br />
+      Site design by Deyu Wang (dyw999 at gmail dot com)
     </h5>
   </footer>
 

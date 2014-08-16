@@ -43,9 +43,9 @@
         <li><a id="more">More</a>
           <div id="more-wrap">
             <ul id="more-dropdown">
-              <li><a href="more-calendar.html">Calendar</a></li>
-              <li><a href="more-course-info.html">Full Course Info</a></li>
-              <li><a href="more-policies.html">Policies</a></li>
+              <li><a href="../more-calendar.html">Calendar</a></li>
+              <li><a href="../more-course-info.html">Full Course Info</a></li>
+              <li><a href="../more-policies.html">Policies</a></li>
               <li><a href="https://login.library.utoronto.ca/cgi-bin/go_log.pl?url=http://exams.library.utoronto.ca">University Exam Repo</a></li>
             </ul>
           </div>
@@ -58,93 +58,92 @@
   </div>
   <div class="center">
     <br />
-    <h1 id="week-5---recursion-with-linked-lists">Week 5 - Recursion with Linked Lists</h1>
-    <p>For today's lecture, we're going to make explicit the recursive structure of linked lists, and see how we can implement the methods from last week in a recursive rather than iterative way.</p>
-    <p>Our recursive implementation of linked lists will follow the exact same structure as the one provided for <code>PeopleChain</code> from last week. Note that there's only one class, <code>LinkedListRec</code>, that has two attributes: <code>first</code>, representing the first item in the list, and <code>rest</code>, a <code>LinkedListRec</code> object representing all the other elements in the list. As a first step, let's take a look at the constructor:</p>
-    <pre class="sourceCode python"><code class="sourceCode python"><span class="kw">class</span> LinkedListRec:
-    
-        <span class="kw">def</span> <span class="ot">__init__</span>(<span class="ot">self</span>, items):
-            <span class="kw">if</span> <span class="dt">len</span>(items) == <span class="dv">0</span>:
-                <span class="ot">self</span>.first = <span class="ot">None</span>
-                <span class="ot">self</span>.rest = <span class="ot">None</span>
-            <span class="kw">else</span>:
-                <span class="ot">self</span>.first = items[<span class="dv">0</span>]
-                <span class="ot">self</span>.rest = LinkedListRec(items[<span class="dv">1</span>:])</code></pre>
-    <p>It shouldn't come as a surprise that even the constructor is recursive: when using recursive implementations like this one, you expect (almost) all of its key functions to be implemented recursively. This is usually the simplest or most elegant way of doing it, as you'll see!</p>
-    <p>This constructor follows the basic recursive pattern: there is a base case when <code>len(items) == 0</code>, which creates an empty list, and then a recursive case which initializes the first item in the list, and then creates the rest of the list recursively.</p>
-    <h3 id="aside-list-of-none">Aside: List of None?</h3>
-    <p>In the constructor, f the <code>items</code> argument is empty, we want to create an empty linked list, and we do so by setting <code>self.first = None</code>. There is one slight annoyance with this, though: what if we want to create a list whose first value actually <em>is</em> <code>None</code>? Doing so might run the risk of the list being interpreted as an empty list, if we check for emptiness by comparing <code>self.first</code> to <code>None</code>.</p>
-    <p>We can get around this problem simply by creating a dummy class (much like our exception classes), whose only purpose is to signify something special - in this case, that the list is empty. We do that as follows here:</p>
-    <pre class="sourceCode python"><code class="sourceCode python"><span class="kw">class</span> EmptyValue:
-        <span class="kw">pass</span>
-    
-    <span class="kw">class</span> LinkedListRec:
-    
-        <span class="kw">def</span> <span class="ot">__init__</span>(<span class="ot">self</span>, items):
-            <span class="co">&quot;&quot;&quot; (LinkedListRec, list) -&gt; NoneType</span>
-    
-    <span class="co">        Create a new linked list containing the elements in items.</span>
-    <span class="co">        If list is empty, self.first initialized to EmptyValue.</span>
-    <span class="co">        &quot;&quot;&quot;</span>
-            <span class="kw">if</span> <span class="dt">len</span>(items) == <span class="dv">0</span>:
-                <span class="ot">self</span>.first = EmptyValue
-                <span class="ot">self</span>.rest = <span class="ot">None</span>
-            <span class="kw">else</span>:
-                <span class="ot">self</span>.first = items[<span class="dv">0</span>]
-                <span class="ot">self</span>.rest = LinkedListRec(items[<span class="dv">1</span>:])
-    
-        <span class="kw">def</span> is_empty(<span class="ot">self</span>):
-            <span class="kw">return</span> <span class="ot">self</span>.first is EmptyValue</code></pre>
-    <h2 id="recursive-traversal">Recursive Traversal</h2>
-    <p>Now let's write <code>__getitem__</code>, which of course is analogous to <code>get_nth</code> from <code>PeopleChain</code>.</p>
-    <pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> <span class="ot">__getitem__</span>(<span class="ot">self</span>, index):
-        <span class="kw">if</span> index == <span class="dv">0</span>:
-            <span class="kw">return</span> <span class="ot">self</span>.first
+<!-- Don't indent the body. There seems to be issues with this and code rendering. -->
+<h1 id="week-5---recursion-with-linked-lists">Week 5 - Recursion with Linked Lists</h1>
+<p>For today's lecture, we're going to make explicit the recursive structure of linked lists, and see how we can implement the methods from last week in a recursive rather than iterative way.</p>
+<p>Our recursive implementation of linked lists will follow the exact same structure as the one provided for <code>PeopleChain</code> from last week. Note that there's only one class, <code>LinkedListRec</code>, that has two attributes: <code>first</code>, representing the first item in the list, and <code>rest</code>, a <code>LinkedListRec</code> object representing all the other elements in the list. As a first step, let's take a look at the constructor:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">class</span> LinkedListRec:
+
+    <span class="kw">def</span> <span class="ot">__init__</span>(<span class="ot">self</span>, items):
+        <span class="kw">if</span> <span class="dt">len</span>(items) == <span class="dv">0</span>:
+            <span class="ot">self</span>.first = <span class="ot">None</span>
+            <span class="ot">self</span>.rest = <span class="ot">None</span>
         <span class="kw">else</span>:
-            <span class="kw">return</span> <span class="ot">self</span>.rest.<span class="ot">__getitem__</span>(index - <span class="dv">1</span>)
-            <span class="co"># Or equivalently, self.rest[index - 1]</span></code></pre>
-    <p>This recursive implemention of a linked list makes it very easy to implement non-mutating methods; most of the ones you'll write in this course will have the same basic structure as <code>__getitem__</code>. We'll leave it as an exercise to handle the case when <code>index</code> is out of bounds.</p>
-    <h2 id="mutation">Mutation</h2>
-    <p>As with the node-based linked lists, things get a little trickier when mutation is involved. However, the basic idea - changing the links to achieve both insertion and deletion - remains the same.</p>
-    <h3 id="deletion">Deletion</h3>
-    <p>The first thing we'll try to do is implement the <code>__delitem__</code> list method:</p>
-    <pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> <span class="ot">__delitem__</span>(<span class="ot">self</span>, index):
-            <span class="co">&quot;&quot;&quot; (LinkedListRec, int) -&gt; NoneType</span>
-    <span class="co">        </span>
-    <span class="co">        Remove item at position index from the list.</span>
-    <span class="co">        Raise an IndexError if index is out of bounds.</span>
-    <span class="co">        &quot;&quot;&quot;</span></code></pre>
-    <p>Applying our recursive thinking, we notice that there are really two possible base cases: when the list is empty, and when <code>index</code> is 0. Note that we've divided this up into two base cases because the function really should behave differently for the two cases: in the former, an <code>IndexError</code> should be raised, and in the latter, the first item in the list should be removed.</p>
-    <p>What about the recursive step? As with <code>__getitem__</code>, if we're asked to delete (say) the third item in a list, that's the same as deleting the second item in the <em>rest</em> of the list. This now gives us our overall structure:</p>
-    <pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> <span class="ot">__delitem__</span>(<span class="ot">self</span>, index):
-        <span class="kw">if</span> <span class="ot">self</span>.is_empty():
-            <span class="kw">raise</span> <span class="ot">IndexError</span>
-        <span class="kw">elif</span> index == <span class="dv">0</span>:
-            <span class="ot">self</span>.remove_first()
+            <span class="ot">self</span>.first = items[<span class="dv">0</span>]
+            <span class="ot">self</span>.rest = LinkedListRec(items[<span class="dv">1</span>:])</code></pre>
+<p>It shouldn't come as a surprise that even the constructor is recursive: when using recursive implementations like this one, you expect (almost) all of its key functions to be implemented recursively. This is usually the simplest or most elegant way of doing it, as you'll see!</p>
+<p>This constructor follows the basic recursive pattern: there is a base case when <code>len(items) == 0</code>, which creates an empty list, and then a recursive case which initializes the first item in the list, and then creates the rest of the list recursively.</p>
+<h3 id="aside-list-of-none">Aside: List of None?</h3>
+<p>In the constructor, f the <code>items</code> argument is empty, we want to create an empty linked list, and we do so by setting <code>self.first = None</code>. There is one slight annoyance with this, though: what if we want to create a list whose first value actually <em>is</em> <code>None</code>? Doing so might run the risk of the list being interpreted as an empty list, if we check for emptiness by comparing <code>self.first</code> to <code>None</code>.</p>
+<p>We can get around this problem simply by creating a dummy class (much like our exception classes), whose only purpose is to signify something special - in this case, that the list is empty. We do that as follows here:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">class</span> EmptyValue:
+    <span class="kw">pass</span>
+
+<span class="kw">class</span> LinkedListRec:
+
+    <span class="kw">def</span> <span class="ot">__init__</span>(<span class="ot">self</span>, items):
+        <span class="co">&quot;&quot;&quot; (LinkedListRec, list) -&gt; NoneType</span>
+
+<span class="co">        Create a new linked list containing the elements in items.</span>
+<span class="co">        If list is empty, self.first initialized to EmptyValue.</span>
+<span class="co">        &quot;&quot;&quot;</span>
+        <span class="kw">if</span> <span class="dt">len</span>(items) == <span class="dv">0</span>:
+            <span class="ot">self</span>.first = EmptyValue
+            <span class="ot">self</span>.rest = <span class="ot">None</span>
         <span class="kw">else</span>:
-            <span class="ot">self</span>.rest.<span class="ot">__delitem__</span>(index - <span class="dv">1</span>)</code></pre>
-    <p>Now the only remaining thing to do is implement <code>remove_first</code>, which we do below. Note that this is the <em>only</em> part that actually changes the list, and it does so by basically removing <code>self.first</code>.</p>
-    <pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> remove_first(<span class="ot">self</span>):
-        <span class="kw">if</span> <span class="ot">self</span>.is_empty():
-            <span class="kw">raise</span> <span class="ot">IndexError</span>
-        <span class="kw">else</span>:
-            <span class="ot">self</span>.first = <span class="ot">self</span>.rest.first
-            <span class="ot">self</span>.rest = <span class="ot">self</span>.rest.rest</code></pre>
-    <h3 id="insertion">Insertion</h3>
-    <p>Now let's handle insertion at the front. The basic idea is we want to update <code>self.rest</code> to be the old list of <code>self</code>, and update <code>self.first</code> to be the new element. You might be surprised to find that the following doesn't work:</p>
-    <pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> insert_first(<span class="ot">self</span>, item):
-        <span class="ot">self</span>.rest = <span class="ot">self</span>
-        <span class="ot">self</span>.first = item</code></pre>
-    <p>The problem is how <a href="">arguments work in Python</a>. We can fix this quite simply by introducing a temporary copy of self.</p>
-    <pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> insert_first(<span class="ot">self</span>, item):
-        temp = LinkedListRec([])
-        temp.first = <span class="ot">self</span>.first
-        temp.rest = <span class="ot">self</span>.rest
-        <span class="ot">self</span>.first = item
-        <span class="ot">self</span>.rest = temp</code></pre>
-    <p>In the lab, you'll finish up insertion by using <code>insert_first</code> to implement <code>insert</code>, much in the same way as <code>delete</code>. Note that I'm leaving it to you because this is where the recursive thinking actually comes in!</p>
-    <br />
-    <br />
+            <span class="ot">self</span>.first = items[<span class="dv">0</span>]
+            <span class="ot">self</span>.rest = LinkedListRec(items[<span class="dv">1</span>:])
+
+    <span class="kw">def</span> is_empty(<span class="ot">self</span>):
+        <span class="kw">return</span> <span class="ot">self</span>.first is EmptyValue</code></pre>
+<h2 id="recursive-traversal">Recursive Traversal</h2>
+<p>Now let's write <code>__getitem__</code>, which of course is analogous to <code>get_nth</code> from <code>PeopleChain</code>.</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> <span class="ot">__getitem__</span>(<span class="ot">self</span>, index):
+    <span class="kw">if</span> index == <span class="dv">0</span>:
+        <span class="kw">return</span> <span class="ot">self</span>.first
+    <span class="kw">else</span>:
+        <span class="kw">return</span> <span class="ot">self</span>.rest.<span class="ot">__getitem__</span>(index - <span class="dv">1</span>)
+        <span class="co"># Or equivalently, self.rest[index - 1]</span></code></pre>
+<p>This recursive implemention of a linked list makes it very easy to implement non-mutating methods; most of the ones you'll write in this course will have the same basic structure as <code>__getitem__</code>. We'll leave it as an exercise to handle the case when <code>index</code> is out of bounds.</p>
+<h2 id="mutation">Mutation</h2>
+<p>As with the node-based linked lists, things get a little trickier when mutation is involved. However, the basic idea - changing the links to achieve both insertion and deletion - remains the same.</p>
+<h3 id="deletion">Deletion</h3>
+<p>The first thing we'll try to do is implement the <code>__delitem__</code> list method:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> <span class="ot">__delitem__</span>(<span class="ot">self</span>, index):
+        <span class="co">&quot;&quot;&quot; (LinkedListRec, int) -&gt; NoneType</span>
+<span class="co">        </span>
+<span class="co">        Remove item at position index from the list.</span>
+<span class="co">        Raise an IndexError if index is out of bounds.</span>
+<span class="co">        &quot;&quot;&quot;</span></code></pre>
+<p>Applying our recursive thinking, we notice that there are really two possible base cases: when the list is empty, and when <code>index</code> is 0. Note that we've divided this up into two base cases because the function really should behave differently for the two cases: in the former, an <code>IndexError</code> should be raised, and in the latter, the first item in the list should be removed.</p>
+<p>What about the recursive step? As with <code>__getitem__</code>, if we're asked to delete (say) the third item in a list, that's the same as deleting the second item in the <em>rest</em> of the list. This now gives us our overall structure:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> <span class="ot">__delitem__</span>(<span class="ot">self</span>, index):
+    <span class="kw">if</span> <span class="ot">self</span>.is_empty():
+        <span class="kw">raise</span> <span class="ot">IndexError</span>
+    <span class="kw">elif</span> index == <span class="dv">0</span>:
+        <span class="ot">self</span>.remove_first()
+    <span class="kw">else</span>:
+        <span class="ot">self</span>.rest.<span class="ot">__delitem__</span>(index - <span class="dv">1</span>)</code></pre>
+<p>Now the only remaining thing to do is implement <code>remove_first</code>, which we do below. Note that this is the <em>only</em> part that actually changes the list, and it does so by basically removing <code>self.first</code>.</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> remove_first(<span class="ot">self</span>):
+    <span class="kw">if</span> <span class="ot">self</span>.is_empty():
+        <span class="kw">raise</span> <span class="ot">IndexError</span>
+    <span class="kw">else</span>:
+        <span class="ot">self</span>.first = <span class="ot">self</span>.rest.first
+        <span class="ot">self</span>.rest = <span class="ot">self</span>.rest.rest</code></pre>
+<h3 id="insertion">Insertion</h3>
+<p>Now let's handle insertion at the front. The basic idea is we want to update <code>self.rest</code> to be the old list of <code>self</code>, and update <code>self.first</code> to be the new element. You might be surprised to find that the following doesn't work:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> insert_first(<span class="ot">self</span>, item):
+    <span class="ot">self</span>.rest = <span class="ot">self</span>
+    <span class="ot">self</span>.first = item</code></pre>
+<p>The problem is how <a href="">arguments work in Python</a>. We can fix this quite simply by introducing a temporary copy of self.</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> insert_first(<span class="ot">self</span>, item):
+    temp = LinkedListRec([])
+    temp.first = <span class="ot">self</span>.first
+    temp.rest = <span class="ot">self</span>.rest
+    <span class="ot">self</span>.first = item
+    <span class="ot">self</span>.rest = temp</code></pre>
+<p>In the lab, you'll finish up insertion by using <code>insert_first</code> to implement <code>insert</code>, much in the same way as <code>delete</code>. Note that I'm leaving it to you because this is where the recursive thinking actually comes in!</p>
     <a href="http://web.cs.toronto.edu/"><img class="logo" src="../images/csfaculty.jpg"/></a>
     <!-- scripts -->
     <script src="../scripts/main.js"></script>
@@ -152,7 +151,9 @@
 
   <footer>
     <h5>
-      Instructor: <a href="http://www.cs.toronto.edu/~liudavid/">David Liu</a> (liudavid at cs dot toronto dot edu) <br />
+      <a href="http://www.cs.toronto.edu/~liudavid/">David Liu</a> (liudavid at cs dot toronto dot edu) <br />
+      Come find me in BA4260<br />
+      Site design by Deyu Wang (dyw999 at gmail dot com)
     </h5>
   </footer>
 
