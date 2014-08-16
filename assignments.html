@@ -7,27 +7,26 @@
   <link rel="stylesheet" href="../styles/main.css" />
   <script src="../scripts/jquery-1.11.1.js"></script>
   <script src="../scripts/misc.js"></script>
-  <style type="text/css">code{white-space: pre;}</style>
     </head>
 <body>
   <div id="nav-background"></div>
-  <div class="center">  
+  <div class="center">
     <div id="line_left_long"></div>
     <div id="line_right_long"></div>
     <nav>
       <ul>
-        <li><a href="../index.html" class="here">CSC148</a></li>
-        <li><a href="../learn.html">Learn</a></li>
+        <li><a href="../index.html">CSC148</a></li>
+        <li><a href="../learn.html" class="here">Learn</a></li>
         <li><a href="https://piazza.com/">Discuss</a></li>
-        <li><a href="">Submit</a></li>
+        <li><a href="https://markus.cdf.toronto.edu/csc148-2014-09/">Submit</a></li>
+        <li><a href="../feedback.html">Feedback</a></li>
         <li><a id="more">More</a>
           <div id="more-wrap">
             <ul id="more-dropdown">
               <li><a href="more-calendar.html">Calendar</a></li>
-              <li><a href="">Full Course Info</a></li>
-              <li><a href="">Policies</a></li>
-              <li><a href="">Anonymous Feedback</a></li>
-              <li><a href="">University Exam Repo</a></li>
+              <li><a href="more-course-info.html">Full Course Info</a></li>
+              <li><a href="more-policies.html">Policies</a></li>
+              <li><a href="https://login.library.utoronto.ca/cgi-bin/go_log.pl?url=http://exams.library.utoronto.ca">University Exam Repo</a></li>
             </ul>
           </div>
         </li>
@@ -36,49 +35,56 @@
     </nav>
   </div>
   <div id="content">
-<h1 id="exercises-and-assignments-faq">Exercises and Assignments FAQ</h1>
-<p>This page is a one-stop shop for answers to common questions you might have for the exercise and assignment portion of the course. If you think I've missed anything important, let me know!</p>
-<p><strong>Question</strong>: Where are the exercises/assignments posted? <strong>Answer</strong>: The corresponding week in the <a href="learn.html">Learn</a> table.</p>
-<p><strong>Question</strong>: When are they due? <strong>Answer</strong>: Exercises are usually due on Sundays at 10pm. Assignment due dates are on the handouts.</p>
-<p><strong>Question</strong>: How do I submit my work? <strong>Answer</strong>: We're using <a href="">MarkUs</a> to handle both exercise and assignment submission and marking. Your first lab will go over how to use MarkUs, if you haven't used it before. <strong>WARNING! WARNING!</strong> MarkUs is prone to extreme slowdowns when too many students try to submit at the same time. <strong>This is not a valid excuse for a late submission.</strong> To be safe, you should do two things:</p>
-<ul>
-<li>Submit multiple versions of your files to MarkUs ahead of time. For exercises, we'll always take the submission with the <em>highest</em> mark, so there's really nothing to lose! For assignments, we'll mark your most recent submission by default, but you'll be able to request an alternate submission be marked.</li>
-<li>Plan to have your final submission into MarkUs an hour before the actual deadline. You should think of any time after that as bonus.</li>
-</ul>
-<p><strong>Question</strong>: Can I work with my friends? <strong>Answer</strong>: For exercises, you must work and submit alone. For assignments, you may work in groups of up to **three* students.</p>
-<h2 id="academic-honesty">Academic Honesty</h2>
-<p><strong>Question</strong>: Can I <em>discuss</em> exercises and assignments with my friends? <strong>Answer</strong>: We think talking about the course material with your peers is a great way to learn, and we encourage you to do it. However, we also take plagiarism <strong>VERY SERIOUSLY</strong>, and this is something which comes up a whole lot in this course. Here are the guidelines you should follow to avoid any suspicion of wrongdoing:</p>
-<ul>
-<li>When discussing questions, don't <em>write anything down</em>. Nothing. If you can remember it after you've left, you've learned it. If not, you need to spend some more time talking.</li>
-<li>When posting a question/response on the forum, don't <em>post code</em> directly for the assignment. You can certainly ask Python-related questions, but only give generic code examples.</li>
-<li>This is the hardest: <strong>never show anyone your code</strong>, and <strong>never look at anyone else's code</strong>. This is one of the biggest temptations in programming classes, and it's up to you to conquer it!</li>
-</ul>
-<h2 id="help-im-stuck">Help, I'm stuck!</h2>
-<p><strong>Question</strong>: I think I need help. What do I do? <strong>Answer</strong>: Ask for help! I have lots of office hours, your TAs are a great resource during labs, and your peers are great for bouncing around ideas. The <a href="">Course Forum</a> usually gets pretty busy, and I'll be checking it regularly. And feel free to book an appointment with me if you want a bit of extra help.</p>
-<p><strong>Question</strong>: Is searching online okay? <strong>Answer</strong>: It depends. If you're trying to find how to use the right Python function, or looking for videos and notes to understand topic X, the internet is a great place to turn to! But if you find yourself copy-and-pasting the exact exercise question into Google, yup, <strong>that's cheating</strong>. In the past, we've had multiple students copy code directly from the same online source. Don't become a cautionary tale.</p>
-<h2 id="autotesting">Autotesting</h2>
-<p><strong>Question</strong>: How does autotesting work? <strong>Answer</strong>: For every function we ask you to write, we'll have a set of <em>unit tests</em> that we'll run on your code. For exercises, your whole mark will be based on the results of these tests: if the tests all pass, you'll get 100%. For assignments, a large fraction of your mark will be based on the autotests, but we'll also mark for design, style, and your own testing.</p>
-<p><strong>Question</strong>: How can I be confident my code will pass the tests? <strong>Answer</strong>: Write your own tests! A big part of this course is getting in the habit of <em>testing your code</em>, and even <em>writing tests before implementations</em>. You shouldn't (and can't) rely on our auto-tests to tell you if your code is running properly. That said, we're doing two things to help you with your testing:</p>
-<ul>
-<li>We'll provide a small set of tests that you can run on your own. These will give you an idea of how our tests will be structured, although they'll be far simpler than our own test suite.</li>
-<li><p>If you submit your code on MarkUs early, we'll run our full auto-testing suite <strong>a few times before the due date</strong>, at approximately these times:</p>
-<ul>
-<li>For exercises: Wednesday, Friday, Saturday, early afternoon each day</li>
-<li>For assignments: 7/5/4/3/2/1 days before the due date</li>
-</ul></li>
-</ul>
-<h2 id="policies">Policies</h2>
-<p><strong>Question</strong>: Is there any flexibility with the deadlines? <strong>Answer</strong>: In extreme circumstances, it's your responsibility to contact me ASAP if you'll have trouble meeting a deadline. For other matters, there is still some flexibility:</p>
-<ul>
-<li>We're dropping your lowest exercise mark, even if it's a 0 because you didn't submit anything.</li>
-<li>The late penalty for assignments will be decided <strong>by you</strong> during the first week of class.</li>
-</ul>
-<p><strong>Question</strong>: Aw man, a small mistake in my code made lots/all of the tests fail! Isn't there anything I can do? <strong>Answer</strong>: A small mistake is still a mistake, and if you were testing properly, then you certainly be <em>surprised</em> that this happened. For exercises, there is no appear. On assignments, however, you'll be permitted to submit a request explaining the <strong>one to four lines</strong> of code that need to be changed. We'll make the changes and rerun the tests. <strong>WARNING! WARNING!</strong> This request has a downside: a 15% penalty will be applied to your overall assignment mark, regardless of the test results. That means your new mark could end up being as high as 85%, or as low a 0% (we won't give you a negative mark). So only do this if you're confident that your small mistake really was the problem.</p>
-<h2 id="unasked-for-advice">Unasked-For Advice</h2>
-<p><strong>Question</strong>: Hey David, what advice would you give me about the exercises and assignments? <strong>Answer</strong>: Hey ____, thanks for asking! The single most important thing you can do to make sure you succeed is <em>start early</em>. Not only does this give you more time overall, it also significantly reduces the pressure you face while working.</p>
-<p>The exercises in particular are not meant to be long, but just quick checks; but if you leave them to the last minutes, you'll have a stressful weekend, especially because you'll need to do some reading on your own.</p>
-<p>And the assignments should be started <em>weeks</em> in advance, done <em>concurrently</em> with the exercises! I've deliberately planned the course schedule and assignments so that each week, you'll be able to do a little bit more. Keep up, and you'll find them to be a fun and rewarding learning experience. Leave them to the last week, and you'll probably not.</p>
+  </div>
+  <div class="center">
+    <br />
+    <h1 id="exercises-and-assignments-faq">Exercises and Assignments FAQ</h1>
+    <p>This page is a one-stop shop for answers to common questions you might have for the exercise and assignment portion of the course. If you think I've missed anything important, let me know!</p>
+    <p><strong>Question</strong>: Where are the exercises/assignments posted? <strong>Answer</strong>: The corresponding week in the <a href="learn.html">Learn</a> table.</p>
+    <p><strong>Question</strong>: When are they due? <strong>Answer</strong>: Exercises are usually due on Sundays at 10pm. Assignment due dates are on the handouts.</p>
+    <p><strong>Question</strong>: How do I submit my work? <strong>Answer</strong>: We're using <a href="">MarkUs</a> to handle both exercise and assignment submission and marking. Your first lab will go over how to use MarkUs, if you haven't used it before. <strong>WARNING! WARNING!</strong> MarkUs is prone to extreme slowdowns when too many students try to submit at the same time. <strong>This is not a valid excuse for a late submission.</strong> To be safe, you should do two things:</p>
+    <ul>
+    <li>Submit multiple versions of your files to MarkUs ahead of time. For exercises, we'll always take the submission with the <em>highest</em> mark, so there's really nothing to lose! For assignments, we'll mark your most recent submission by default, but you'll be able to request an alternate submission be marked.</li>
+    <li>Plan to have your final submission into MarkUs an hour before the actual deadline. You should think of any time after that as bonus.</li>
+    </ul>
+    <p><strong>Question</strong>: Can I work with my friends? <strong>Answer</strong>: For exercises, you must work and submit alone. For assignments, you may work in groups of up to **three* students.</p>
+    <h2 id="academic-honesty">Academic Honesty</h2>
+    <p><strong>Question</strong>: Can I <em>discuss</em> exercises and assignments with my friends? <strong>Answer</strong>: We think talking about the course material with your peers is a great way to learn, and we encourage you to do it. However, we also take plagiarism <strong>VERY SERIOUSLY</strong>, and this is something which comes up a whole lot in this course. Here are the guidelines you should follow to avoid any suspicion of wrongdoing:</p>
+    <ul>
+    <li>When discussing questions, don't <em>write anything down</em>. Nothing. If you can remember it after you've left, you've learned it. If not, you need to spend some more time talking.</li>
+    <li>When posting a question/response on the forum, don't <em>post code</em> directly for the assignment. You can certainly ask Python-related questions, but only give generic code examples.</li>
+    <li>This is the hardest: <strong>never show anyone your code</strong>, and <strong>never look at anyone else's code</strong>. This is one of the biggest temptations in programming classes, and it's up to you to conquer it!</li>
+    </ul>
+    <h2 id="help-im-stuck">Help, I'm stuck!</h2>
+    <p><strong>Question</strong>: I think I need help. What do I do? <strong>Answer</strong>: Ask for help! I have lots of office hours, your TAs are a great resource during labs, and your peers are great for bouncing around ideas. The <a href="">Course Forum</a> usually gets pretty busy, and I'll be checking it regularly. And feel free to book an appointment with me if you want a bit of extra help.</p>
+    <p><strong>Question</strong>: Is searching online okay? <strong>Answer</strong>: It depends. If you're trying to find how to use the right Python function, or looking for videos and notes to understand topic X, the internet is a great place to turn to! But if you find yourself copy-and-pasting the exact exercise question into Google, yup, <strong>that's cheating</strong>. In the past, we've had multiple students copy code directly from the same online source. Don't become a cautionary tale.</p>
+    <h2 id="autotesting">Autotesting</h2>
+    <p><strong>Question</strong>: How does autotesting work? <strong>Answer</strong>: For every function we ask you to write, we'll have a set of <em>unit tests</em> that we'll run on your code. For exercises, your whole mark will be based on the results of these tests: if the tests all pass, you'll get 100%. For assignments, a large fraction of your mark will be based on the autotests, but we'll also mark for design, style, and your own testing.</p>
+    <p><strong>Question</strong>: How can I be confident my code will pass the tests? <strong>Answer</strong>: Write your own tests! A big part of this course is getting in the habit of <em>testing your code</em>, and even <em>writing tests before implementations</em>. You shouldn't (and can't) rely on our auto-tests to tell you if your code is running properly. That said, we're doing two things to help you with your testing:</p>
+    <ul>
+    <li>We'll provide a small set of tests that you can run on your own. These will give you an idea of how our tests will be structured, although they'll be far simpler than our own test suite.</li>
+    <li><p>If you submit your code on MarkUs early, we'll run our full auto-testing suite <strong>a few times before the due date</strong>, at approximately these times:</p>
+    <ul>
+    <li>For exercises: Wednesday, Friday, Saturday, early afternoon each day</li>
+    <li>For assignments: 7/5/4/3/2/1 days before the due date</li>
+    </ul></li>
+    </ul>
+    <h2 id="policies">Policies</h2>
+    <p><strong>Question</strong>: Is there any flexibility with the deadlines? <strong>Answer</strong>: In extreme circumstances, it's your responsibility to contact me ASAP if you'll have trouble meeting a deadline. For other matters, there is still some flexibility:</p>
+    <ul>
+    <li>We're dropping your lowest exercise mark, even if it's a 0 because you didn't submit anything.</li>
+    <li>The late penalty for assignments will be decided <strong>by you</strong> during the first week of class.</li>
+    </ul>
+    <p><strong>Question</strong>: Aw man, a small mistake in my code made lots/all of the tests fail! Isn't there anything I can do? <strong>Answer</strong>: A small mistake is still a mistake, and if you were testing properly, then you certainly be <em>surprised</em> that this happened. For exercises, there is no appear. On assignments, however, you'll be permitted to submit a request explaining the <strong>one to four lines</strong> of code that need to be changed. We'll make the changes and rerun the tests. <strong>WARNING! WARNING!</strong> This request has a downside: a 15% penalty will be applied to your overall assignment mark, regardless of the test results. That means your new mark could end up being as high as 85%, or as low a 0% (we won't give you a negative mark). So only do this if you're confident that your small mistake really was the problem.</p>
+    <h2 id="unasked-for-advice">Unasked-For Advice</h2>
+    <p><strong>Question</strong>: Hey David, what advice would you give me about the exercises and assignments? <strong>Answer</strong>: Hey ____, thanks for asking! The single most important thing you can do to make sure you succeed is <em>start early</em>. Not only does this give you more time overall, it also significantly reduces the pressure you face while working.</p>
+    <p>The exercises in particular are not meant to be long, but just quick checks; but if you leave them to the last minutes, you'll have a stressful weekend, especially because you'll need to do some reading on your own.</p>
+    <p>And the assignments should be started <em>weeks</em> in advance, done <em>concurrently</em> with the exercises! I've deliberately planned the course schedule and assignments so that each week, you'll be able to do a little bit more. Keep up, and you'll find them to be a fun and rewarding learning experience. Leave them to the last week, and you'll probably not.</p>
+    <br />
+    <br />
     <a href="http://web.cs.toronto.edu/"><img class="logo" src="../images/csfaculty.jpg"/></a>
+    <!-- scripts -->
+    <script src="../scripts/main.js"></script>
   </div>
 
   <footer>
@@ -86,9 +92,6 @@
       Instructor: <a href="http://www.cs.toronto.edu/~liudavid/">David Liu</a> (liudavid at cs dot toronto dot edu) <br />
     </h5>
   </footer>
-
-  <!-- scripts -->
-  <script src="../scripts/main.js"></script>
 
 </body>
 </html>

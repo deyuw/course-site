@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="../styles/main.css" />
   <script src="../scripts/jquery-1.11.1.js"></script>
   <script src="../scripts/misc.js"></script>
-  <style type="text/css">code{white-space: pre;}</style>
       <style type="text/css">
     table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
       margin: 0; padding: 0; vertical-align: baseline; border: none; }
@@ -31,23 +30,23 @@
     </head>
 <body>
   <div id="nav-background"></div>
-  <div class="center">  
+  <div class="center">
     <div id="line_left_long"></div>
     <div id="line_right_long"></div>
     <nav>
       <ul>
-        <li><a href="../index.html" class="here">CSC148</a></li>
-        <li><a href="../learn.html">Learn</a></li>
+        <li><a href="../index.html">CSC148</a></li>
+        <li><a href="../learn.html" class="here">Learn</a></li>
         <li><a href="https://piazza.com/">Discuss</a></li>
-        <li><a href="">Submit</a></li>
+        <li><a href="https://markus.cdf.toronto.edu/csc148-2014-09/">Submit</a></li>
+        <li><a href="../feedback.html">Feedback</a></li>
         <li><a id="more">More</a>
           <div id="more-wrap">
             <ul id="more-dropdown">
               <li><a href="more-calendar.html">Calendar</a></li>
-              <li><a href="">Full Course Info</a></li>
-              <li><a href="">Policies</a></li>
-              <li><a href="">Anonymous Feedback</a></li>
-              <li><a href="">University Exam Repo</a></li>
+              <li><a href="more-course-info.html">Full Course Info</a></li>
+              <li><a href="more-policies.html">Policies</a></li>
+              <li><a href="https://login.library.utoronto.ca/cgi-bin/go_log.pl?url=http://exams.library.utoronto.ca">University Exam Repo</a></li>
             </ul>
           </div>
         </li>
@@ -56,53 +55,64 @@
     </nav>
   </div>
   <div id="content">
-<h1 id="lab-6---sophisticated-recursion">Lab 6 - Sophisticated Recursion</h1>
-<h2 id="task-1-fibonacci-revisited.">Task 1: Fibonacci revisited.</h2>
-<p><strong>Learning goals</strong>:</p>
-<ul>
-<li>Practice timing some code using the Timer class</li>
-<li>Use memoization to greatly increase the speed of computation.</li>
-</ul>
-<h3 id="profiling-and-analysis">Profiling and Analysis</h3>
-<p>Recall from lecture our simple recursive algorithm for computing the Fibonacci numbers. One problem with this algorithm is that it's extremely slow: try running some experiments in <a href="sophrec.py">sophrec.py</a> to see what we mean; the running time grows roughly exponentially with the size of the argument <code>n</code>! Note that you'll need to download the <a href="../util/timer.py">timer.py</a> file to access the <code>Timer</code> class.</p>
-<p>Before moving on, discuss why this is happening. If you need some help, try commenting out the <code>print</code> statements and examine what gets printed (note: don't get too hung up on the <em>order</em> of what's printed, that's not the point here).</p>
-<h3 id="memoization">Memoization</h3>
-<p>To improve the runtime efficiency of <code>fib</code>, we're going to introduce a powerful technique called <strong>memoization</strong>. Memoization eliminates redundant function calls by storing the function call results in some global list variable - in this case, such a list would store the actual computed Fibonacci numbers. Then in <code>fib(n)</code>, before making the calls to <code>fib(n-1)</code> and <code>fib(n-2)</code>, look up these values in the table. If they exist in the table, there's no need to make a recursive call - just use that value! And if it's not, then compute it recursively. At some point you should also be storing the computed values in the table as well.</p>
-<p>Write a new function <code>memo_fib(n)</code> function to implement memoization; if you did it correctly, there should only be one recursive call made to each integer <code>&lt; n</code> (you can check this with the print statements).</p>
-<p>As a bonus, rerun your profiling experiment with <code>memo_fib</code> instead of <code>fib</code> and marvel at the results!</p>
-<h1 id="task-2-binary-search">Task 2: Binary Search</h1>
-<p><strong>Learning goals</strong>:</p>
-<ul>
-<li>Think recursively!</li>
-<li>Understand binary search, a fundamental search algorithm</li>
-</ul>
-<p>Consider problem of trying to determine whether some item is in a list. The usual approach is the loop through all list elements and compare them to item. Of course, if the item isn't in the list, every element will be checked. Can we do better?</p>
-<p>As we all know how to search <a href="">phone books</a>, we certainly can do better if the list is sorted. Simply compare x against the middle element, and use the result to decide which half of the list to search next. This way, with each comparison we cut in half the number of remaining elements - a great save in efficiency! (We'll revisit this more rigorously later.)</p>
-<p>Pause: what's the base case? At what point should the binary search algorithm stop?</p>
-<p>In the <a href="binsearch.py">starter code</a>, implement binary search, which is very naturally a recursive one. To keep your code as simple as possible, you should may list slicing to get sublists.</p>
-<h1 id="task-3-indexed-binary-search-optional">Task 3: Indexed Binary Search (optional)</h1>
-<p><strong>Learning goals</strong>:</p>
-<ul>
-<li>Understand the cost of list slicing</li>
-<li>Understand how to use indexes to avoid copying lists</li>
-</ul>
-<p>Though list slicing made your code in Task 2 very simple, there's a problem: every time you make a list slice in Python, a new list is created, which is rather inefficient. Instead, what we're going to do is use additional parameters representing the <em>left and right bounds</em> of the part of the list we're checking. This enables us to pass the same list argument into the recursive calls: no slicing necessary! Instead, we simply update the bounds parameters depending on whether we want to search the left or right half.</p>
-<p>Here is the function header and description for what you should implement:</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> indexed_binary_search(lst, item, left, right):
-    <span class="co">&quot;&quot;&quot; (list, object, int, int) -&gt; bool</span>
-
-<span class="co">    Precondition: lst is a sorted list, 0 &lt;= left &lt;= right &lt; len(lst).</span>
-
-<span class="co">    Return True if item is in lst[left:right].</span>
-
-<span class="co">    Note that if we wanted to search the whole list, we would call</span>
-<span class="co">    indexed_binary_search(lst, item, 0, len(lst)).</span>
-<span class="co">    &quot;&quot;&quot;</span>
-    <span class="kw">pass</span></code></pre>
+  </div>
+  <div class="center">
+    <br />
+    <h1 id="lab-6---sophisticated-recursion">Lab 6 - Sophisticated Recursion</h1>
+    <h2 id="task-1-fibonacci-revisited.">Task 1: Fibonacci revisited.</h2>
+    <p><strong>Learning goals</strong>:</p>
+    <ul>
+    <li>Practice timing some code using the Timer class</li>
+    <li>Use memoization to greatly increase the speed of computation.</li>
+    </ul>
+    <h3 id="profiling-and-analysis">Profiling and Analysis</h3>
+    <p>Recall from lecture our simple recursive algorithm for computing the Fibonacci numbers. One problem with this algorithm is that it's extremely slow: try running some experiments in <a href="sophrec.py">sophrec.py</a> to see what we mean; the running time grows roughly exponentially with the size of the argument <code>n</code>! Note that you'll need to download the <a href="../util/timer.py">timer.py</a> file to access the <code>Timer</code> class.</p>
+    <p>Before moving on, discuss why this is happening. If you need some help, try commenting out the <code>print</code> statements and examine what gets printed (note: don't get too hung up on the <em>order</em> of what's printed, that's not the point here).</p>
+    <h3 id="memoization">Memoization</h3>
+    <p>To improve the runtime efficiency of <code>fib</code>, we're going to introduce a powerful technique called <strong>memoization</strong>. Memoization eliminates redundant function calls by storing the function call results in some global list variable - in this case, such a list would store the actual computed Fibonacci numbers. Then in <code>fib(n)</code>, before making the calls to <code>fib(n-1)</code> and <code>fib(n-2)</code>, look up these values in the table. If they exist in the table, there's no need to make a recursive call - just use that value! And if it's not, then compute it recursively. At some point you should also be storing the computed values in the table as well.</p>
+    <p>Write a new function <code>memo_fib(n)</code> function to implement memoization; if you did it correctly, there should only be one recursive call made to each integer <code>&lt; n</code> (you can check this with the print statements).</p>
+    <p>As a bonus, rerun your profiling experiment with <code>memo_fib</code> instead of <code>fib</code> and marvel at the results!</p>
+    <h1 id="task-2-binary-search">Task 2: Binary Search</h1>
+    <p><strong>Learning goals</strong>:</p>
+    <ul>
+    <li>Think recursively!</li>
+    <li>Understand binary search, a fundamental search algorithm</li>
+    </ul>
+    <p>Consider problem of trying to determine whether some item is in a list. The usual approach is the loop through all list elements and compare them to item. Of course, if the item isn't in the list, every element will be checked. Can we do better?</p>
+    <p>As we all know how to search <a href="">phone books</a>, we certainly can do better if the list is sorted. Simply compare x against the middle element, and use the result to decide which half of the list to search next. This way, with each comparison we cut in half the number of remaining elements - a great save in efficiency! (We'll revisit this more rigorously later.)</p>
+    <p>Pause: what's the base case? At what point should the binary search algorithm stop?</p>
+    <p>In the <a href="sophrec.py">starter code</a>, implement binary search, which is very naturally a recursive one. To keep your code as simple as possible, you should may list slicing to get sublists.</p>
+    <h1 id="task-3-indexed-binary-search-optional">Task 3: Indexed Binary Search (optional)</h1>
+    <p><strong>Learning goals</strong>:</p>
+    <ul>
+    <li>Understand the cost of list slicing</li>
+    <li>Understand how to use indexes to avoid copying lists</li>
+    </ul>
+    <p>Though list slicing made your code in Task 2 very simple, there's a problem: every time you make a list slice in Python, a new list is created, which is rather inefficient. Instead, what we're going to do is use additional parameters representing the <em>left and right bounds</em> of the part of the list we're checking. This enables us to pass the same list argument into the recursive calls: no slicing necessary! Instead, we simply update the bounds parameters depending on whether we want to search the left or right half.</p>
+    <p>Here is the function header and description for what you should implement:</p>
+    <pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> indexed_binary_search(lst, item, left, right):
+        <span class="co">&quot;&quot;&quot; (list, object, int, int) -&gt; bool</span>
+    
+    <span class="co">    Precondition: lst is a sorted list, 0 &lt;= left &lt;= right &lt; len(lst).</span>
+    
+    <span class="co">    Return True if item is in lst[left:right].</span>
+    
+    <span class="co">    Note that if we wanted to search the whole list, we would call</span>
+    <span class="co">    indexed_binary_search(lst, item, 0, len(lst)).</span>
+    <span class="co">    &quot;&quot;&quot;</span>
+        <span class="kw">pass</span></code></pre>
+    <br />
+    <br />
     <a href="http://web.cs.toronto.edu/"><img class="logo" src="../images/csfaculty.jpg"/></a>
     <!-- scripts -->
     <script src="../scripts/main.js"></script>
   </div>
+
+  <footer>
+    <h5>
+      Instructor: <a href="http://www.cs.toronto.edu/~liudavid/">David Liu</a> (liudavid at cs dot toronto dot edu) <br />
+    </h5>
+  </footer>
 
 </body>
 </html>
