@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>CSC148 Fall 2014</title>
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+  <link rel="stylesheet" href="../styles/main.css" />
+  <script src="../scripts/jquery-1.11.1.js"></script>
+  <script src="../scripts/misc.js"></script>
+  <style type="text/css">code{white-space: pre;}</style>
+      <style type="text/css">
+    table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+      margin: 0; padding: 0; vertical-align: baseline; border: none; }
+    table.sourceCode { width: 100%; line-height: 100%; background-color: #303030; color: #cccccc; }
+    td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; }
+    td.sourceCode { padding-left: 5px; }
+    pre, code { color: #cccccc; background-color: #303030; }
+    code > span.kw { color: #f0dfaf; }
+    code > span.dt { color: #dfdfbf; }
+    code > span.dv { color: #dcdccc; }
+    code > span.bn { color: #dca3a3; }
+    code > span.fl { color: #c0bed1; }
+    code > span.ch { color: #dca3a3; }
+    code > span.st { color: #cc9393; }
+    code > span.co { color: #7f9f7f; }
+    code > span.ot { color: #efef8f; }
+    code > span.al { color: #ffcfaf; }
+    code > span.fu { color: #efef8f; }
+    code > span.er { color: #c3bf9f; }
+    </style>
+    </head>
+<body>
+  <div id="nav-background"></div>
+  <div class="center">  
+    <div id="line_left_long"></div>
+    <div id="line_right_long"></div>
+    <nav>
+      <ul>
+        <li><a href="../index.html" class="here">CSC148</a></li>
+        <li><a href="../learn.html">Learn</a></li>
+        <li><a href="https://piazza.com/">Discuss</a></li>
+        <li><a href="">Submit</a></li>
+        <li><a id="more">More</a>
+          <div id="more-wrap">
+            <ul id="more-dropdown">
+              <li><a href="more-calendar.html">Calendar</a></li>
+              <li><a href="">Full Course Info</a></li>
+              <li><a href="">Policies</a></li>
+              <li><a href="">Anonymous Feedback</a></li>
+              <li><a href="">University Exam Repo</a></li>
+            </ul>
+          </div>
+        </li>
+        <span style="float: right;"><li>Fall 2014</li></span>
+      </ul>
+    </nav>
+  </div>
+  <div id="content">
+<h1 id="week-5---recursion">Week 5 - Recursion</h1>
+<p>This week, we're going to learn about a powerful idea called <strong>recursion</strong>, which we'll be using in various ways for the rest of the course. However, recursion is much more than just a programming technique: it is really a way thinking about solving problems. Many students when learning recursion for the first time get hung up on tracing through how recursive code works, and completely miss the bigger picture. If you can't <strong>think recursively</strong>, there's no way you'll be successful in writing recursive code!</p>
+<p>The key idea of recursion is this: identify how an object or problem can be broken down into <em>smaller instances with the same structure</em>. We saw one example of this with linked lists last week: a linked list can be divided into two parts, the first element in the list and the rest of the list, where the rest of the list is another linked list. Another simple example of <em>recursive structure</em> is a family tree, which begins with some parents, and then the family trees of their children, which containg the family trees of <em>their</em> children, etc.</p>
+<p>In programming, we exploit the recursive structure of objects and problems by making use of <strong>recursive functions</strong>, which are functions that call themselves as helper functions. You've actually seen one instance of this already, when you implemented the <code>PeopleChain</code> method <code>get_nth</code> with a call to <code>get_nth</code>.</p>
+<p>In today's lecture, we're going to look at some simple examples of recursion based on some mathematics. The key idea here is for you to get used to thinking recursively so that you can write and understand recursive functions with no confusion! (Recursion is often one of the trickiest parts of this course, which is why we're going to go slow here.)</p>
+<h2 id="classics-factorial-and-fibonacci">Classics: Factorial and Fibonacci</h2>
+<p>Recall from math that the factorial function is defined as follows: <code>fact(n) = n * (n-1) * ... * 3 * 2 * 1</code>. It's not too hard to see the recursive structure here: we could rewrite this defintion as <code>fact(n) = n * fact(n-1)</code>, which is recursive because we've defined <code>fact</code> in terms of itself.</p>
+<p>However, this recursive definition by itself is circular: if we only ever define <code>fact</code> in terms of itself, how can we know what any value of fact actually is? For this we need a <strong>base case</strong>, which acts as a stopping point for the recursive definition. As hinted by the name, the base case is usually the simplest form of the object or problem: in this case, we know the value of 1! is 1, so our base case could be <code>fact(1) = 1</code>. Putting this together, we can use the following recursive function to compute the factorial of a number:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> fact(n):
+    <span class="co">&quot;&quot;&quot; (int) -&gt; int</span>
+<span class="co">    Precondition: n &gt; 0</span>
+<span class="co">    </span>
+<span class="co">    Return n!, i.e., n * (n-1) * ... * 2 * 1</span>
+<span class="co">    &quot;&quot;&quot;</span>
+
+    <span class="kw">if</span> n == <span class="dv">1</span>:
+        <span class="kw">return</span> <span class="dv">1</span>
+    <span class="kw">else</span>:
+        <span class="kw">return</span> n * fact(n<span class="dv">-1</span>)</code></pre>
+<p>In general, a recursive function consists of two parts:</p>
+<ul>
+<li>One or more <strong>base cases</strong>, which are the simplest cases for the parameters where the function can be evaluated directly, <em>without</em> the use of recursion. Our <code>fact</code> function has one base case, when <code>n == 1</code>.</li>
+<li>One or more <strong>recursive cases</strong>, which make use of the recursive structure of a problem by making recursive call(s) to the original function.</li>
+</ul>
+<p>Another simple example from mathematics is the recursively-defined <em>Fibonacci numbers</em>, which are the following: <code>fib(1) = 1</code>, <code>fib(2) = 1</code>, and for all <code>n &gt;= 3</code>, <code>fib(n) = fib(n-1) + fib(n-2)</code>. As with the factorial function, this mathematical definition translates immediately into a recursive program that computes the Fibonacci numbers:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> fib(n):
+    <span class="kw">if</span> n &lt;= <span class="dv">2</span>:
+        <span class="kw">return</span> <span class="dv">1</span>
+    <span class="kw">else</span>:
+        <span class="kw">return</span> fib(n<span class="dv">-1</span>) + fib(n<span class="dv">-2</span>)</code></pre>
+<h2 id="thinking-recursively">Thinking Recursively</h2>
+<p>There are two main ways to think about recursive functions. One is the <em>low-level approach</em>: tracing through how a computer handles recursive functions by tracking the call stack, the local variables, and the objects stored in the heap at any point in time; this is what you'll see in the <a href="http://www.pythontutor.com/visualize.html#mode=edit">Python visualiser</a>.</p>
+<p>However, I've seen enough students crash and burn with this approach that I <strong>strongly discourage using this thought process to understand recursive functions right now.</strong> That's not to say that understading how a computer handles recursion isn't interesting or important; but you'll get plenty more experience seeing how the computer works in general later in this course and beyond, and so for this introduction to recursion, I think it's much more important to be able to write correct recursive programs at a high-level.</p>
+<p>It might seem strange to suggest that you use recursion without understanding how Python handles it, but this is exactly what you do for every helper function you've ever called! In fact, this is one of the lynchpins of modular design and an interface, that separates what a function does with how it works. And this is the key idea in the <em>high-level approach</em> to thinking about recursive functions: every time you make a recursive call, rather than tracing through the call, <em>immediately</em> determine what happens based on the function docstring. That is, <strong>you don't need to trace through the recursive call to figure out what it does; what's what the docstring is for!</strong></p>
+<p>As a simple example with the factorial function, when we look at the recursive case and see the statement <code>return n * fact(n-1)</code>, we don't need to trace the call to <code>fact(n-1)</code>. We know based on its function description that it returns <code>(n-1) * (n-2) * ... * 2 * 1</code>, and so multiplying this by <code>n</code> results in the correct value.</p>
+<p>But that was a pretty simple example; let's see a more complicated recursive algorithm.</p>
+<h2 id="binary-strings">Binary Strings</h2>
+<p>A binary string is a string containing only 0's and 1's. Let's try to print out a list of all binary strings of length <code>n</code>.</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> all_binary_strings(n):
+    <span class="co">&quot;&quot;&quot; (int) -&gt; list of str</span>
+
+<span class="co">    Return a list of all binary strings of length n.</span>
+<span class="co">    &quot;&quot;&quot;</span></code></pre>
+<p>Before writing any code, we need to understand the recursive structure of the problem. Often students begin writing before they understand this; this leads to really complicated code, and goes hand in hand with then having to trace through this code to figure out what it's doing, because it isn't working.</p>
+<p>When trying to identify the recursive structure, it usually helps to look at small cases - but not too small, because if the cases are too small then the pattern can be obscured. Let's list all of the binary strings of length 3:</p>
+<blockquote>
+<p>000, 001, 010, 011, 100, 101, 110, 111</p>
+</blockquote>
+<p>Remember that we're looking to break down the structure into a smaller instance with the same structure: in this case, we might notice that if we remove the first character of these binary strings, the result is a bunch of binary strings of length 2:</p>
+<blockquote>
+<p><del>0</del><strong>00</strong>, <del>0</del><strong>01</strong>, <del>0</del><strong>10</strong>, <del>0</del><strong>11</strong>, <del>1</del><strong>00</strong>, <del>1</del><strong>01</strong>, <del>1</del><strong>10</strong>, <del>1</del><strong>11</strong></p>
+</blockquote>
+<p>What do you notice about this? It looks like <em>every binary string of length 2</em> is in the list, and <em>each one appears exactly twice</em>. That's interesting! Can you come up with an explanation?</p>
+<p>What we've stumbled upon is a relationship between &quot;all binary strings of length 3&quot; and &quot;all binary strings of length 2&quot;. And hey, that's exactly what we're looking for in &quot;recursive structure&quot;!</p>
+<p>We can summarize the recursive structure of the problem in an algorithmic way as follows. To compute all binary strings of length n,</p>
+<ol style="list-style-type: decimal">
+<li>Compute all binary strings of length n - 1</li>
+<li>Take each of those strings, and add a 0 to the front.</li>
+<li>Take each of those strings, and add a 1 to the front.</li>
+<li>Return all of the strings from steps 2 and 3.</li>
+</ol>
+<p>That's it for the recursive structure: what about the base case? Well, when <code>n = 0</code> there's only one binary string of length 0, the empty string. With this, we can fully implement the function.</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> all_binary_strings(n):
+    <span class="co">&quot;&quot;&quot; (int) -&gt; list of str</span>
+
+<span class="co">    Return a list of all binary strings of length n.</span>
+<span class="co">    &quot;&quot;&quot;</span>
+
+    <span class="kw">if</span> n == <span class="dv">0</span>:
+        <span class="kw">return</span> [<span class="st">&#39;&#39;</span>]
+    <span class="kw">else</span>:
+        short_strings = all_binary_strings(n<span class="dv">-1</span>)
+        strings = []
+        <span class="kw">for</span> s in short_strings:
+            strings.append(<span class="st">&#39;0&#39;</span> + s)
+            strings.append(<span class="st">&#39;1&#39;</span> + s)
+        <span class="kw">return</span> strings</code></pre>
+    <a href="http://web.cs.toronto.edu/"><img class="logo" src="../images/csfaculty.jpg"/></a>
+    <!-- scripts -->
+    <script src="../scripts/main.js"></script>
+  </div>
+
+</body>
+</html>
