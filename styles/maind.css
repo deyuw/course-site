@@ -1,0 +1,498 @@
+/*main*/
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+  font-family: "Avenir", sans-serif;
+  font-size: 16px;
+  margin: 0 auto;
+  width: 1020px;
+  height: 100%;
+  padding: 0px 20px;
+  line-height: 1.6;
+  cursor: default;
+}
+
+/* nav bar */
+#nav-container {
+  position: fixed;
+  width: 1020px;
+  height: 3em;
+  margin: 0;
+  padding: 0.25em 0;
+  background-color: rgba(255, 255, 255, 1);
+  z-index: 1;
+  line-height: 2;
+  /*border-bottom: 2px solid #C0C0C0;*/
+}
+
+nav { /*top navigation bar*/
+  height: 2em;
+  width: 650px;
+  margin: 0 auto 0.25em auto;
+}
+
+nav ul {
+  margin: 0;
+  height: 2em;
+}
+
+nav li {
+  margin: 0;
+  height: 2em;
+  display: inline-block;
+}
+
+nav li a {
+  padding: 4px 8px 3px 8px;
+  height: 2em;
+  border-radius: 7px;
+}
+
+#nav-border {
+    width: 100%;
+    height: 2px;
+    margin: 0;
+    padding: 0;
+}
+
+#more {
+  cursor: pointer;
+  color: #3399FF;
+}
+
+#more-dropdown {
+  display: none;
+  /*transform: scale(1,0);*/
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  height: calc(8em + 2px);
+  list-style-type: none;
+  background-color: white;
+  border: 1px solid #3399FF;
+  border-radius: 4px 4px 4px 4px;
+  animation: fadein 0.4s;
+  -moz-animation: fadein 0.4s;
+  -webkit-animation: fadein 0.4s;
+  -o-animation: fadein 0.4s;
+}
+
+#more-dropdown li {
+  display: block;
+  margin: 0;
+  padding: 0;
+  height: 2em;
+}
+
+#more-dropdown li a {
+  line-height: 1.1em;
+  display: block;
+}
+
+#line-left-long {
+  width: 50%;
+  height: 2px;
+  float: left;
+  background: -webkit-gradient(linear, 10 0, 20% 0, from(white), to(#C0C0C0), color-stop(100%, #C0C0C0));
+  background: -moz-linear-gradient(to left, #C0C0C0, white);
+}
+
+#line-right-long {
+  width: 50%;
+  height: 2px;
+  float: right;
+  background: -webkit-gradient(linear, 285 0, 95% 0, from(#C0C0C0), to(white), color-stop(100%, #C0C0C0));
+  background: -moz-linear-gradient(to right, #C0C0C0, white);
+}
+
+
+/* Content and Learn Table */
+
+#content {
+  margin: 0;
+  padding-top: 3.5em;
+  padding-left: 1em;
+  animation: fadein 0.6s;
+  -moz-animation: fadein 0.6s;
+  -webkit-animation: fadein 0.6s;
+  -o-animation: fadein 0.6s;
+}
+
+/*materials table*/
+#learn-table {
+  margin: 0 auto;
+  padding: 0;
+  width: 900px;
+  border: 1px solid #C0C0C0;
+}
+
+#learn-table th {
+    font-weight: bold;
+    border-bottom: 1px solid #C0C0C0;
+    border-left: 1px solid #C0C0C0;
+    background-color: #eeeeff;
+    text-align: center;
+}
+
+#learn-table td {
+  vertical-align: top;
+  border: 1px solid #aaaaaa;
+  border-width: 0px 1px 1px 0px;
+  padding: 9px;
+  text-align: left;
+}
+
+#current-week {
+  background-color: #f4f4f4;
+}
+
+#learn-table td > ul {
+    margin: 0;
+}
+
+#learn-table li {
+    margin: 0;
+    display: block;
+}
+
+#learn-table .week {
+  width: 80px;
+  text-align: center;
+}
+
+#learn-table .topics {
+  width: 300px;
+}
+#learn-table .labs {
+  width: 40px;
+  text-align: center;
+}
+#learn-table .exercises {
+  width: 100px;
+  text-align: center;
+}
+#learn-table .readings {
+  width: 300px;
+}
+
+/*rotate text*/
+#learn-table .unit {
+  width: 80px;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+
+  /* also accepts left, right, top, bottom coordinates; not required, but a good idea for styling */
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+
+  /* Should be unset in IE9+ I think. */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+  /* more edits to rotated text */
+  vertical-align: middle;
+  text-align: center;
+  font-size: 20px;
+
+  /* font smoothing */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Footer */
+footer {
+  padding: 1em 0;
+  text-align: center;
+  font-size: 0.8em;
+  color: #777777;
+}
+
+footer > p {
+    margin: 0.1em 0;
+}
+
+#logo {
+  display: block;
+  margin: 0 auto 0.3em auto;
+  padding: 0.5em;
+  width: 30%;
+  transition: 0.5s;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+#logo:hover {
+  border: 1px solid #3399FF;
+  transition: 0s;
+}
+
+
+/*logistics*/
+#logistics table {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#logistics td,
+#logistics th {
+  margin: 0;
+  padding: 4px;
+}
+
+#logistics tr {
+  width: 100%;
+}
+
+#logistics td {
+  text-align: center;
+}
+
+#logistics-table > tbody > tr {
+  border-top: solid black 1px;
+  border-bottom: solid black 1px;
+}
+
+.logistics-row-header {
+  font-weight: bold;
+  text-align: right;
+  vertical-align: top;
+  font-size: 1.05em;
+}
+
+#logistics-lectures td {
+  width: 50%;
+  text-align: center;
+}
+
+#logistics-labs th,
+#logistics-labs td {
+  text-align: center;
+  font-weight: normal;
+}
+
+/* Fonts */
+h1 {
+  font-size: 28px;
+  font-weight: 100;
+  margin: 0;
+}
+
+p {
+  margin: 4px 0;
+}
+
+/*links*/
+a {
+  padding: 0px;
+  border-radius: 4px;
+  color: #3399FF;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+a:hover,
+a:focus {
+  background: #E9F6FB;
+}
+
+table {
+  outline: none;
+  border-collapse: collapse;
+}
+
+@font-face {
+  font-family: code-font;
+  src: url("consolas.ttf");
+}
+
+code {
+  font-family: code-font;
+  border-radius: 2px;
+  background: #F4F4F4;
+  white-space: pre;
+}
+
+pre code {
+  margin: 20px;
+  padding: 6px 0px;
+  border-radius: 4px;
+  background: none;
+  display: block;
+}
+
+/*text selection*/
+::selection { background: #e7e7e7; /* Safari */ }
+::-moz-selection { background: #e7e7ff; /* Firefox */ }
+
+#feedback-form {
+  width: 700px;
+  margin: 10px auto 0 auto;
+  padding: 0 20px;
+}
+
+#feedback-form input {
+  font-size: 16px;
+  width: 320px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  padding: 5px;
+  margin: 0 5px 10px 5px;
+}
+
+#feedback-form textarea {
+  font-family: "Avenir", sans-serif;
+  font-size: 16px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  padding: 5px 5px;
+  margin: 5px auto;
+  width: 650px;
+  height: 200px;
+  display: block;
+}
+
+#feedback-form input.submit {
+    display: block;
+    width: 100px;
+    margin: 1em auto 0 auto;
+}
+
+
+
+
+
+
+/* Untriaged */
+
+.center{
+  width: 650px;
+  margin: 0 auto;
+  animation: fadein 0.6s;
+  -moz-animation: fadein 0.6s;
+  -webkit-animation: fadein 0.6s;
+  -o-animation: fadein 0.6s;
+}
+
+
+
+
+
+/*resets*/
+*, ::after, ::before{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+h2, h3, h4, h5, h6, pre, blockquote, form, fieldset, {
+  margin: 1em 0;
+}
+.clear {
+  clear:both;
+}
+fieldset {
+  border: 1px solid transparent;
+}
+
+
+@media screen and (max-width: 1000px){ /*nav bar for mobile display*/
+  nav{
+    position: fixed;
+    width: 658px;
+    top: 40px;
+    left: 30px;
+    /*line-height: 2;*/
+    /*margin: -57px 0 0 -8px;*/
+    /*padding: 9px 0 6px 0;*/
+    /*background-color: rgba(255, 255, 255, 0);*/
+  }
+}
+
+
+
+
+
+
+
+.here{ /*currently selected nav button*/
+  padding: 4px 8px 4px 8px;
+  border-radius: 7px;
+  background: #3399FF;
+  color: white;
+}
+.here:hover{
+  background: #3399FF;
+  color: white;
+}
+
+
+
+/* Exams table */
+#exams-table {
+  margin: 0 auto;
+  border-top: solid black 1px;
+  border-bottom: solid black 1px;
+}
+
+#exams-table td {
+  text-align: center;
+  padding: 4px;
+  margin: 0;
+}
+
+#exams-table th {
+  padding: 4px;
+  text-align: right;
+  vertical-align: top;
+}
+
+
+/*image style*/
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+#instructor tr > td:first-child {
+  color: #A9A9A9;
+  padding: 0px 20px 0px 0px;
+  vertical-align:top;
+  line-height: 1.4;
+}
+#instructor td:nth-child(2) {
+  vertical-align:top;
+  line-height: 1.4;
+}
+
+/*video*/
+button{
+  width: 650px;
+  height: 450px;
+  border: 1px solid #3399FF;
+  border-radius: 10px;
+}
+
+/*pdf style*/
+object[type="application/pdf"]{
+  border: solid #cccccc 3px;
+  border-radius: 6px;
+  width: 850px;
+  height: 80vh;
+}
+
+
