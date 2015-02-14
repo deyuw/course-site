@@ -7,10 +7,10 @@ style structure:
 - other
 
 colors:
-- link: #3399FF
-- hovered link: #E9F6FB
-- clicked link: #85DDFF
-- visited link: #25BA2A
+- button symbol/text unvisited: #3399FF
+- button symbol/text visited: #00A86B
+- button background on hover: #E9F6FB
+- button background on touch/click: #85DDFF
 - translucency: rgba(255, 255, 255, 0.9)
 
 */
@@ -462,18 +462,22 @@ nav li a{
 	border-width:0px 0px 0px 0px;
 }
 .materials tr:first-child td{
-	background:-o-linear-gradient(bottom, #f4f4f4 5%, #f4f4f4 100%);  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f4f4f4), color-stop(1, #f4f4f4) );
+	background:-o-linear-gradient(bottom, #f4f4f4 5%, #f4f4f4 100%);  
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f4f4f4), color-stop(1, #f4f4f4) );
 	background:-moz-linear-gradient( center top, #f4f4f4 5%, #f4f4f4 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#f4f4f4", endColorstr="#f4f4f4");  background: -o-linear-gradient(top,#f4f4f4,f4f4f4);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#f4f4f4", endColorstr="#f4f4f4");  
+	background: -o-linear-gradient(top,#f4f4f4,f4f4f4);
 	background-color:#f4f4f4;
 	border:0px solid #aaaaaa;
 	border-width:0px 0px 1px 1px;
 	color:#000000;
 }
 .materials tr:first-child:hover td{
-	background:-o-linear-gradient(bottom, #f4f4f4 5%, #f4f4f4 100%);  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f4f4f4), color-stop(1, #f4f4f4) );
+	background:-o-linear-gradient(bottom, #f4f4f4 5%, #f4f4f4 100%);  
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f4f4f4), color-stop(1, #f4f4f4) );
 	background:-moz-linear-gradient( center top, #f4f4f4 5%, #f4f4f4 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#f4f4f4", endColorstr="#f4f4f4");  background: -o-linear-gradient(top,#f4f4f4,f4f4f4);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#f4f4f4", endColorstr="#f4f4f4");  
+	background: -o-linear-gradient(top,#f4f4f4,f4f4f4);
 	background-color:#f4f4f4;
 }
 .materials tr:first-child td:first-child{

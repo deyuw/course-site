@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>CSC324 Winter 2015</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="styles/maind.css" />
+</head>
+<body>
+  <div id="nav-container">
+    <nav>
+      <ul>
+        <li><a href="index.html">CSC324</a></li>
+        <li><a href="https://piazza.com/utoronto.ca/winter2015/csc324" target="blank_">Discuss</a></li>
+        <li><a href="https://markus.cdf.toronto.edu/csc324-2015-01/" target="blank_">Submit</a></li>
+        <li><a href="feedback.html">Anonymous Feedback</a></li>
+        <li><a id="more">More</a>
+          <div id="more-wrap">
+            <ul id="more-dropdown">
+              <li><a href="syllabus.html" target="blank_">Info Sheet</a></li>
+              <li><a href="integrity.html">Academic Integrity</a></li>
+              <li><a href="exams.html">Exam Info</a></li>
+              <li><a href="https://login.library.utoronto.ca/cgi-bin/go_log.pl?url=http://exams.library.utoronto.ca">University Exam Repo</a></li>
+            </ul>
+          </div>
+        </li>
+        <span style="float: right;"><li>Winter 2015</li></span>
+      </ul>
+    </nav>
+    <div id="nav-border">
+      <div id="line-left-long"></div>
+      <div id="line-right-long"></div>
+    </div>
+  </div>
+  <div id="content">
+    <h1>Welcome to CSC324!</h1>
+    <p>Click <a href="../courses/csc324_f14">here</a> if you're looking for the Fall 2014 website.</p>
+    <p>
+      In the table below, you'll find topic outlines for each lecture, and handouts for the labs, exercises, and assignments.
+    </p>
+    <p>
+      I won't be posting announcements here - check Piazza at least once a day to make sure you don't miss anything important!
+    </p>
+    <p>
+      We'll be using these <a href="res/notes.pdf">Course Notes</a>, which are now available in print through the UofT Bookstore's print-on-demand service. <strong>I'm in the middle of getting an updated version to print and posted here. I recommend waiting for an announcement before buying a print copy.</strong>
+    </p>
+    <p>I'll be updating errata for the notes as well; please do let me know if you find any errors!
+    </p>
+    <p>
+      For the Prolog unit, I strongly encourage you to use the textbook <a href="http://www.learnprolognow.org/lpnpage.php?pageid=online"><i>Learn Prolog Now!</i></a> as an additional reference. I've posted the relevant chapters in the table below.
+    </p>
+    <div>
+      <table id="learn-table">
+        <tr id="current-week">
+          <td></td> <!-- first column -->
+          <td>Week</td>
+          <td>Learn</td>
+          <td>Labs</td>
+          <td>Exercises</td>
+          <td>Resources & Readings</td>
+        </tr>
+        <tr>
+          <td rowspan="4" class="unit">Racket</td> <!-- first column -->
+          <td>Jan 5</td>
+          <td>
+            <strong>There IS a lecture</strong> Monday, Jan 5 at 2pm (in SS1073)
+            <ul>
+              <li>Welcome!</li>
+              <li>A brief history of the lambda calculus</li>
+              <li>Introduction to Racket</li>
+              <li>Eager evaluation</li>
+              <li>Recursion and Lists (more next week)</li>
+            </ul>
+          </td>
+          <td>No lab</td>
+          <td>No exercise</td>
+          <td>
+            <ul>
+              <li>pp. 7-20</li>
+              <li><a href="http://racket-lang.org/download/">Install Racket</a></li>
+              <li><a href="http://docs.racket-lang.org/reference/pairs.html">List Documentation</a></li>
+              <li><a href="http://docs.racket-lang.org/test-engine/index.html?q=">Testing Library</a></li>
+              <li><a href="http://youtu.be/duyOsd9YSJM">Video: Numbers and Booleans in the Lambda Calculus</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Jan 12</td>
+          <td>
+            <strong>Lectures will be on Monday and Wednesday</strong><br>
+            <strong>First lab will be on Friday.</strong>
+            <ul>
+              <li>Tail Recursion</li>
+              <li>Higher-Order Functions</li>
+            </ul>
+          </td>
+
+          <td></td>
+          <td></td>
+          <td>
+            <ul>
+              <li>pp. 20-22</li>
+              <li><a href="http://neopythonic.blogspot.ca/2009/04/tail-recursion-elimination.html">Tail Call Elimination (not) in Python</a></li>
+              <li><a href="extra/composition_fold.html">Composition example</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Jan 19</td>
+          <td>
+            <ul>
+              <li>More Higher-Order Functions
+              <li>Scopes and Closures</li>
+            </ul>
+          </td>
+          <td></td>
+          <td></td>
+          <td>
+            <ul>
+              <li>pp. 23-28</li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures">Closures in Javascript</a></li>
+              <li><a href="http://youtu.be/wGcwtKtf7sE">Video: Implementing Let</a></li>
+              <li><a href="extra/closures.html">More Closure/Scope Examples</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Jan 26</td>
+          <td>
+            <ul>
+              <li>Macros</li>
+            </ul>
+          </td>
+          <td></td>
+          <td></td>
+          <td>
+            <ul>
+              <li>pp. 28-31</li>
+              <li><a href="http://docs.racket-lang.org/guide/macros.html?q=macros">Macro Guide</a>
+              </li>
+              <li><a href="extra/rest_argument.html">Rest Arguments</a></li>
+              <li><a href="https://www.youtube.com/watch?v=q35i55e9oY4">Video: Ellipses in Macros</a></li>
+              <li><a href="http://www.paulgraham.com/avg.html">Beating the Averages</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="5" class="unit">Haskell</td> <!-- first column -->
+          <td>Feb 2</td>
+          <td>
+            <ul>
+              <li>Introduction to Haskell</li>
+              <li>Lazy evaluation</li>
+              <li>Intro to types in Haskell (maybe)</li>
+            </ul>
+          </td>
+          <td></td>
+          <td></td>
+          <td>
+            <ul>
+              <li>pp. 33-39</li>
+              <li><a href="https://www.haskell.org/platform/">Install Haskell</a></li>
+              <li><a href="http://learnyouahaskell.com/chapters">Learn You A Haskell</a></li>
+              <li><a href="http://michaelochurch.wordpress.com/2014/10/07/are-haskell-engineers-second-rate/">Are Haskell Engineers Second-Rate?</a></li>
+              <li><a href="http://www.haskell.org/haskellwiki/Haskell/Lazy_evaluation">Haskell Wiki: Lazy Evaluation</a></li>
+              <li><a href="extra/HUnit.html">HUnit Primer</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Feb 9</td>
+          <td>
+            <ul>
+              <li>Static Typing<li>
+              <li>Types in Haskell</li>
+              <li>Polymorphism</li>
+            </ul>
+          </td>
+          <td></td>
+          <td></td>
+          <td>
+            <ul>
+              <li>pp. 40-48</li>
+              <li><a href="http://www.haskell.org/haskellwiki/Section_of_an_infix_operator">Haskell Wiki: Sectioning</a></li>
+              <li><a href="extra/types_worksheet.pdf">Types Worksheet</a></li>
+              <li><a href="http://www.cs.utexas.edu/~wcook/Drafts/2009/essay.pdf">On Abstract Data Types</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Feb 16</td>
+          <td colspan="4"><strong><a href="https://www.google.ca/search?q=reading+is+fun&tbm=isch">Reading week!</a></strong></td>
+        <tr>
+          <td>Feb 23</td>
+          <td>
+            <ul>
+              <li>User-defined types</li>
+              <li>Typeclasses</li>
+            </ul>
+          </td>
+          <td></td>
+          <td></td>
+          <td>
+            <ul>
+              <li>pp. 48-53</li>
+              <li><a href="http://www.haskell.org/tutorial/stdclasses.html">Haskell Typeclasses</a></li>
+              <li><a href="http://www.haskell.org/tutorial/numbers.html">Haskell Numbers</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Mar 2</td>
+          <td>
+            <ul>
+              <li>Haskell I/O</li>
+              <li>Stateful computation</li>
+            </ul>
+          </td>
+          <td></td>
+          <td></td>
+          <td>
+            <ul>
+              <li>pp. 53-58</li>
+              <li><a href="http://byorgey.wordpress.com/2012/07/19/monads-easy-or-hard/">"Monads"</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="unit" rowspan="3">Prolog</td>
+          <td>Mar 9</td>
+          <td>
+            <ul>
+              <li>Introduction to Prolog</li>
+              <li>Facts, Queries, and Rules</li>
+            </ul>
+          </td>
+          <td></td>
+          <td></td>
+          <td>
+            <ul>
+              <li>pp. 59-64</li>
+              <li><a href="http://www.swi-prolog.org/Download.html">Install Prolog</a></li>
+              <li>LPN: Chapters 1, 3, and 4</li>
+              <li><a href="http://en.wikibooks.org/wiki/Prolog">Prolog Wikibook</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Mar 16</td>
+          <td>
+            <ul>
+              <li>Unification</li>
+              <li>Backtracking</li>
+            </ul>
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+              <ul>
+                <li>pp. 64-72</li>
+                <li>LPN: Chapters 2 and 9</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Mar 23</td>
+            <td>
+              <ul>
+                <li>Cuts</li>
+              </ul>
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+              <ul>
+                <li>pp. 73-77</li>
+                <li>LPN: Chapter 10</li>
+                <li><a href="https://www.youtube.com/watch?v=2bmVyrdeAkY">Video: A Subtlety of Cut</a></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="unit">Bonus!</td> <!-- first column -->
+            <td>Mar 30</td>
+            <td>
+              <ul>
+                <li>
+                  Bonus topics of interest (<a href="extra/choice.html">Backtracking in Racket</a>)
+                </li>
+              </ul>
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+              <ul>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <a href="http://web.cs.toronto.edu/"><img id="logo" src="images/csfaculty.jpg" alt="DCS Logo"></a>
+    <p>
+      <a href="http://www.cs.toronto.edu/~liudavid/">David Liu</a> (liudavid at cs dot toronto dot edu)
+    </p>
+    <p>Come find me in BA4260</p>
+    <p>Site design by Deyu Wang (dyw999 at gmail dot com)</p>
+  </footer>
+
+  <!-- scripts -->
+  <script src="scripts/jquery-1.11.1.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
