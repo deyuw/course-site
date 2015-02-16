@@ -91,7 +91,7 @@ footer{
 }
 
 /*new remove*/
-/*form input, form textarea{ 
+form input, form textarea{ 
 	font-family: "Avenir", sans-serif;
 	font-size: 16px;
 	border: 1px solid grey;
@@ -99,13 +99,7 @@ footer{
 	padding: 5px 10px;
 	margin: 0 15px 25px 0;
 	width: 315px;
-}*/
-
-#cs-logo { /*new add*/
-	width: 400px;
-	margin: 0 auto;
 }
-
 
 
 
@@ -405,61 +399,6 @@ nav li a{
 	background: url("../images/check.png") no-repeat left top;
 }
 
-/*logistics*/
-#logistics {
-	margin-top: 2em;
-	width: 100%;
-}
-#logistics table {
-	margin: 0 auto;
-	padding: 0;
-}
-
-#logistics-table {
-	width: 100%;
-}
-
-#logistics-lectures {
-	width: 100%;
-}
-
-#logistics td,
-#logistics th {
-	margin: 0;
-	padding: 4px;
-}
-
-#logistics tr {
-	width: 100%;
-}
-
-#logistics td {
-	text-align: center;
-}
-
-#logistics-table {
-	border-top: solid black 1px;
-	border-bottom: solid black 1px;
-}
-
-.logistics-row-header {
-	font-weight: bold;
-	text-align: right;
-	vertical-align: top;
-	font-size: 1.05em;
-}
-
-#logistics-lectures td {
-	width: 33%;
-	text-align: center;
-}
-
-#logistics-labs th,
-#logistics-labs td {
-	text-align: center;
-	font-weight: normal;
-}
-
 
 
 /*materials table*/
@@ -491,12 +430,12 @@ nav li a{
 	border-spacing: 0;
 	/*width:100%;*/
 	/*height:100%;*/
-	/*margin:0px;padding:0px;*/ /*new remove*/
+	margin:0px;padding:0px; /*new remove*/
 	
 	/*new add*/
-	margin:0 auto;
+	/*margin:0 auto;
 	padding: 0px;
-	border: solid 1px grey;
+	border: solid 1px grey;*/
 }
 .materials tr:last-child td:last-child {
 	-moz-border-radius-bottomright:5px;
@@ -608,25 +547,6 @@ nav li a{
 	/*z-index: -1;*/
 }
 
-/* Exams table */
-#exams-table {
-	margin: 0 auto;
-	border-top: solid black 1px;
-	border-bottom: solid black 1px;
-}
-
-#exams-table td {
-	text-align: center;
-	padding: 4px;
-	margin: 0;
-}
-
-#exams-table th {
-	padding: 4px;
-	text-align: right;
-	vertical-align: top;
-}
-
 
 /*image style*/
 img.center {
@@ -688,14 +608,19 @@ object[type="application/pdf"]{
 	border-radius: 10px;
 	padding: 15px;
 	display: block;
-	margin: 40px auto 10px auto;
-	width: 100%;
+	/*margin: 40px auto 10px auto;*/
+	width: 400px;
+	margin: 0 auto;
 	transition: 0.5s;
 }
 .logo:hover{
 	border: 1px solid #3399FF;
 	border-radius: 10px;
 	transition: 0s;
+}
+#cs-logo { /*new add*/
+	width: 400px;
+	margin: 0 auto;
 }
 
 /*rotate text*/
